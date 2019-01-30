@@ -19,6 +19,6 @@ wp-content/plugins/hello.php
 
 node_modules/
 themes/
-themes/vincent-custom/css
-!themes/index.php
 !themes/vincent-custom
+!themes/index.php
+themes/vincent-custom/css
