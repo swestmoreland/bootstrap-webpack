@@ -19,7 +19,7 @@ wp-content/plugins/hello.php
 
 node_modules/
 themes/*
-!themes/vincent-custom/
+!themes/vincentcustom/
 !themes/index.php
-themes/vincent-custom/css/*
-!themes/vincent-custom/css/.gitkeep
+themes/vincentcustom/css/*
+!themes/vincentcustom/css/.gitkeep
