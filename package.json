@@ -1,0 +1,21 @@
+{
+  "name": "vincent-www",
+  "version": "1.0.0",
+  "description": "Web app for Vincent Solar",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-barrien/vincent-www.git"
+  },
+  "author": "Marcelo Barrientos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-barrien/vincent-www/issues"
+  },
+  "homepage": "https://github.com/m-barrien/vincent-www#readme"
+}

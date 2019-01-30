@@ -16,3 +16,9 @@ wp-content/plugins/hello.php
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+
+node_modules/
+themes/
+themes/vincent-custom/css
+!themes/index.php
+!themes/vincent-custom
