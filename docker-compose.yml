@@ -5,6 +5,8 @@ services:
   wordpress:
     image: wordpress:5.0.3-php7.1-apache
     restart: unless-stopped
+    depends_on:
+      - db
     ports:
       - 8080:80
     environment:
@@ -13,6 +15,7 @@ services:
       WORDPRESS_DB_PASSWORD: dbpass
       WORDPRESS_DB_NAME: vincent_db
     volumes:
+      - ./wp-content:/var/www/html/wp-content 
       - ./themes:/var/www/html/wp-content/themes/
       - ./plugins:/var/www/html/wp-content/plugins/
 

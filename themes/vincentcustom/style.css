@@ -1,0 +1,108 @@
+/*
+Theme Name: Bootstrap Four
+Theme URI: http://bootstrapfour.hyprtxt.com/
+Author: Taylor Young
+Author URI: http://hyprtxt.com/
+Description: A versatile and responsive Bootstrap WordPress starter theme FOR DEVELOPERS based on Alpha Twitter Bootstrap 4.
+Version: 0.2.3
+License: MIT
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu
+Text Domain: bootstrap-four
+
+bootstrapfour WordPress Theme, Copyright 2015 Taylor Young.
+*/
+
+/* The bootstrap.css file is auto-enqueued in functions.php, also font-awesome */
+
+/* YOU SHOULD BE MAKING A CHILD THEME. Don't make me be the bad guy and erase all your hard work with a theme update. I don't want to destroy your world. A child theme template is in the works, watch the GitHub repo (https://github.com/Hyprtxt/bootstrapfour) to keep up with developments */
+
+
+/* * * * * * * * * * * * * * *
+ * WordPress Content Classes
+ * * * * * * * * * * * * * * */
+
+img {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin: 0.4rem 0 1.6rem 1.6rem;
+}
+.alignleft {
+  display: inline;
+  float: left;
+  margin: 0.4rem 1.6rem 1.6rem 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0.4rem auto 1.6rem auto;
+}
+.wp-caption {
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0;
+}
+.wp-caption-text {
+
+}
+.sticky {
+  background: #f7f7f9;
+  padding: 1rem;
+}
+.bypostauthor {
+  background: #f7f7f9;
+  padding: 0.5rem;
+}
+.gallery-caption {
+  font-weight: bold;
+}
+/* Text meant only for screen readers */
+.says,
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+/* * * * * * * * * * * * * * *
+ * ??? profit
+ * * * * * * * * * * * * * * */
+
+body > nav.navbar {
+  border-radius: 0;
+}
+
+.main-container {
+  border-radius: .25rem;
+  background: white;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+nav.navbar {
+  margin-bottom: 2rem;
+}
