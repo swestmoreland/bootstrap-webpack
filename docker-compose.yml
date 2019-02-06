@@ -4,7 +4,7 @@ services:
 
   wordpress:
     image: wordpress:5.0.3-php7.1-apache
-    restart: always
+    restart: unless-stopped
     ports:
       - 8080:80
     environment:
@@ -19,9 +19,9 @@ services:
 
   db:
     image: mysql:5.7
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: vincent_db
       MYSQL_USER: dbuser
       MYSQL_PASSWORD: dbpass
-      MYSQL_RANDOM_ROOT_PASSWORD: 'marcelo'
+      MYSQL_ROOT_PASSWORD: dbpass
