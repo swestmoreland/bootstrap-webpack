@@ -6,13 +6,12 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-8">
+			<?php
+			while ( have_posts() ) : the_post();
 
-			<?php 
-			if ( have_posts() ) : while ( have_posts() ) : the_post();
-  	
-				get_template_part( 'content-manutenciones', get_post_format() );
-  
-			endwhile; endif; 
+				get_template_part( 'template-parts/page/content', 'page' );
+
+			endwhile; // End of the loop.
 			?>
 
 		</div> <!-- /.blog-main -->

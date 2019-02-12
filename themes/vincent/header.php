@@ -17,6 +17,8 @@
           echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="">';
           ?>
         </div>
-        <?php echo get_bloginfo( 'description' ); ?>
+        <div class="col-md-9">
+          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+        </div>
       </div>
     
