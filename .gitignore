@@ -21,6 +21,11 @@ wp-content/
 node_modules/
 themes/*
 !themes/vincentcustom/
+!themes/vincent/
 !themes/index.php
 themes/vincentcustom/css/*
+themes/vincent/css/*
+themes/vincent/js/*
 !themes/vincentcustom/css/.gitkeep
+!themes/vincent/css/.gitkeep
+!themes/vincent/js/.gitkeep

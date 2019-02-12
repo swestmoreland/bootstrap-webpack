@@ -6,7 +6,10 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test spezcified\" && exit 1",
+    "sass": "node-sass --include-path scss resources/scss/app.scss themes/vincent/css/app.css",
+    "bundle-js": "bundle-js ./resources/js/app.js -o ./themes/vincent/js/app.js"
+
   },
   "repository": {
     "type": "git",
