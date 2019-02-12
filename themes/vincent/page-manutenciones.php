@@ -5,13 +5,14 @@
 		<h1>Plantilla manutenciones</h1>
 	</div>
 	<div class="row">
-		<div class="col-sm-8">
-			<?php
-			while ( have_posts() ) : the_post();
+		<div class="col-sm-12">
 
-				get_template_part( 'template-parts/page/content', 'page' );
-
-			endwhile; // End of the loop.
+			<?php 
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+  	
+				get_template_part( 'content-manutenciones', get_post_format() );
+  
+			endwhile; endif; 
 			?>
 
 		</div> <!-- /.blog-main -->
