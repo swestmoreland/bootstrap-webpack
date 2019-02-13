@@ -7,8 +7,8 @@
     <?php wp_head();?>
     <title><?php echo get_bloginfo( 'name' ); ?></title>
   </head>
-  <body>  
-    <div class="container">
+  <body> 
+    <div class="conatiner-fluid">
       <div class="row">
         <div class="col-md-3">
           <?php
@@ -25,4 +25,4 @@
             ?>
         </div>
       </div>
-    
+    </div> 
