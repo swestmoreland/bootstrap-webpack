@@ -1,20 +1,24 @@
 <?php get_header(); ?>
 	<div class="row">
-		<h1>Plantilla manutenciones</h1>
+		<h1>Nuestros Servicios</h1>
 	</div>
 	<div class="row">
-		<div class="col-sm-12">
 
-			<?php 
-				if(have_posts()) : while(have_posts()) : the_post();
-					the_title();
-					echo '<div class="entry-content">';
-					the_content();
-					echo '</div>';
-				endwhile; endif;
-			?>
+		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+			<div class="col-sm-6">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="row">
+						<img src="<?php the_post_thumbnail_url(); ?>"/>
+					</div>
+				<?php endif; ?>
+				<div class="row">
+					<h2><? the_title() ;?></h2>
+					<p><? the_excerpt() ;?></p>
+				</div>
+				
+			</div>
+		<?php endwhile; endif; ?>
 
-		</div> <!-- /.blog-main -->
 
 
 	</div> <!-- /.row -->
