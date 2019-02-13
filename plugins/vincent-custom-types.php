@@ -37,6 +37,7 @@ function lc_custom_post_servicio() {
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,
     'has_archive'       => true,
+    'rewrite' => array('slug' => 'servicios'),
     'query_var'         => 'film'
   );
  

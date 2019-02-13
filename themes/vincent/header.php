@@ -14,11 +14,11 @@
           <?php
           $custom_logo_id = get_theme_mod( 'custom_logo' );
           $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-          echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="">';
+          echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
           ?>
         </div>
         <div class="col-md-9">
-          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
       </div>
     

@@ -2,8 +2,10 @@
 
 	<div class="row">
 
-		<div class="col-sm-8">
-
+		<div class="col-sm-12">
+			<div class="row">
+				<h1>Contenido de index.php</h1>
+			</div>
 			<?php 
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
   	
