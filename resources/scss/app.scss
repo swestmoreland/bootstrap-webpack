@@ -6,3 +6,20 @@
 
 // Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap"; 
+
+.menu{
+	@extend .nav; 
+	@extend .justify-content-end;		
+	li{
+		@extend .nav-item;
+		a{
+			@extend .nav-link;
+			text-transform: uppercase;
+		}
+	}
+	.current-menu-item{
+		a{
+			color: $orange;
+		}
+	}
+}

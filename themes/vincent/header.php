@@ -18,7 +18,11 @@
           ?>
         </div>
         <div class="col-md-9">
-          <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+          <?php wp_nav_menu( array( '
+            theme_location' => 'header-menu',          
+            'container'      => '',
+            'menu_class'     => 'menu' ) ); 
+            ?>
         </div>
       </div>
     
