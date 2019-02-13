@@ -4,15 +4,21 @@
 
 		<div class="col-sm-12">
 			<div class="row">
-				<h1>Contenido de index.php</h1>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide">Slide 1</div>
+				      <div class="swiper-slide">Slide 2</div>
+				      <div class="swiper-slide">Slide 3</div>
+				      <div class="swiper-slide">Slide 4</div>
+				      <div class="swiper-slide">Slide 5</div>
+				      <div class="swiper-slide">Slide 6</div>
+				      <div class="swiper-slide">Slide 7</div>
+				      <div class="swiper-slide">Slide 8</div>
+				      <div class="swiper-slide">Slide 9</div>
+				      <div class="swiper-slide">Slide 10</div>
+				    </div>
+				</div>
 			</div>
-			<?php 
-			if ( have_posts() ) : while ( have_posts() ) : the_post();
-  	
-				get_template_part( 'content', get_post_format() );
-  
-			endwhile; endif; 
-			?>
 
 		</div> <!-- /.blog-main -->
 
