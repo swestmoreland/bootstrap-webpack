@@ -6,16 +6,10 @@
 			<div class="row">
 				<div class="swiper-container">
 				    <div class="swiper-wrapper">
-				      <div class="swiper-slide">Slide 1</div>
-				      <div class="swiper-slide">Slide 2</div>
-				      <div class="swiper-slide">Slide 3</div>
-				      <div class="swiper-slide">Slide 4</div>
-				      <div class="swiper-slide">Slide 5</div>
-				      <div class="swiper-slide">Slide 6</div>
-				      <div class="swiper-slide">Slide 7</div>
-				      <div class="swiper-slide">Slide 8</div>
-				      <div class="swiper-slide">Slide 9</div>
-				      <div class="swiper-slide">Slide 10</div>
+				      <div class="swiper-slide">
+				      	<img class="d-block d-md-none" src="http://placehold.it/720x1280">
+				      	<img class="d-none d-md-block" src="http://placehold.it/1280x720">
+				      </div>
 				    </div>
 				</div>
 			</div>
