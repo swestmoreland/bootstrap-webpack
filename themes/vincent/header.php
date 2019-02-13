@@ -8,14 +8,17 @@
     <title><?php echo get_bloginfo( 'name' ); ?></title>
   </head>
   <body> 
-    <div class="conatiner-fluid">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
-          <?php
-          $custom_logo_id = get_theme_mod( 'custom_logo' );
-          $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-          echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
-          ?>
+        <div class="site-logo">
+          <div class="logo">
+            <?php
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+            echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
+            ?>
+            
+          </div>
         </div>
         <div class="col-md-9">
           <?php wp_nav_menu( array( '

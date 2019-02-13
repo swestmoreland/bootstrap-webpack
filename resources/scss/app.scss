@@ -14,6 +14,27 @@
 //swiper
 @import "../../node_modules/swiper/dist/css/swiper"; 
 
+section {
+    @include make-row();
+}
+
+.site-logo{
+	@include media-breakpoint-up(sm) {
+        @include make-col(3);
+        padding: 20px;
+        
+    }
+    @include media-breakpoint-down(sm) {
+        // Smaller than md: 768px
+        @include make-col(12);
+        .logo{
+        	width: 20%;
+        	margin-left: auto;
+        	margin-right: auto;
+        }
+	}
+}
+
 .menu{
 	@extend .nav; 
 	@extend .justify-content-end;		
@@ -33,7 +54,8 @@
 
 .swiper-container {
   width: 100%;
-  height: 500px;
+  height: auto;
+  max-height: 700px;
 }
 .swiper-slide {
   text-align: center;
@@ -52,4 +74,10 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+footer{
+	.footer-logo{
+		@extend .p-4;
+	}
 }
