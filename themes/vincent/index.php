@@ -108,7 +108,7 @@
 	</section><!-- 6salepoints -->
 </div>
 <div class="container-fluid">
-	<section><!-- cover -->
+	<section><!-- ofertas -->
 
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
@@ -120,7 +120,35 @@
 		</div>
 
 
-	</section> <!-- cover -->
+	</section> <!-- ofertas -->
+</div>
+<div class="container">
+	<section><!-- parterns -->
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h1>Distribuimos y trabajamos junto con</h1>
+			<div class="row">
+				<div class="col-md-2">
+					<img class="img-fluid" src="http://placehold.it/200x100">
+				</div>
+				<div class="col-md-2">
+					<img class="img-fluid" src="http://placehold.it/200x100">
+				</div>
+				<div class="col-md-2">
+					<img class="img-fluid" src="http://placehold.it/200x100">
+				</div>
+				<div class="col-md-2">
+					<img class="img-fluid" src="http://placehold.it/200x100">
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h1>Han confiado en nosotros</h1>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h1>Partners</h1>
+		</div>
+	</section> <!-- parterns -->
 </div>	
 
 <?php get_footer(); ?>
