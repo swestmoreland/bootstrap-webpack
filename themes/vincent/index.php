@@ -123,6 +123,25 @@
 	</section> <!-- ofertas -->
 </div>
 <div class="container">
+	<section> <!-- noticias -->
+		<h2>Noticias</h2>
+		<div class="noticias">
+			<ul>
+			<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+			 
+			<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+			 
+			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+			 
+			<li><?php the_excerpt(__('(more…)')); ?></li>
+			 
+			<?php 
+			endwhile;
+			wp_reset_postdata();
+			?>
+			</ul>
+		</div>
+	</section> <!-- noticias -->
 	<section><!-- parterns -->
 		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
@@ -133,7 +152,7 @@
 				        'post_mime_type' => 'image',
 				        'orderby' => 'post_date',
 				        'order' => 'desc',
-				        'posts_per_page' => '300',
+				        'posts_per_page' => '3000',
 				        'post_status'    => 'inherit'
 				         );
 
