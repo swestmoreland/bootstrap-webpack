@@ -1,5 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 // Variables
 @import 'variables';
@@ -97,12 +99,68 @@ section {
 footer{
 	.footer-logo{
 		@extend .p-4;
+		@extend .d-block;
+		@extend .mx-auto;
+	}
+	.bottom-text{
+		color: $gray-500;
+		width: 100%;
+	}
+	.footer-company-about{
+		@extend .p-2;
+		@extend .text-center;
+		color: $gray-600;
+	}
+	.footer-center{
+		.footer-contact-pill{
+			@extend .d-block;
+			@extend .p-2;
+			@extend .px-4;
+			i{
+				
+				background-color: $gray-800;
+				color: $body-bg;
+				font-size: 16px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 42px;
+				vertical-align: middle;
+				width: 38px;
+				height: 38px;
+			}
+			p{
+				display: inline-block;
+				color: $gray-800;
+				font-weight: bold;
+				vertical-align: middle;
+				margin: 0;
+				span{
+					display: block;
+					font-weight: normal;
+					font-size: 14px;
+					line-height: 2;
+				}
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 .flags{
 	@extend .mx-auto;
 	width: auto;
 	max-width: 230px;
+}
+.proud-to-be{
+	@extend .d-block;
+	@extend .mx-auto;
+	width: auto;
+	max-width: 100px;
 }
 
 .sale-point{
@@ -136,4 +194,9 @@ footer{
 		width: 100%;
 		max-width: 100px;
 	}
+}
+.fancy-font{
+	width: 100%;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2.3rem;
 }
