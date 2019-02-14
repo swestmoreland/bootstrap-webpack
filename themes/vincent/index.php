@@ -124,29 +124,80 @@
 </div>
 <div class="container">
 	<section><!-- parterns -->
-		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
 			<div class="row">
-				<div class="col-md-2">
-					<img class="img-fluid" src="http://placehold.it/200x100">
-				</div>
-				<div class="col-md-2">
-					<img class="img-fluid" src="http://placehold.it/200x100">
-				</div>
-				<div class="col-md-2">
-					<img class="img-fluid" src="http://placehold.it/200x100">
-				</div>
-				<div class="col-md-2">
-					<img class="img-fluid" src="http://placehold.it/200x100">
-				</div>
+				<?
+				$args = array(
+				        'post_type' => 'attachment',
+				        'post_mime_type' => 'image',
+				        'orderby' => 'post_date',
+				        'order' => 'desc',
+				        'posts_per_page' => '300',
+				        'post_status'    => 'inherit'
+				         );
+
+				$loop = new WP_Query( $args );
+
+				while ( $loop->have_posts() ) : $loop->the_post();
+					$category = get_the_category()[0]->slug; 
+					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+					if($category == "close-partners"){
+						?>
+						<div class="col-md-2">
+							<img class="img-fluid" src="<?php echo $image[0]?>">
+						</div>						
+						<?
+					}
+
+				endwhile;
+				?>
 				
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="brands">
 			<h1>Han confiado en nosotros</h1>
+			<div class="row">
+				<?
+				$loop->rewind_posts(); 
+
+				while ( $loop->have_posts() ) : $loop->the_post();
+					$category = get_the_category()[0]->slug; 
+					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+					if($category == "clientes"){
+						?>
+						<div class="col-md-2">
+							<img class="img-fluid" src="<?php echo $image[0]?>">
+						</div>						
+						<?
+					}
+
+				endwhile;
+				?>
+				
+			</div>			
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="brands">
 			<h1>Partners</h1>
+			<div class="row">
+				<?
+				$loop->rewind_posts(); 
+
+				while ( $loop->have_posts() ) : $loop->the_post();
+					$category = get_the_category()[0]->slug; 
+					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+					if($category == "partners"){
+						?>
+						<div class="col-md-2">
+							<img class="img-fluid" src="<?php echo $image[0]?>">
+						</div>						
+						<?
+					}
+
+				endwhile;
+				?>
+				
+			</div>
 		</div>
 	</section> <!-- parterns -->
 </div>	

@@ -163,6 +163,12 @@ footer{
 	width: auto;
 	max-width: 100px;
 }
+.brands{
+	@include make-col(12);
+	h1{
+		font-size: 15px;
+	}
+}
 
 .sale-point{
 	@extend .px-4;
