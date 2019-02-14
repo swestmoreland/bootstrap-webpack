@@ -100,3 +100,36 @@ footer{
 	width: auto;
 	max-width: 230px;
 }
+
+.sale-point{
+	@extend .px-4;
+	@include media-breakpoint-up(sm) {
+
+	    @include make-col(4);
+	    .icon{
+	    	@include make-col(12)
+	    	height: 100px;
+	    }
+	    .sale-text{
+	    	@include make-col(12)
+	    	text-align: center;
+	    }
+        
+    }
+    @include media-breakpoint-down(sm) {
+        // Smaller than md: 768px
+        @include make-col(12);
+	    .icon{
+	    	@include make-col(3)
+	    }
+	    .sale-text{
+	    	@include make-col(9)
+	    	text-align: left;
+	    	
+	    }
+	}
+	.img-fluid{
+		width: 100%;
+		max-width: 100px;
+	}
+}
