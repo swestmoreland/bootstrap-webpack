@@ -107,5 +107,20 @@
 		</div>
 	</section><!-- 6salepoints -->
 </div>
+<div class="container-fluid">
+	<section><!-- cover -->
+
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide">
+		      	<img class="d-block d-md-none" src="http://placehold.it/700x1280">
+		      	<img class="d-none d-md-block" src="http://placehold.it/1280x700">
+		      </div>
+		    </div>
+		</div>
+
+
+	</section> <!-- cover -->
+</div>	
 
 <?php get_footer(); ?>

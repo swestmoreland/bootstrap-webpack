@@ -14,6 +14,10 @@
 //swiper
 @import "../../node_modules/swiper/dist/css/swiper"; 
 
+body{
+	margin-top: -32px;
+}
+
 section {
 	@extend .pt-2;
 	@extend .pb-2;
