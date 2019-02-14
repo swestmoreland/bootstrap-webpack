@@ -20,11 +20,11 @@
             
           </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-xs-12 col-sm-12 col-md-9">
           <?php wp_nav_menu( array( '
             theme_location' => 'header-menu',          
             'container'      => '',
-            'menu_class'     => 'menu' ) ); 
+            'menu_class'     => 'menu flex-md-row flex-xs-column flex-sm-column' ) ); 
             ?>
         </div>
       </div>

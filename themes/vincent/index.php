@@ -13,6 +13,12 @@
 
 
 	</div> <!-- /.row -->
+	<section>
+		<div class="flags">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/flags.png">
+			
+		</div>
+	</section>
 </div>
 
 <?php get_footer(); ?>
