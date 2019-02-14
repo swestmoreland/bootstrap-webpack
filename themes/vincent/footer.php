@@ -1,7 +1,7 @@
 
 <footer class="container-fluid">
 		<div class="row">
-			<p class="d-block fancy-font text-center"> Confianza y calidad europea a su alcance </p>
+			<p class="d-block fancy-font text-center px-3"> Confianza y calidad europea a su alcance </p>
 		</div>
 		<section><!-- flags -->
 			<div class="proud-to-be">
