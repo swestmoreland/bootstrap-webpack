@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-	<section>
+	<section id="manutenciones">
 		
 		<div class="col-sm-12 col-md-12">
 			<h1>Nuestros Servicios</h1>
@@ -8,7 +8,7 @@
 		<div class="col-sm-12 col-md-12">
 			<div class="row">
 				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-					<div class="col-sm-12 col-md-6">
+					<div class="col-sm-12 col-md-3">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="p-2">
 								<img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>"/>
