@@ -28,6 +28,7 @@ section {
     h1{
     	@extend .text-center;
     	@extend .d-block;
+    	@extend .px-2;
     	width: 100%;
     	color: $gray-800;
     }
@@ -174,8 +175,8 @@ footer{
 	@include make-col(12);
 	.row{
 		@include media-breakpoint-up(sm) {
-			padding-left: 20%;
-			padding-right: 20%;
+			padding-left: 15%;
+			padding-right: 15%;
 	    }
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
@@ -195,6 +196,9 @@ footer{
 	        @include make-col(4);
 	    }		
 	}
+	h1{
+    	font-size: 1.5rem;
+    }
 }
 
 .sale-point{

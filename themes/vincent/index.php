@@ -113,7 +113,7 @@
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
-		      	<img class="d-block d-md-none" src="http://placehold.it/700x1280">
+		      	<img class="d-block d-md-none" src="http://placehold.it/700x700">
 		      	<img class="d-none d-md-block" src="http://placehold.it/1280x700">
 		      </div>
 		    </div>
