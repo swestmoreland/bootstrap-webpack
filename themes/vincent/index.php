@@ -146,6 +146,14 @@
 		wp_reset_postdata();
 		?>
 	</section> <!-- noticias -->
+</div>
+<div class="container-fluid">
+	<section><!-- productos con sello -->
+		<h1>Productos Con Sello</h1>
+		<div class="row">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">
+		</div>
+	</section><!-- productos con sello -->
 	<section><!-- parterns -->
 		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
@@ -167,7 +175,7 @@
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 					if($category == "close-partners"){
 						?>
-						<div class="col-md-2">
+						<div class="icon">
 							<img class="img-fluid" src="<?php echo $image[0]?>">
 						</div>						
 						<?
@@ -189,7 +197,7 @@
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 					if($category == "clientes"){
 						?>
-						<div class="col-md-2">
+						<div class="icon">
 							<img class="img-fluid" src="<?php echo $image[0]?>">
 						</div>						
 						<?
@@ -211,7 +219,7 @@
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 					if($category == "partners"){
 						?>
-						<div class="col-md-2">
+						<div class="icon">
 							<img class="img-fluid" src="<?php echo $image[0]?>">
 						</div>						
 						<?
