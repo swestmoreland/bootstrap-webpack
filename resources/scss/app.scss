@@ -27,8 +27,9 @@ section {
     @include make-row();
     h1{
     	@extend .text-center;
-    	color: $gray-900;
-    	font-size: 1.9rem;
+    	@extend .d-block;
+    	width: 100%;
+    	color: $gray-800;
     }
 }
 
@@ -42,7 +43,7 @@ section {
         // Smaller than md: 768px
         @include make-col(12);
         .logo{
-        	width: 20%;
+        	width: 25%;
         	margin-left: auto;
         	margin-right: auto;
         }
@@ -81,7 +82,7 @@ section {
 .swiper-container {
   width: 100%;
   height: auto;
-  max-height: 700px;
+  //max-height: 700px;
 }
 .swiper-slide {
   text-align: center;
@@ -170,10 +171,7 @@ footer{
 }
 .brands{
 	@include make-col(12);
-	h1{
-		font-size: 1.7rem;
-		color: $gray-600;
-	}
+
 }
 
 .sale-point{
@@ -213,4 +211,37 @@ footer{
 	width: 100%;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 2.3rem;
+}
+#manutenciones{
+	p{
+		@extend .text-center;
+	}
+}
+.blog-single-resumido{
+	@include media-breakpoint-up(sm) {
+        @include make-col(4);
+    }
+    @include media-breakpoint-down(sm) {
+        // Smaller than md: 768px
+        @include make-col(12);
+    }
+    img {
+		object-fit: cover;
+		width:100%;
+		height:230px;
+	}
+	h2{
+		font-size: $font-size-base*1.4;
+		max-height: 100px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	p{
+		@extend .text-justify;
+		max-height: 100px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+
 }

@@ -124,23 +124,27 @@
 </div>
 <div class="container">
 	<section> <!-- noticias -->
-		<h2>Noticias</h2>
-		<div class="noticias">
-			<ul>
-			<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
-			 
-			<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-			 
-			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-			 
-			<li><?php the_excerpt(__('(more…)')); ?></li>
-			 
-			<?php 
-			endwhile;
-			wp_reset_postdata();
-			?>
-			</ul>
-		</div>
+		<h1>Noticias</h1>
+		<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+		 
+		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+		 
+			<div class="blog-single-resumido">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="p-2">
+						<img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>"/>
+					</div>
+				<?php endif; ?>
+				<div class="p-2">
+					<h2><? the_title() ;?></h2>
+					<? the_excerpt(__('(more…)')); ?>
+				</div>
+			</div>
+		 
+		<?php 
+		endwhile;
+		wp_reset_postdata();
+		?>
 	</section> <!-- noticias -->
 	<section><!-- parterns -->
 		<div class="brands">
