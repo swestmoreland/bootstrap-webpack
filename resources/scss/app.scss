@@ -173,16 +173,26 @@ footer{
 .brands{
 	@include make-col(12);
 	.row{
-		@extend .px-4;
+		@include media-breakpoint-up(sm) {
+			padding-left: 20%;
+			padding-right: 20%;
+	    }
+	    @include media-breakpoint-down(sm) {
+	        // Smaller than md: 768px
+	        padding-left: 10%;
+			padding-right: 10%;
+	    }	
+
 	}
 	.icon{
 		@extend .p-2;
+		@extend .px-3;
 		@include media-breakpoint-up(sm) {
 	        @include make-col(2);
 	    }
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
-	        @include make-col(2);
+	        @include make-col(4);
 	    }		
 	}
 }
