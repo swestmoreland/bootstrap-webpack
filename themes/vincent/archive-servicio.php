@@ -1,26 +1,32 @@
 <?php get_header(); ?>
-	<div class="row">
-		<h1>Nuestros Servicios</h1>
-	</div>
-	<div class="row">
-
-		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			<div class="col-sm-6">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="row">
-						<img src="<?php the_post_thumbnail_url(); ?>"/>
+<div class="container">
+	<section>
+		
+		<div class="col-sm-12 col-md-12">
+			<h1>Nuestros Servicios</h1>
+		</div>
+		<div class="col-sm-12 col-md-12">
+			<div class="row">
+				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+					<div class="col-sm-12 col-md-6">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="p-2">
+								<img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>"/>
+							</div>
+						<?php endif; ?>
+						<div class="p-2">
+							<h2><? the_title() ;?></h2>
+							<p><? the_excerpt() ;?></p>
+						</div>
+						
 					</div>
-				<?php endif; ?>
-				<div class="row">
-					<h2><? the_title() ;?></h2>
-					<p><? the_excerpt() ;?></p>
-				</div>
-				
+				<?php endwhile; endif; ?>
 			</div>
-		<?php endwhile; endif; ?>
 
 
 
-	</div> <!-- /.row -->
+		</div> <!-- /.row -->
 
+	</section>
+</div>
 <?php get_footer(); ?>
