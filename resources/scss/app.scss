@@ -23,7 +23,7 @@ body{
 
 section {
 	@extend .pt-2;
-	@extend .pb-2;
+	@extend .pb-3;
     @include make-row();
     h1{
     	@extend .text-center;
@@ -37,6 +37,7 @@ section {
 	@include media-breakpoint-up(sm) {
         @include make-col(3);
         padding: 20px;
+        max-width: 210px;	
         
     }
     @include media-breakpoint-down(sm) {
@@ -218,6 +219,7 @@ footer{
 	}
 }
 .blog-single-resumido{
+	@extend .p-3;
 	@include media-breakpoint-up(sm) {
         @include make-col(4);
     }
@@ -231,6 +233,7 @@ footer{
 		height:230px;
 	}
 	h2{
+		@extend .pt-2;
 		font-size: $font-size-base*1.4;
 		max-height: 100px;
 		white-space: nowrap;

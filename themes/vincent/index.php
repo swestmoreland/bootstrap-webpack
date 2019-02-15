@@ -5,7 +5,7 @@
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
-		      	<img class="d-block d-md-none" src="http://placehold.it/720x1280">
+		      	<img class="d-block d-md-none" src="http://placehold.it/720x720">
 		      	<img class="d-none d-md-block" src="http://placehold.it/1280x720">
 		      </div>
 		    </div>
@@ -131,11 +131,11 @@
 		 
 			<div class="blog-single-resumido">
 				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="p-2">
+					<div class="">
 						<img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>"/>
 					</div>
 				<?php endif; ?>
-				<div class="p-2">
+				<div class="">
 					<h2><? the_title() ;?></h2>
 					<? the_excerpt(__('(more…)')); ?>
 				</div>
