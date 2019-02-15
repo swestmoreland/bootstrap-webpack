@@ -25,6 +25,11 @@ section {
 	@extend .pt-2;
 	@extend .pb-2;
     @include make-row();
+    h1{
+    	@extend .text-center;
+    	color: $gray-900;
+    	font-size: 1.9rem;
+    }
 }
 
 .site-logo{
