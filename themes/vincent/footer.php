@@ -1,5 +1,10 @@
 
 <footer class="container-fluid">
+		<section>
+			<div class="col-sm-12 col-md-8 offset-md-2">
+				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/cert.png">
+			</div>
+		</section>
 		<div class="row">
 			<p class="d-block fancy-font text-center px-3"> Confianza y calidad europea a su alcance </p>
 		</div>
