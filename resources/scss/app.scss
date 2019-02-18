@@ -30,7 +30,7 @@ section {
     	@extend .d-block;
     	@extend .px-2;
     	width: 100%;
-    	color: $gray-800;
+    	color: $vincent-blue;
     }
 }
 header{
@@ -82,12 +82,14 @@ header{
 			list-style-type: none;
 			a{
 				text-transform: uppercase;
-				font-size: $font-size-base*1.2;
+				font-size: $font-size-base*1.0;
+				font-weight: bold;
+				color:$vincent-blue;
 			}
 		}
 		.current-menu-item{
 			a{
-				color: $orange;
+				color: $vincent-orange;
 			}
 		}
 	}
