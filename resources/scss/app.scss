@@ -274,3 +274,47 @@ footer{
 	}
 
 }
+article{
+	@extend .px-3;
+	p{
+		@extend .text-justify;
+	}
+	.wp-block-image{
+		img{
+			@extend .d-block;
+			@extend .mx-auto;
+			@extend .img-fluid;
+		}
+	}
+}
+.nav-links{
+	@include make-row();
+	@extend .px-4;
+	width: 100%;
+	.nav-previous{
+		@include media-breakpoint-up(sm) {
+	        @include make-col(6);
+	        text-align: left;
+	    }
+	    @include media-breakpoint-down(sm) {
+	        // Smaller than md: 768px
+	        @include make-col(12);
+	        text-align: center;
+	    }	
+	}
+	.nav-next{
+		@include media-breakpoint-up(sm) {
+	        @include make-col(6);
+	        text-align: right;
+	    }
+	    @include media-breakpoint-down(sm) {
+	        // Smaller than md: 768px
+	        @include make-col(12);
+	        text-align: center;
+	    }
+
+	}
+	a{
+		width: 100%;
+	}
+}
