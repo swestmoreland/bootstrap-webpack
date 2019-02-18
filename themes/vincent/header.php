@@ -8,10 +8,9 @@
     <title><?php echo get_bloginfo( 'name' ); ?></title>
   </head>
   <body> 
-    <div class="container-fluid">
+    <header>
       <div class="row">
-        <a href="/">
-          <div class="site-logo">
+        <a href="/" class="site-logo">
             <div class="logo">
               <?php
               $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -20,14 +19,11 @@
               ?>
               
             </div>
-          </div>
         </a>
-        <div class="col-xs-12 col-sm-12 col-md-9">
           <?php wp_nav_menu( array( '
             theme_location' => 'header-menu',          
             'container'      => '',
-            'menu_class'     => 'menu flex-md-row flex-xs-column flex-sm-column' ) ); 
+            'menu_class'     => 'menu' ) ); 
             ?>
-        </div>
       </div>
-    </div> 
+    </header> 

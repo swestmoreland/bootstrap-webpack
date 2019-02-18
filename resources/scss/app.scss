@@ -17,7 +17,7 @@
 @import "../../node_modules/swiper/dist/css/swiper"; 
 
 body{
-	//margin-top: -32px;
+	margin-top: -32px;
 	font-family: 'Encode Sans Expanded', sans-serif;
 }
 
@@ -33,51 +33,63 @@ section {
     	color: $gray-800;
     }
 }
-
-.site-logo{
-	@include media-breakpoint-up(sm) {
-        @include make-col(3);
-        padding: 20px;
-        max-width: 210px;	
-        
-    }
-    @include media-breakpoint-down(sm) {
-        // Smaller than md: 768px
-        @include make-col(12);
-        .logo{
-        	width: 25%;
-        	margin-left: auto;
-        	margin-right: auto;
-        }
-	}
-}
-
-.menu{
-
-	@extend .nav; 
-	@extend .flex-row; 
-	@extend .justify-content-end;		
-	li{
-		@extend .nav-item;
-		a{
-			@extend .nav-link;
-			text-transform: uppercase;
-		}
-	}
-	.current-menu-item{
-		a{
-			color: $orange;
+header{
+	@extend .container-fluid;
+	.site-logo{
+		@extend .d-block;
+		@include media-breakpoint-up(sm) {
+	        @include make-col(3);
+	        padding: 20px;
+	        max-width: 210px;	
+	        
+	    }
+	    @include media-breakpoint-down(sm) {
+	        // Smaller than md: 768px
+	        @include make-col(12);
+	        .logo{
+	        	width: 25%;
+	        	margin-left: auto;
+	        	margin-right: auto;
+	        }
 		}
 	}
 
-	@include media-breakpoint-up(sm) {
-        @include make-col(3);
-        padding-top: 20px;
-        
-    }
-    @include media-breakpoint-down(sm) {
-        // Smaller than md: 768px
+	.menu{
+		@extend .pr-4;
+		@include media-breakpoint-up(sm) {
+			@include make-col(9);
+			padding-top: 2.4rem;
+		}
+		@include media-breakpoint-down(sm) {
+			@include make-col(12);
+			padding-top: 1rem;
+		}
 
+		li{
+			@extend .p-0;
+			@include media-breakpoint-up(sm) {
+				display: inline;
+				float:right;
+				margin-right:20px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 0;
+				margin:0;
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			list-style-type: none;
+			a{
+				text-transform: uppercase;
+				font-size: $font-size-base*1.2;
+			}
+		}
+		.current-menu-item{
+			a{
+				color: $orange;
+			}
+		}
 	}
 }
 
