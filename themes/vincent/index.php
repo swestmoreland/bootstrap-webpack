@@ -127,23 +127,12 @@
 		<h1>Noticias</h1>
 		<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
 		 
-		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); 
 		 
-			<div class="blog-single-resumido">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="">
-						<img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>"/>
-					</div>
-				<?php endif; ?>
-				<div class="">
-					<h2><? the_title() ;?></h2>
-					<? the_excerpt(__('(more…)')); ?>
-				</div>
-			</div>
+			get_template_part( 'template-parts/content-short', get_post_format() );
 		 
-		<?php 
-		endwhile;
-		wp_reset_postdata();
+			endwhile;
+			wp_reset_postdata();
 		?>
 	</section> <!-- noticias -->
 </div>
