@@ -245,9 +245,7 @@ footer{
 	}
 }
 .blog-single-resumido{
-	@extend .d-block;
 	@extend .p-3;
-	text-decoration: none;
 	@include media-breakpoint-up(sm) {
         @include make-col(4);
     }
@@ -293,7 +291,7 @@ article{
 	@include make-row();
 	@extend .px-4;
 	width: 100%;
-	.nav-previous{
+	.previous{
 		@include media-breakpoint-up(sm) {
 	        @include make-col(6);
 	        text-align: left;
@@ -304,7 +302,7 @@ article{
 	        text-align: center;
 	    }	
 	}
-	.nav-next{
+	.next{
 		@include media-breakpoint-up(sm) {
 	        @include make-col(6);
 	        text-align: right;

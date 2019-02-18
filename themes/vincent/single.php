@@ -2,6 +2,7 @@
 <div class="container">
 	<section> <!-- noticias -->
 		<h1>Noticias</h1>
+
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
@@ -15,31 +16,15 @@
 				the_post_navigation( array(
 					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'vincent' ),
 				) );
-			} elseif ( is_singular( 'post' ) ) {
-				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . 
-					__( '', 'vincent' ) . 
-					'</span> ' .
-					'<span class="screen-reader-text">' .
-					 __( 'Siguiente post:', 'vincent' ) . 
-					'</span> ' .
-					'<span class="post-title">%title &nbsp;
-						<i class="fas fa-arrow-circle-right"></i>
-					</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' .
-					__( '<i class="fas fa-arrow-circle-left"></i>&nbsp;', 'vincent' ) . 
-					'</span> ' .
-					'<span class="screen-reader-text">' . 
-					__( 'Anterior post:', 'vincent' ) . 
-					'</span> ' .
-					'<span class="post-title">%title</span>',
-				) );
 			}
 
 			// End of the loop.
 		endwhile;
 		?>
+		<div class="nav-links">
+			<div class="previous"><?php previous_post_link(); ?> </div>
+			<div class="next"><?php next_post_link(); ?> </div>	
+		</div>
 	</section> <!-- noticias -->
 </div>
 <?php get_footer(); ?>
