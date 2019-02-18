@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
 	<section> <!-- noticias -->
-		<h1>Noticias</h1>
 
 		<?php
 		// Start the loop.

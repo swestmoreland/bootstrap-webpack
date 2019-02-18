@@ -23,6 +23,7 @@
           <?php wp_nav_menu( array( '
             theme_location' => 'header-menu',          
             'container'      => '',
+            'menu_id'      => 'collapseExample',
             'menu_class'     => 'menu' ) ); 
             ?>
       </div>

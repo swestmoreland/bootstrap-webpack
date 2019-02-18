@@ -46,15 +46,17 @@ header{
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
 	        @include make-col(12);
+	        min-width: 100px;	
 	        .logo{
 	        	width: 25%;
+	        	min-width: 100px;	
 	        	margin-left: auto;
 	        	margin-right: auto;
 	        }
 		}
 	}
 
-	.menu{
+	.menu {
 		@extend .pr-4;
 		@include media-breakpoint-up(sm) {
 			@include make-col(9);
@@ -67,10 +69,14 @@ header{
 
 		li{
 			@extend .p-0;
+			list-style-type: none;
 			@include media-breakpoint-up(sm) {
 				display: inline;
 				float:right;
-				margin-right:20px;
+				margin-right:20px; 
+				a{
+					padding-bottom: 10px;
+				}
 			}
 			@include media-breakpoint-down(sm) {
 				padding: 0;
@@ -79,17 +85,34 @@ header{
 				width: 100%;
 				text-align: center;
 			}
-			list-style-type: none;
 			a{
+				text-decoration: none;
 				text-transform: uppercase;
 				font-size: $font-size-base*1.0;
 				font-weight: bold;
 				color:$vincent-blue;
+				&:hover{
+					@include media-breakpoint-up(md) {
+						border-bottom: 4px solid;
+					}
+					@include media-breakpoint-down(md) {
+						border-bottom: none;
+					}
+				}
 			}
+
 		}
 		.current-menu-item{
 			a{
 				color: $vincent-orange;
+				&:hover{
+					@include media-breakpoint-up(md) {
+						border-bottom: 4px solid;
+					}
+					@include media-breakpoint-down(md) {
+						border-bottom: none;
+					}
+				}
 			}
 		}
 	}
@@ -254,9 +277,8 @@ footer{
 	font-size: 2.3rem;
 }
 #manutenciones{
-	p{
+
 		@extend .text-center;
-	}
 }
 .blog-single-resumido{
 	@extend .p-3;
@@ -291,11 +313,14 @@ footer{
 		max-height: 100px;
 		overflow: hidden;
 		text-overflow:ellipsis;
+		color: $gray-600;
 	}
 
 }
 article{
+	@extend .mx-auto;
 	@extend .px-3;
+	max-width: 720px;
 	p{
 		@extend .text-justify;
 	}
@@ -304,6 +329,11 @@ article{
 			@extend .d-block;
 			@extend .mx-auto;
 			@extend .img-fluid;
+		}
+	}
+	.entry-title{
+		a{
+			color:$gray-700;
 		}
 	}
 }
