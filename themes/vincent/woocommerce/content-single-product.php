@@ -22,12 +22,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @hooked wc_print_notices - 10
  */
-do_action( 'woocommerce_before_single_product' );
-
-if ( post_password_required() ) {
-	echo get_the_password_form(); // WPCS: XSS ok.
-	return;
-}
+//do_action( 'woocommerce_before_single_product' );
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
@@ -39,7 +34,7 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
-		do_action( 'woocommerce_before_single_product_summary' );
+		//do_action( 'woocommerce_before_single_product_summary' );
 	?>
 	<div class="summary entry-summary"> <!-- titulo hasta category -->
 		<?php
@@ -50,7 +45,7 @@ if ( post_password_required() ) {
 			 * @hooked woocommerce_template_single_rating - 10
 			 * @hooked woocommerce_template_single_price - 10
 			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_add_to_cart - 90
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
@@ -60,9 +55,9 @@ if ( post_password_required() ) {
 	</div><!-- titulo hasta category -->
 
 	<!-- before product descirption -->
-	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
+	<!-- <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
 
-    <img class="img-fluid" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+    <img class="img-fluid" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"> -->
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.

@@ -23,7 +23,9 @@ body{
 	margin-top: -32px;
 	font-family: 'Encode Sans Expanded', sans-serif;
 }
-
+ul{
+	@extend .p-2;
+}
 section {
 	@extend .pt-2;
 	@extend .pb-3;
@@ -383,8 +385,14 @@ article{
 		@extend .text-center;	
 	}
 	ul{
+		@extend .p-2;
 		li{
 			list-style-type: none;
+		}
+		&.tabs{//esocnder listado de producto solito
+			&.wc-tabs{
+				@extend .d-none;
+			}
 		}
 	}
 	a,h2{
@@ -398,8 +406,11 @@ article{
 
 	}
 	h2{
+		@extend .d-block;
+		width:100%;
 		text-transform: uppercase;
 		font-size: $font-size-base*1.3;
+
 	}
 	.button{
 		&.product_type_simple{
@@ -413,7 +424,7 @@ article{
 	}
 	#bloques,.related{
 		ul{
-			@include make-row();
+			//@include make-row();
 			width: 100%;
 			li{
 				@extend .p-2;
