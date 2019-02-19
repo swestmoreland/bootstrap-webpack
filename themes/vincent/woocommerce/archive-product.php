@@ -14,8 +14,8 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 ?>
 
-<div class="container">
-<section>
+<div class="container" id="woocommerce">
+<section> <!-- ENCABEZADO -->
 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 	<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 <?php endif; ?>
@@ -31,20 +31,9 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 	
-</section>
-
-<section class="woocommerce-products-header">
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</section>
-<?php
+</section> <!-- ENCABEZADO -->
+<section id="bloques"> <!-- CATEGORIAS -->
+<?php 
 if ( woocommerce_product_loop() ) {
 
 	/**
@@ -54,7 +43,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
-	do_action( 'woocommerce_before_shop_loop' );
+	//do_action( 'woocommerce_before_shop_loop' );
 
 	woocommerce_product_loop_start();
 
@@ -89,12 +78,29 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
+?>	
+</section> <!-- CATEGORIAS -->
+<section class="woocommerce-products-header"> <!-- PRODUCTOS -->
+	<?php
+	/**
+	 * Hook: woocommerce_archive_description.
+	 *
+	 * @hooked woocommerce_taxonomy_archive_description - 10
+	 * @hooked woocommerce_product_archive_description - 10
+	 */
+	do_action( 'woocommerce_archive_description' );
+	?>
+</section> <!-- PRODUCTOS -->
+
+<?php
+
 
 /**
  * Hook: woocommerce_after_main_content.
  *
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
+
 do_action( 'woocommerce_after_main_content' );
 
 /**
@@ -102,7 +108,7 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action( 'woocommerce_sidebar' );
+//do_action( 'woocommerce_sidebar' );
 ?>
 
 </div>

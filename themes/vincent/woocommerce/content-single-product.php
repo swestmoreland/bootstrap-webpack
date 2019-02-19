@@ -29,6 +29,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 
 	<?php
@@ -40,8 +41,7 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-
-	<div class="summary entry-summary">
+	<div class="summary entry-summary"> <!-- titulo hasta category -->
 		<?php
 			/**
 			 * Hook: woocommerce_single_product_summary.
@@ -57,8 +57,9 @@ if ( post_password_required() ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-	</div>
+	</div><!-- titulo hasta category -->
 
+	<!-- before product descirption -->
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
@@ -69,6 +70,7 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	<!-- after product content -->
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
