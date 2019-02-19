@@ -25,50 +25,29 @@ defined( 'ABSPATH' ) || exit;
 //do_action( 'woocommerce_before_single_product' );
 ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
+<section class="product-singleton" id="product-<?php the_ID(); ?>">
 
-	<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		//do_action( 'woocommerce_before_single_product_summary' );
-	?>
-	<div class="summary entry-summary"> <!-- titulo hasta category -->
+	<h1>
+		<?php the_title(); ?>
+	</h1>
+	<div class="product-image">
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
+    	<img class="img-fluid" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">	
+
 		<?php
-			/**
-			 * Hook: woocommerce_single_product_summary.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 90
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
-			 */
-			do_action( 'woocommerce_single_product_summary' );
+		    global $product;
+
+		    $attachment_ids = $product->get_gallery_attachment_ids();
+
+		    foreach( $attachment_ids as $attachment_id ) {
+		        echo $image_link = wp_get_attachment_url( $attachment_id );
+		    }
 		?>
-	</div><!-- titulo hasta category -->
-
-	<!-- before product descirption -->
-	<!-- <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
-
-    <img class="img-fluid" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"> -->
-	<?php
-		/**
-		 * Hook: woocommerce_after_single_product_summary.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
-	<!-- after product content -->
-</div>
+	</div>
+	<div class="product-description">
+		<h2>Descripción</h2>
+		<?php the_content();?>
+	</div>
+</section>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

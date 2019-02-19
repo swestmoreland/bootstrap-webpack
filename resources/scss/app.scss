@@ -24,7 +24,7 @@ body{
 	font-family: 'Encode Sans Expanded', sans-serif;
 }
 ul{
-	@extend .p-2;
+	@extend .px-2;
 }
 section {
 	@extend .pt-2;
@@ -62,7 +62,7 @@ header{
 	}
 
 	.menu {
-		@extend .pr-4;
+		@extend .px-4;
 		@include media-breakpoint-up(sm) {
 			@include make-col(9);
 			padding-top: 2.4rem;
@@ -424,7 +424,7 @@ article{
 	}
 	#bloques,.related{
 		ul{
-			//@include make-row();
+			@include make-row();
 			width: 100%;
 			li{
 				@extend .p-2;
@@ -449,7 +449,27 @@ article{
 			
 		}
 	}
+	.product-singleton{
+		.product-image{
+			@include make-col-ready();
+			@include media-breakpoint-up(sm) {
+		        @include make-col(4);
+		    }
+			@include media-breakpoint-down(sm) {
+		        @include make-col(12);
+		    }	
+		}
+		.product-description{
+			@include make-col-ready();
+			@include media-breakpoint-up(sm) {
+		        @include make-col(8);
+		    }
+			@include media-breakpoint-down(sm) {
+		        @include make-col(12);
+		    }	
+		}
+	}
 	.woocommerce-breadcrumb{
-		@extend .px-4;
+		@extend .px-3;
 	}
 }
