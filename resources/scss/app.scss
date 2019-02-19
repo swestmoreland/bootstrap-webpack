@@ -438,4 +438,7 @@ article{
 			
 		}
 	}
+	.woocommerce-breadcrumb{
+		@extend .px-4;
+	}
 }

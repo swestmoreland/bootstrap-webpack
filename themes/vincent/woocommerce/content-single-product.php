@@ -60,6 +60,9 @@ if ( post_password_required() ) {
 	</div><!-- titulo hasta category -->
 
 	<!-- before product descirption -->
+	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
+
+    <img class="img-fluid" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
