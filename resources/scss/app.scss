@@ -126,7 +126,7 @@ header{
 .swiper-container {
   width: 100%;
   height: auto;
-  //max-height: 700px;
+  min-height: 300px;
 }
 .swiper-slide {
   text-align: center;
@@ -467,6 +467,33 @@ article{
 			@include media-breakpoint-down(sm) {
 		        @include make-col(12);
 		    }	
+		}
+		.swiper-container {
+			width: 100%;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+		.gallery-top {
+			min-height: 300px;
+			width: 100%;
+		}
+		.gallery-thumbs {
+			height: 200px;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+		.gallery-thumbs .swiper-slide {
+			width: 25%;
+			height: 100%;
+			opacity: 0.4;
+		}
+		.gallery-thumbs .swiper-slide-thumb-active {
+			opacity: 1;
 		}
 	}
 	.woocommerce-breadcrumb{
