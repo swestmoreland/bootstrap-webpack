@@ -368,3 +368,9 @@ article{
 		width: 100%;
 	}
 }
+.wp-post-image{
+	@extend .img-fluid;
+}
+.woocommerce-product-gallery,.woocommerce-result-count,.woocommerce-ordering{
+	@extend .d-none;
+}
