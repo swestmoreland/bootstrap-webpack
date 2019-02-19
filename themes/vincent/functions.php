@@ -28,4 +28,16 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
+function custom_woocommerce_product_add_to_cart_text( $text ) {
+ 
+    if( 'Read more' == $text ) {
+        $text = __( 'Leer más', 'woocommerce' );
+    }
+ 
+    return $text;
+     
+}
+add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 add_editor_style( 'css/app.css' );

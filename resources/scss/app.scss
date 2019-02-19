@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
@@ -8,6 +9,8 @@
 
 // Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap"; 
+//@import "../../plugins/woocommerce/assets/css/woocommerce.scss"; 
+@import "../../plugins/woocommerce/assets/css/woocommerce-layout.scss"; 
 
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
@@ -373,4 +376,35 @@ article{
 }
 .woocommerce-product-gallery,.woocommerce-result-count,.woocommerce-ordering{
 	@extend .d-none;
+}
+
+.woocommerce{
+	.woocommerce-loop-product__title{
+		@extend .text-center;	
+	}
+	ul{
+		li{
+			list-style-type: none;
+		}
+	}
+	a,h2{
+		font-family: 'Roboto', sans-serif;
+		text-decoration: none;
+		color: $gray-800;
+		&:hover{
+			text-decoration: none;
+			color: $gray-600;
+		}
+
+	}
+	.button{
+		&.product_type_simple{
+			@extend .d-block;
+			@extend .text-center;
+			@extend .btn;
+			@extend .btn-outline-secondary;
+
+			color:$gray-600;
+		}
+	}
 }
