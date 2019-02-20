@@ -47,40 +47,44 @@ function lc_custom_post_servicio() {
   register_post_type( 'servicio', $args);
 }
  
-// Hook <strong>lc_custom_post_servicio_reviews()</strong> to the init action hook
-add_action( 'init', 'lc_custom_post_servicio_reviews' );
+// Hook <strong>lc_custom_post_oferta()</strong> to the init action hook
+add_action( 'init', 'lc_custom_post_oferta' );
  
-// The custom function to register a servicio review post type
-function lc_custom_post_servicio_reviews() {
+// The custom function to register a servicio post type
+function lc_custom_post_oferta() {
  
   // Set the labels, this variable is used in the $args array
   $labels = array(
-    'name'               => __( 'Servicio Reviews' ),
-    'singular_name'      => __( 'Servicio Review' ),
-    'add_new'            => __( 'Add New Servicio Review' ),
-    'add_new_item'       => __( 'Add New Servicio Review' ),
-    'edit_item'          => __( 'Edit Servicio Review' ),
-    'new_item'           => __( 'New Servicio Review' ),
-    'all_items'          => __( 'All Servicio Reviews' ),
-    'view_item'          => __( 'View Servicio Reviews' ),
-    'search_items'       => __( 'Search Servicio Reviews' )
+    'name'               => __( 'Ofertas' ),
+    'singular_name'      => __( 'Oferta' ),
+    'add_new'            => __( 'Add New Oferta' ),
+    'add_new_item'       => __( 'Add New Oferta' ),
+    'edit_item'          => __( 'Edit Oferta' ),
+    'new_item'           => __( 'New Oferta' ),
+    'all_items'          => __( 'All Ofertas' ),
+    'view_item'          => __( 'View Oferta' ),
+    'search_items'       => __( 'Search Ofertas' ),
+    'featured_image'     => 'Poster',
+    'set_featured_image' => 'Add Poster'
   );
  
   // The arguments for our post type, to be entered as parameter 2 of register_post_type()
   $args = array(
     'labels'            => $labels,
-    'description'       => 'Holds our servicio reviews',
+    'description'       => 'Holds our ofertas and oferta specific data',
     'public'            => true,
-    'menu_position'     => 6,
-    'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
+    'menu_position'     => 5,
+    'supports'          => array( 'title', 'thumbnail', 'excerpt', 'editor','custom-fields' ),
     'has_archive'       => true,
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,
-    'has_archive'       => true
+    'has_archive'       => true,
+    'rewrite' => array('slug' => 'ofertas'),
+    'query_var'         => 'ofertin'
   );
  
   // Call the actual WordPress function
   // Parameter 1 is a name for the post type
-  // $args array goes in parameter 2.
-  register_post_type( 'review', $args);
+  // Parameter 2 is the $args array
+  register_post_type( 'oferta', $args);
 }
