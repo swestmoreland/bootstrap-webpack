@@ -20,11 +20,58 @@
 		</div> 
 
 
-		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria">
+		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria" >
 			<h2>
 				Galería soluciones fotovoltaicas
 			</h2>
-			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-empresas.jpg">
+			<?
+			$args = array(
+			        'post_type' => 'attachment',
+			        'post_mime_type' => 'image',
+			        'orderby' => 'post_date',
+			        'order' => 'desc',
+			        'posts_per_page' => '3000',
+			        'post_status'    => 'inherit',
+			        'category_name'=>'empresas',
+			         );
+
+			$loop = new WP_Query( $args );
+			?>				
+			<div class="row sol-gallery">
+				<div class="swiper-container gallery-top">
+				<div class="swiper-wrapper">
+				    <?php
+						while ( $loop->have_posts() ) : $loop->the_post();
+							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+								?>
+								<div class="swiper-slide" style="background-image:url(<?php echo $image[0]; ?>)">
+								</div>
+								<?php
+
+						endwhile;				    
+					?>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+				</div>
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+					<?php
+						rewind_posts();
+						while ( $loop->have_posts() ) : $loop->the_post();
+							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+								?>
+								<div class="swiper-slide" style="background-image:url(<?php echo $image[0]; ?>)">
+									
+								</div>
+								<?php
+
+						endwhile;	
+					?>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section>
@@ -51,7 +98,7 @@
 			<h2>
 				Galería soluciones térmicas
 			</h2>
-			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-empresas-term.png">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-empresas.png">
 		</div>
 	</section>
 
