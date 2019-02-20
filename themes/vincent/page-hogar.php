@@ -35,15 +35,13 @@
 			<img class="img-fluid d-none d-xs-none d-sm-none d-md-block" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-banner.png">
 			<img class="img-fluid d-block d-md-none mx-auto" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-banner-mob.png">
 		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-5 offset-md-1">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-1.png">
-				<p>Sistema fotovoltaico en smarthouse</p>
-			</div> 
-			<div class="col-xs-12 col-sm-12 col-md-5">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-2.png">
-				<p>Conexión del sistema fotovoltaico 1 fase</p>
-			</div> 
+		<div class="col-xs-12 col-sm-12 col-md-5 offset-md-1">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-1.png">
+			<p>Sistema fotovoltaico en smarthouse</p>
+		</div> 
+		<div class="col-xs-12 col-sm-12 col-md-5">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-2.png">
+			<p>Conexión del sistema fotovoltaico 1 fase</p>
 		</div> 
 
 
@@ -107,18 +105,16 @@
 			<img class="img-fluid d-none d-xs-none d-sm-none d-md-block" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-banner.png">
 			<img class="img-fluid d-block d-md-none mx-auto" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-banner-mob.png">
 		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-4">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-1.png">
-				<p>Sistema de circulación forzada, calefacción + agua caliente</p>
-			</div> 
-			<div class="col-xs-12 col-sm-12 col-md-4">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-2.png">	
-				<p>Sistema de circulación forzada, calefacción + agua caliente + piscina</p>
-			</div> 
-			<div class="col-xs-12 col-sm-12 col-md-4">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-3.png">
-			</div>
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-1.png">
+			<p>Sistema de circulación forzada, calefacción + agua caliente</p>
+		</div> 
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-2.png">	
+			<p>Sistema de circulación forzada, calefacción + agua caliente + piscina</p>
+		</div> 
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-term-3.png">
 		</div>
 		<? wp_reset_query(); ?>
 		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria">
