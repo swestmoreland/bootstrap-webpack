@@ -1,13 +1,62 @@
 <?php get_header(); ?>
 <div class="container-fluid">
 	<div class="row cover-swiper"><!-- cover -->
+		<?php
+		$args = array(
+		        'post_type' => 'attachment',
+		        'post_mime_type' => 'image',
+		        'orderby' => 'post_date',
+		        'order' => 'desc',
+		        'posts_per_page' => '3000',
+		        'post_status'    => 'inherit',
+		        'category_name'=>'cover-grande',
+		         );
 
-		<div class="swiper-container">
+		$loop = new WP_Query( $args );
+		?>		
+		<div class="swiper-container d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
-		      <div class="swiper-slide">
-		      	<img class="d-block d-md-none" src="http://placehold.it/720x720">
-		      	<img class="d-none d-md-block" src="http://placehold.it/1280x720">
-		      </div>
+
+			    <?php
+					while ( $loop->have_posts() ) : $loop->the_post();
+						$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+							?>
+					      <div class="swiper-slide">
+					      	<img class="img-fluid" src="<?php echo $image[0]; ?>">
+					      </div>
+							<?php
+
+					endwhile;				    
+				?>		      
+		    </div>
+		</div>
+		<? wp_reset_query(); ?>
+		<?php
+		$args = array(
+		        'post_type' => 'attachment',
+		        'post_mime_type' => 'image',
+		        'orderby' => 'post_date',
+		        'order' => 'desc',
+		        'posts_per_page' => '3000',
+		        'post_status'    => 'inherit',
+		        'category_name'=>'cover-movil',
+		         );
+
+		$loop = new WP_Query( $args );
+		?>	
+		<div class="swiper-container d-block d-md-none">
+		    <div class="swiper-wrapper">
+			    <?php
+					while ( $loop->have_posts() ) : $loop->the_post();
+						$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+							?>
+					      <div class="swiper-slide">
+					      	<img class="img-fluid" src="<?php echo $image[0]; ?>">
+					      </div>
+							<?php
+
+					endwhile;				    
+				?>
 		    </div>
 		</div>
 
@@ -109,16 +158,21 @@
 </div>
 <div class="container-fluid">
 	<section class="cover-swiper"><!-- ofertas -->
-
-		<div class="swiper-container">
+		
+		<div class="swiper-container d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
-		      	<img class="d-block d-md-none" src="http://placehold.it/700x700">
-		      	<img class="d-none d-md-block" src="http://placehold.it/1280x700">
+		      	<img class="d-none d-md-block" src="http://placehold.it/1280x720">
 		      </div>
 		    </div>
 		</div>
-
+		<div class="swiper-container d-block d-md-none">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide">
+		      	<img class="d-block d-md-none" src="http://placehold.it/720x720">
+		      </div>
+		    </div>
+		</div>
 
 	</section> <!-- ofertas -->
 </div>
