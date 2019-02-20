@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container-fluid">
-	<div class="row"><!-- cover -->
+	<div class="row cover-swiper"><!-- cover -->
 
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
@@ -108,7 +108,7 @@
 	</section><!-- 6salepoints -->
 </div>
 <div class="container-fluid">
-	<section><!-- ofertas -->
+	<section class="cover-swiper"><!-- ofertas -->
 
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">

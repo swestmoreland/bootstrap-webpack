@@ -476,6 +476,12 @@ article{
 		    ul{
 		    	@extend .pl-4;
 		    }	
+		    a{
+		    	&.ficha-tecnica{
+		    		@extend .btn;
+		    		@extend .btn-outline-danger;
+		    	}
+		    }
 		}
 		.swiper-container {
 			width: 100%;

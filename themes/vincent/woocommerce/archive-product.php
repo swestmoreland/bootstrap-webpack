@@ -57,7 +57,6 @@ if ( woocommerce_product_loop() ) {
 			 * @hooked WC_Structured_Data::generate_product_data() - 10
 			 */
 			do_action( 'woocommerce_shop_loop' );
-
 			wc_get_template_part( 'content', 'product' );
 		}
 	}
@@ -80,6 +79,7 @@ if ( woocommerce_product_loop() ) {
 }
 ?>	
 </section> <!-- CATEGORIAS -->
+
 <section class="woocommerce-products-header"> <!-- PRODUCTOS -->
 	<?php
 	/**
@@ -88,7 +88,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_taxonomy_archive_description - 10
 	 * @hooked woocommerce_product_archive_description - 10
 	 */
-	do_action( 'woocommerce_archive_description' );
+	//do_action( 'woocommerce_archive_description' );
 	?>
 </section> <!-- PRODUCTOS -->
 
