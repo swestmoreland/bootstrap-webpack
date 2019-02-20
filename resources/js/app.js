@@ -11,7 +11,7 @@ var mySwiper = new Swiper ('.cover-swiper .swiper-container', {
   loop: true
 });
 
-var galleryThumbs = new Swiper('.gallery-thumbs', {
+var galleryThumbs = new Swiper('#woocommerce .gallery-thumbs', {
   spaceBetween: 10,
   slidesPerView: 4,
   loop: true,
@@ -20,7 +20,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
 });
-var galleryTop = new Swiper('.gallery-top', {
+var galleryTop = new Swiper('#woocommerce .gallery-top', {
   spaceBetween: 10,
   loop:true,
   loopedSlides: 5, //looped slides should be the same
@@ -32,5 +32,29 @@ var galleryTop = new Swiper('.gallery-top', {
     swiper: galleryThumbs,
   },
 });
+
+var galleryThumbs = new Swiper('#solutions .gallery-thumbs', {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  loop: true,
+  freeMode: true,
+  loopedSlides: 5, //looped slides should be the same
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('#solutions .gallery-top', {
+  spaceBetween: 10,
+  loop:true,
+  loopedSlides: 5, //looped slides should be the same
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});
+
+
 });
 

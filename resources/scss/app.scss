@@ -520,3 +520,39 @@ article{
 		}
 	}
 }
+.shortcut-galeria{
+	h2{
+		@extend .text-center;
+	}
+	img{
+		width:100%;
+	}
+	.swiper-container {
+		width: 100%;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		&.gallery-thumbs {
+			height: 90px;
+			width: 100%;
+		}
+	}
+	.swiper-slide {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.gallery-thumbs {
+		height: 100px;
+		box-sizing: border-box;
+		padding: 10px 0;
+	}
+	.gallery-thumbs .swiper-slide {
+		width: 25%;
+		height: 60px;
+		opacity: 0.4;
+	}
+	.gallery-thumbs .swiper-slide-thumb-active {
+		opacity: 1;
+	}	
+}
