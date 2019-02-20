@@ -47,6 +47,9 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_t
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_show_product_thumbnails', 6 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_breadcrumb', 20 );
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
 
 function woo_rename_tabs( $tabs ) {

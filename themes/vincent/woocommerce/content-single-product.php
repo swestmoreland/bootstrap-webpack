@@ -85,6 +85,8 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 </section>
 <section>
+	<div class="col">
+		
 		<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
@@ -95,6 +97,7 @@ defined( 'ABSPATH' ) || exit;
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	</div>
 </section>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

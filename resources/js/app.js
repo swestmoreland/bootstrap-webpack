@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
 //initialize swiper when document ready
-var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper ('.cover-swiper .swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true
