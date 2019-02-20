@@ -33,29 +33,44 @@ defined( 'ABSPATH' ) || exit;
 	
 	<?php $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
 	?>
-	<div class="swiper-container gallery-top">
-	<div class="swiper-wrapper">
-	  <div class="swiper-slide" style="background-image:url(<?php echo $feat_image[0]; ?>)"></div>
-	</div>
-	<!-- Add Arrows -->
-	<div class="swiper-button-next swiper-button-white"></div>
-	<div class="swiper-button-prev swiper-button-white"></div>
-	</div>
-	<div class="swiper-container gallery-thumbs">
+	<div class="product-image">
+		<div class="swiper-container gallery-top">
 		<div class="swiper-wrapper">
 		  <div class="swiper-slide" style="background-image:url(<?php echo $feat_image[0]; ?>)"></div>
+			<?php
+			    global $product;
+
+			    $attachment_ids = $product->get_gallery_attachment_ids();
+
+			    foreach( $attachment_ids as $attachment_id ) {
+			        $image_link = wp_get_attachment_url( $attachment_id );
+			    	?>
+			    	<div class="swiper-slide" style="background-image:url(<?php echo $image_link; ?>)"></div>
+			        <?php
+			    }
+			?>
 		</div>
-	</div>
-	<div class="product-image">
-		<?php
-		    global $product;
+		<!-- Add Arrows -->
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		</div>
+		<div class="swiper-container gallery-thumbs">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide" style="background-image:url(<?php echo $feat_image[0]; ?>)"></div>
+			<?php
+			    global $product;
 
-		    $attachment_ids = $product->get_gallery_attachment_ids();
+			    $attachment_ids = $product->get_gallery_attachment_ids();
 
-		    foreach( $attachment_ids as $attachment_id ) {
-		        echo $image_link = wp_get_attachment_url( $attachment_id );
-		    }
-		?>
+			    foreach( $attachment_ids as $attachment_id ) {
+			        $image_link = wp_get_attachment_url( $attachment_id );
+			    	?>
+			    	<div class="swiper-slide" style="background-image:url(<?php echo $image_link; ?>)"></div>
+			        <?php
+			    }
+			?>
+			</div>
+		</div>
 	</div>
 	<div class="product-description">
 		<h2>Descripción</h2>
