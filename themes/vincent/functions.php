@@ -45,20 +45,20 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_thumbnails', 6 );
 
-//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_show_product_thumbnails', 6 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_show_product_thumbnails', 6 );
 
 
-add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
   $tabs['description']['title'] = __( 'Ir a descripción' );   // Rename the description tab
+  $tabs['related_products']['title'] = __( 'Productos Relacionados' );   // Rename the description tab
   return $tabs;
 
 }
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 
 
-add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
 function woo_reorder_tabs( $tabs ) {
 
   $tabs['reviews']['priority'] = 20;     // Reviews first
@@ -67,5 +67,6 @@ function woo_reorder_tabs( $tabs ) {
 
   return $tabs;
 }
+add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
 
 add_editor_style( 'css/app.css' );
