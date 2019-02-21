@@ -3,33 +3,6 @@
 <?php get_header(); ?>
 <div id="solutions" class="container">
 	<section>
-		<?
-		/*
-		$args = array(
-		        'post_type' => 'attachment',
-		        'post_mime_type' => 'image',
-		        'orderby' => 'post_date',
-		        'order' => 'desc',
-		        'posts_per_page' => '3000',
-		        'post_status'    => 'inherit',
-		        'category_name'=>'hogar',
-		         );
-
-		$loop = new WP_Query( $args );
-
-		while ( $loop->have_posts() ) : $loop->the_post();
-			$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-				?>
-				<div class="">
-					<img class="img-fluid" src="<?php echo $image[0]?>">
-				</div>						
-				<?
-
-		endwhile;
-		*/
-		?>		
-	</section>
-	<section>
 		<h1>Soluciones energéticas para su hogar</h1>
 		<div class="col-sm-12 col-md-12 py-2">
 			<img class="img-fluid d-none d-xs-none d-sm-none d-md-block" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-banner.png">
