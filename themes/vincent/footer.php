@@ -61,5 +61,24 @@
 			<p class="d-block bottom-text text-center"> 2018 © Vincent Solar, Renewable Energy | Todos los derechos	</p>	
 		</div>
 </footer>
+<div class="bottom-dock">
+	<div class="dock-button">
+		<div id="collapseContacto" class="collapse">
+			<a href="tel:+322948569">
+				<i class="fas fa-phone"></i>
+				Llamar
+			</a>
+			<a href="mailto:info@vincentsolar.com">
+				<i class="fas fa-envelope"></i>
+				Correo
+			</a>
+		</div>
+		<a data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
+			<i class="fas fa-hand-pointer"></i>
+			Contactenos
+		</a>
+		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
+	</div>
+</div>
   </body>
 </html>
