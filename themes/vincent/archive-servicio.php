@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <div class="container-fluid">
-	<div class="row">
+	<section>
+		<h1>Instalaciones y Mantenciones</h1>
 		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner_mantenciones_lg.png">
-	</div>
+	</section>
 </div>
 <div class="container">
 	<section id="manutenciones">
 		
 		<div class="col-sm-12 col-md-12">
-			<h1>Instalaciones y Mantenciones</h1>
 		</div>
 		<div class="col-sm-12 col-md-12">
 			<div class="row">
