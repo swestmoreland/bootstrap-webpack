@@ -71,6 +71,7 @@ header{
 	}
 	.site-logo{
 		@extend .d-block;
+		@include make-col-ready();
 		@include media-breakpoint-up(sm) {
 	        @include make-col(3);
 	        padding: 20px;
@@ -92,8 +93,10 @@ header{
 	}
 
 	.menu {
-		@extend .px-4;
+		@extend .pl-4;
+		@include make-col-ready();
 		background-color: $body-bg;
+
 		@include media-breakpoint-up(sm) {
 			@include make-col(9);
 			padding-top: 2.4rem;
@@ -110,7 +113,8 @@ header{
 			@include media-breakpoint-up(sm) {
 				display: inline;
 				float:right;
-				margin-right:20px; 
+				margin-right:6px; 
+				text-align: right;
 				a{
 					padding-bottom: 10px;
 				}

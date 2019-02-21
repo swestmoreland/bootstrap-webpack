@@ -30,6 +30,7 @@
             theme_location' => 'header-menu',          
             'container'      => '',
             'menu_id'      => '',
+            'reverse'      => TRUE,
             'menu_class'     => 'menu d-none d-xs-none d-sm-none d-md-block' ) ); 
             ?>
           <?php wp_nav_menu( array( '
