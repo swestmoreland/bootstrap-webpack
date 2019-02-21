@@ -80,7 +80,7 @@ function lc_custom_post_oferta() {
     'show_in_nav_menus' => true,
     'has_archive'       => true,
     'rewrite' => array('slug' => 'ofertas'),
-    'query_var'         => 'ofertin'
+    'query_var'         => 'oferta'
   );
  
   // Call the actual WordPress function

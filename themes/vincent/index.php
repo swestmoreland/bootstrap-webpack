@@ -166,13 +166,6 @@
 		      </div>
 		    </div>
 		</div>
-		<div class="swiper-container d-block d-md-none">
-		    <div class="swiper-wrapper">
-		      <div class="swiper-slide">
-		      	<img class="d-block d-md-none" src="http://placehold.it/720x720">
-		      </div>
-		    </div>
-		</div>
 
 	</section> <!-- ofertas -->
 </div>
