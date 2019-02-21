@@ -38,8 +38,30 @@ section {
     	color: $vincent-blue;
     }
 }
+.header-fill{
+	width: 100%;
+	height: 0px;
+	&.fixed-header{
+		padding-bottom: $header-height;
+	}
+}
 header{
 	@extend .container-fluid;
+	@include media-breakpoint-up(sm) {
+		height: 100px;
+	}
+	@include media-breakpoint-down(sm) {
+		height: 100px;
+	}
+
+	background-color: $body-bg;
+	z-index: $zindex-fixed;
+	&.fixed-header {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%; 
+	}
 	.site-logo{
 		@extend .d-block;
 		@include media-breakpoint-up(sm) {
@@ -555,4 +577,13 @@ article{
 	.gallery-thumbs .swiper-slide-thumb-active {
 		opacity: 1;
 	}	
+}
+.oferta{
+	h2{
+		color: $vincent-blue;
+		small{
+			white-space: nowrap;
+			color: $gray-500;
+		}
+	}
 }

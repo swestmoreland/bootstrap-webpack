@@ -1,5 +1,7 @@
 $fa-font-path: "../fonts";
 
+$header-height : 100px ;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -30,3 +32,12 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-modal:                      1050;
+$zindex-popover:                    1060;
+$zindex-tooltip:                    1070;

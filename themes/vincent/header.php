@@ -8,6 +8,9 @@
     <title><?php echo get_bloginfo( 'name' ); ?></title>
   </head>
   <body> 
+    <div class="header-fill">
+      
+    </div>
     <header>
       <div class="row">
         <a href="/" class="site-logo">
