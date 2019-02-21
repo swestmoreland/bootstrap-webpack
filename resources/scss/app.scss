@@ -20,7 +20,6 @@
 @import "../../node_modules/swiper/dist/css/swiper"; 
 
 body{
-	margin-top: -32px;
 	font-family: 'Encode Sans Expanded', sans-serif;
 }
 ul{
@@ -39,11 +38,10 @@ section {
     }
 }
 .header-fill{
-	width: 100%;
-	height: 0px;
-	&.fixed-header{
-		padding-bottom: $header-height;
-	}
+	//width: 100%;
+	//height: 0px;
+	padding-bottom: $header-height;
+
 }
 header{
 	@extend .container-fluid;
@@ -53,14 +51,23 @@ header{
 	@include media-breakpoint-down(sm) {
 		height: 100px;
 	}
-
+	overflow: visible;
 	background-color: $body-bg;
 	z-index: $zindex-fixed;
-	&.fixed-header {
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+	.menu-button{
+		z-index: $zindex-fixed + 1;
+		position: absolute;
+		margin-top: 32px;
+		margin-left: 20px;	
+
+		color: $vincent-orange;
+		background-color: $body-bg;
+		border-color: $vincent-orange;
 	}
 	.site-logo{
 		@extend .d-block;
@@ -73,10 +80,11 @@ header{
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
 	        @include make-col(12);
+	        padding-top: 20px;
 	        min-width: 100px;	
 	        .logo{
 	        	width: 25%;
-	        	min-width: 100px;	
+	        	min-width: 115px;	
 	        	margin-left: auto;
 	        	margin-right: auto;
 	        }
@@ -85,6 +93,7 @@ header{
 
 	.menu {
 		@extend .px-4;
+		background-color: $body-bg;
 		@include media-breakpoint-up(sm) {
 			@include make-col(9);
 			padding-top: 2.4rem;
@@ -92,6 +101,7 @@ header{
 		@include media-breakpoint-down(sm) {
 			@include make-col(12);
 			padding-top: 1rem;
+			padding-bottom: 1rem;
 		}
 
 		li{
