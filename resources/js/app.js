@@ -8,6 +8,9 @@ $(document).ready(function () {
 var mySwiper = new Swiper ('.cover-swiper .swiper-container', {
   // Optional parameters
   direction: 'horizontal',
+  autoplay: {
+    delay: 4000,
+  },
   loop: true
 });
 
@@ -21,6 +24,9 @@ var galleryThumbs = new Swiper('#woocommerce .gallery-thumbs', {
   watchSlidesProgress: true,
 });
 var galleryTop = new Swiper('#woocommerce .gallery-top', {
+  autoplay: {
+    delay: 4000,
+  },
   spaceBetween: 10,
   loop:true,
   loopedSlides: 5, //looped slides should be the same
@@ -35,7 +41,7 @@ var galleryTop = new Swiper('#woocommerce .gallery-top', {
 
 var galleryThumbs = new Swiper('#solutions .gallery-thumbs', {
   spaceBetween: 10,
-  slidesPerView: 4,
+  slidesPerView: 6,
   loop: true,
   freeMode: true,
   loopedSlides: 5, //looped slides should be the same
@@ -44,6 +50,9 @@ var galleryThumbs = new Swiper('#solutions .gallery-thumbs', {
 });
 var galleryTop = new Swiper('#solutions .gallery-top', {
   spaceBetween: 10,
+  autoplay: {
+    delay: 2500,
+  },
   loop:true,
   loopedSlides: 5, //looped slides should be the same
   navigation: {
