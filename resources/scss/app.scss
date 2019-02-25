@@ -520,6 +520,12 @@ article{
 		    	&.ficha-tecnica{
 		    		@extend .btn;
 		    		@extend .btn-outline-danger;
+					@include media-breakpoint-up(sm) {
+				        width: auto;
+				    }
+					@include media-breakpoint-down(sm) {
+				        width: 100%;
+				    }
 		    	}
 		    }
 		}

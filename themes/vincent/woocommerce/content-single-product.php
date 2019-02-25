@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 	    global $product;
 
 	    $attachment_ids = $product->get_gallery_attachment_ids();
-	    if ($feat_image) {
+	    if ($feat_image && $attachment_ids) {
 
 	?>
 		<div class="product-image">
@@ -72,6 +72,13 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		</div>
 	<?php
+		}
+		elseif ($feat_image) {
+			?>
+			<div class="product-image">
+				<img class="img-fluid" src="<?php echo $feat_image[0]; ?>">
+			</div>
+			<?php
 		}
 		else{
 			?>
