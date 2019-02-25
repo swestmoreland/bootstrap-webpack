@@ -162,7 +162,16 @@
 		<div class="swiper-container d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
-		      	<img class="d-none d-md-block" src="http://placehold.it/1280x720">
+		      	<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-1.jpg">
+		      </div>
+		      <div class="swiper-slide">
+		      	<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-2.jpg">
+		      </div>
+		      <div class="swiper-slide">
+		      	<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-3.jpg">
+		      </div>
+		      <div class="swiper-slide">
+		      	<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-4.jpg">
 		      </div>
 		    </div>
 		</div>
