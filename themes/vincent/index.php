@@ -178,6 +178,16 @@
 
 	</section> <!-- ofertas -->
 </div>
+<div class="container-fluid">
+	<section id="solution-blocks">
+		<div class="col-sm-12 col-md-6">
+			<img class="img-fluid p-2" style="width: 100%" src="<?php echo get_template_directory_uri() ?>/image/snippets/hogar.png">
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<img class="img-fluid p-2" style="width: 100%" src="<?php echo get_template_directory_uri() ?>/image/snippets/empresas.png">
+		</div>
+	</section>
+</div>
 <div class="container">
 	<section> <!-- noticias -->
 		<h1>Noticias</h1>
