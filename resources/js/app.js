@@ -3,6 +3,19 @@
 // require bootstrap
 // require swiper
 
+
+//Contact open & close
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function show_popup() {
+	await sleep(5000);
+	$("#collapseContacto").collapse('show');
+	await sleep(3000);
+	$("#collapseContacto").collapse('hide');
+}
+
 $(document).ready(function () {
 //initialize swiper when document ready
 var mySwiper = new Swiper ('.cover-swiper .swiper-container', {
@@ -65,7 +78,7 @@ var galleryTop = new Swiper('#solutions .gallery-top', {
 });
 
 
-});
+
 /*
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 1) {
@@ -80,3 +93,9 @@ $(window).scroll(function(){
     }
 });
 */
+
+
+//DOC READY
+show_popup();
+});
+
