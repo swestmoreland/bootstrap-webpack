@@ -233,24 +233,22 @@
 				        'orderby' => 'post_date',
 				        'order' => 'desc',
 				        'posts_per_page' => '3000',
-				        'post_status'    => 'inherit'
+				        'post_status'    => 'inherit',
+				        'category_name'=>'close-partners',
 				         );
 
 				$loop = new WP_Query( $args );
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-					$category = get_the_category()[0]->slug; 
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-					if($category == "close-partners"){
 						?>
-						<div class="icon">
-							<img class="img-fluid" src="<?php echo $image[0]?>">
+						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
 						<?
-					}
 
 				endwhile;
 				?>
+				<? wp_reset_query(); ?>
 				
 			</div>
 		</div>
@@ -258,21 +256,28 @@
 			<h1>Han confiado en nosotros</h1>
 			<div class="row">
 				<?
-				$loop->rewind_posts(); 
+				$args = array(
+				        'post_type' => 'attachment',
+				        'post_mime_type' => 'image',
+				        'orderby' => 'post_date',
+				        'order' => 'desc',
+				        'posts_per_page' => '3000',
+				        'post_status'    => 'inherit',
+				        'category_name'=>'clientes',
+				         );
+
+				$loop = new WP_Query( $args );
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-					$category = get_the_category()[0]->slug; 
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-					if($category == "clientes"){
 						?>
-						<div class="icon">
-							<img class="img-fluid" src="<?php echo $image[0]?>">
+						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
 						<?
-					}
 
 				endwhile;
 				?>
+				<? wp_reset_query(); ?>
 				
 			</div>			
 		</div>
@@ -280,21 +285,28 @@
 			<h1>Partners</h1>
 			<div class="row">
 				<?
-				$loop->rewind_posts(); 
+				$args = array(
+				        'post_type' => 'attachment',
+				        'post_mime_type' => 'image',
+				        'orderby' => 'post_date',
+				        'order' => 'desc',
+				        'posts_per_page' => '3000',
+				        'post_status'    => 'inherit',
+				        'category_name'=>'partners',
+				         );
+
+				$loop = new WP_Query( $args );
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-					$category = get_the_category()[0]->slug; 
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-					if($category == "partners"){
 						?>
-						<div class="icon">
-							<img class="img-fluid" src="<?php echo $image[0]?>">
+						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
 						<?
-					}
 
 				endwhile;
 				?>
+				<? wp_reset_query(); ?>
 				
 			</div>
 		</div>

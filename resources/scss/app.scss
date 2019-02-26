@@ -256,22 +256,27 @@ footer{
 	max-width: 100px;
 }
 .brands{
+	@extend .py-4;
 	@include make-col(12);
+	@include media-breakpoint-up(sm) {
+		padding-left: 18%;
+		padding-right: 18%;
+    }
+    @include media-breakpoint-down(sm) {
+        // Smaller than md: 768px
+        padding-left: 10%;
+		padding-right: 10%;
+    }	
 	.row{
-		@include media-breakpoint-up(sm) {
-			padding-left: 15%;
-			padding-right: 15%;
-	    }
-	    @include media-breakpoint-down(sm) {
-	        // Smaller than md: 768px
-	        padding-left: 10%;
-			padding-right: 10%;
-	    }	
 
 	}
 	.icon{
 		@extend .p-2;
 		@extend .px-3;
+		height: 80px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
 		@include media-breakpoint-up(sm) {
 	        @include make-col(2);
 	    }
@@ -486,6 +491,10 @@ article{
 				    }
 				    h2{
 				    	@extend .text-center;
+						@include media-breakpoint-up(sm) {
+					    	height: 40px;
+							overflow: hidden;
+				    	}
 				    }					
 				}
 				img{
