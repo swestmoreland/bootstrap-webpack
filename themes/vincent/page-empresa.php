@@ -18,7 +18,7 @@
 		</div> 
 
 
-		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria" >
+		<div id="galeria" class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria" >
 			<h2>
 				Galería soluciones fotovoltaicas
 			</h2>
@@ -94,7 +94,9 @@
 			<h2>
 				Galería soluciones térmicas
 			</h2>
-			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-empresas.jpg">
+			<a href="#galeria">
+				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-empresas.jpg">
+			</a>
 		</div>
 	</section>
 
