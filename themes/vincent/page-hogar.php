@@ -10,11 +10,11 @@
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-5 offset-md-1">
 			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-1.png">
-			<p>Sistema fotovoltaico en smarthouse</p>
+			<p>Diagrama de sistema fotovoltaico en un hogar.</p>
 		</div> 
 		<div class="col-xs-12 col-sm-12 col-md-5">
 			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-2.png">
-			<p>Conexión del sistema fotovoltaico 1 fase</p>
+			<p>Conexión del sistema fotovoltaico 1 fase.</p>
 		</div> 
 
 
