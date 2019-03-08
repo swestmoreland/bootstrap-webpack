@@ -23,6 +23,10 @@
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
+
 // Include plugin bootstrap file
 require_once dirname( __FILE__ ) .
 	DIRECTORY_SEPARATOR .

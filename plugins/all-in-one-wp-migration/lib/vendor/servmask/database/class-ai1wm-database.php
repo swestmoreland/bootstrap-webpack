@@ -23,6 +23,10 @@
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
+
 abstract class Ai1wm_Database {
 
 	/**
@@ -690,8 +694,7 @@ abstract class Ai1wm_Database {
 								$value = $this->replace_column_prefixes( $value, 0 );
 							}
 
-							// Replace table values
-							$items[] = is_null( $value ) ? 'NULL' : "'" . $this->escape( $value ) . "'";
+							$items[] = $this->prepare_table_values( $value );
 						}
 
 						// Set table values
@@ -1337,6 +1340,22 @@ abstract class Ai1wm_Database {
 		);
 
 		return $header;
+	}
+
+	/**
+	 * Prepare table values
+	 *
+	 * @param  mixed $input Table value
+	 * @return mixed
+	 */
+	protected function prepare_table_values( $input ) {
+		if ( is_null( $input ) ) {
+			return 'NULL';
+		} elseif ( is_numeric( $input ) ) {
+			return $input;
+		}
+
+		return "'" . $this->escape( $input ) . "'";
 	}
 
 	/**

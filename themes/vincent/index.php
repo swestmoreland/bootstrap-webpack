@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+?>
 <div class="container-fluid">
 	<div class="row cover-swiper"><!-- cover -->
 		<?php
@@ -33,17 +35,11 @@
 				?>		      
 		    </div>
 		</div>
-		<? wp_reset_query(); ?>
+
 		<?php
-		$args = array(
-		        'post_type' => 'attachment',
-		        'post_mime_type' => 'image',
-		        'orderby' => 'post_date',
-		        'order' => 'asc',
-		        'posts_per_page' => '3000',
-		        'post_status'    => 'inherit',
-		        'category_name'=>'cover-movil',
-		         );
+		wp_reset_postdata();
+        wp_reset_query();
+		$args['category_name'] = 'cover-movil';
 
 		$loop = new WP_Query( $args );
 		?>	
@@ -60,7 +56,9 @@
 					      </div>
 							<?php
 
-					endwhile;				    
+					endwhile;
+					wp_reset_postdata();
+			        wp_reset_query();
 				?>
 		    </div>
 		</div>
@@ -212,6 +210,7 @@
 		 
 			endwhile;
 			wp_reset_postdata();
+			wp_reset_query();
 		?>
 	</section> <!-- noticias -->
 </div>
@@ -219,14 +218,16 @@
 	<section><!-- productos con sello -->
 		<h1>Productos Con Sello</h1>
 		<div class="row">
-			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">
+		    <div class="w-100">
+		        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">    
+		    </div>
 		</div>
 	</section><!-- productos con sello -->
 	<section><!-- parterns -->
 		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
 			<div class="row">
-				<?
+				<?php
 				$args = array(
 				        'post_type' => 'attachment',
 				        'post_mime_type' => 'image',
@@ -244,18 +245,18 @@
 						?>
 						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
-						<?
+						<?php
 
 				endwhile;
 				?>
-				<? wp_reset_query(); ?>
+				<?php wp_reset_query(); ?>
 				
 			</div>
 		</div>
 		<div class="brands">
 			<h1>Han confiado en nosotros</h1>
 			<div class="row">
-				<?
+				<?php
 				$args = array(
 				        'post_type' => 'attachment',
 				        'post_mime_type' => 'image',
@@ -273,18 +274,18 @@
 						?>
 						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
-						<?
+						<?php
 
 				endwhile;
 				?>
-				<? wp_reset_query(); ?>
+				<?php wp_reset_query(); ?>
 				
 			</div>			
 		</div>
 		<div class="brands">
 			<h1>Partners</h1>
 			<div class="row">
-				<?
+				<?php
 				$args = array(
 				        'post_type' => 'attachment',
 				        'post_mime_type' => 'image',
@@ -302,11 +303,10 @@
 						?>
 						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
 						</div>						
-						<?
+						<?php
 
 				endwhile;
 				?>
-				<? wp_reset_query(); ?>
 				
 			</div>
 		</div>

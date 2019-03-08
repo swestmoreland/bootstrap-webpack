@@ -8,7 +8,7 @@
 	<section class="oferta">
 		
 		<div class="col-sm-12 col-md-10 offset-md-1">
-			<h2 class="px-2"><? the_title() ;?> <small>Todo Incluido</small></h2>
+			<h2 class="px-2"><?php the_title() ;?> <small>Todo Incluido</small></h2>
 			<div class="row">
 					<div class="col-sm-12 col-md-6 col-lg-5">
 						<?php if ( has_post_thumbnail() ) : ?>
@@ -18,7 +18,7 @@
 						<?php endif; ?>
 					</div>
 					<div class="col-sm-12 col-md-6 col-lg-7">
-						<? the_content() ;?>
+						<?php the_content() ;?>
 					</div>
 						
 			</div>

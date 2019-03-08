@@ -16,6 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
+
 if ( defined( 'WP_CLI' ) ) {
 	class Ai1wm_WP_CLI_Command extends WP_CLI_Command {
 		public function __invoke() {

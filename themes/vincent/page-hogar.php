@@ -22,7 +22,7 @@
 			<h2>
 				Galería soluciones fotovoltaicas
 			</h2>
-			<?
+			<?php
 			$args = array(
 			        'post_type' => 'attachment',
 			        'post_mime_type' => 'image',

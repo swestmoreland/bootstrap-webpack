@@ -5,7 +5,7 @@
 		</div>
 	<?php endif; ?>
 	<div class="">
-		<h2><? the_title() ;?></h2>
-		<? the_excerpt(__('(more…)')); ?>
+		<h2><?php the_title() ;?></h2>
+		<?php the_excerpt(__('(more…)')); ?>
 	</div>
 </a>

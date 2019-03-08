@@ -20,8 +20,8 @@
 							</div>
 						<?php endif; ?>
 						<div class="p-2">
-							<h2><? the_title() ;?></h2>
-							<p><? the_excerpt() ;?></p>
+							<h2><?php the_title() ;?></h2>
+							<p><?php the_excerpt() ;?></p>
 						</div>
 						
 					</div>
