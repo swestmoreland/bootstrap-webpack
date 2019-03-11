@@ -6,6 +6,7 @@ services:
       - backend
     volumes:
       - ./public_html/:/var/www/html/
+      - ./public_html/:/home/vincentsolar/public_html/
   apache:
     build: './apache/'
     depends_on:
@@ -18,6 +19,7 @@ services:
       - "8080:80"
     volumes:
       - ./public_html/:/var/www/html/
+      - ./public_html/:/home/vincentsolar/public_html/
   mysql:
     image: mysql:5.7
     ports:
@@ -31,6 +33,23 @@ services:
       MYSQL_USER: dbuser
       MYSQL_PASSWORD: dbpass
       MYSQL_ROOT_PASSWORD: dbpass
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+    - mysql
+    external_links:
+    - mysql:mysql
+    ports:
+    - "8000:80"
+    environment:
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpass
+      MYSQL_ROOT_PASSWORD: dbpass
+      PMA_HOST: mysql
+    networks:
+      - frontend
+      - backend
+
 networks:
   frontend:
   backend:
