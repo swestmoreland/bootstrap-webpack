@@ -37,6 +37,12 @@ section {
     	color: $vincent-blue;
     }
 }
+:target {
+  display: block;
+  position: relative;
+  top: -$header-height; 
+  visibility: hidden;
+}
 .header-fill{
 	//width: 100%;
 	//height: 0px;

@@ -44,6 +44,9 @@
 								?>
 								<div class="swiper-slide" style="background-image:url(<?php echo $image[0]; ?>)">
 								</div>
+								<script type="text/javascript">
+									photo_arr.push( "<?php echo $image[0]; ?>");
+								</script>								
 								<?php
 
 						endwhile;				    
@@ -92,14 +95,20 @@
 		<? wp_reset_query(); ?>
 		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria">
 			<h2>
-				Galería soluciones térmicas
+				Galería soluciones residenciales
 			</h2>
-			<a href="#galeria">
+			<a href="#gallery">
 				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-hogar.jpg">
 			</a>
 		</div>
 	</section>
-
+	<div id="gallery"></div>
+	<section id="collage-gallery" class="no-gutters">
+		<div id="gallery-col-1" class="col-sm-12 col-md-6 col-lg-3"></div>
+		<div id="gallery-col-2" class="col-sm-12 col-md-6 col-lg-3"></div>
+		<div id="gallery-col-3" class="col-sm-12 col-md-6 col-lg-3"></div>
+		<div id="gallery-col-4" class="col-sm-12 col-md-6 col-lg-3"></div>
+	</section>
 
 </div>
 <?php get_footer(); ?>
