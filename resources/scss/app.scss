@@ -678,6 +678,19 @@ article{
 #collage-gallery{
 	.gallery-grid-img{
 		display: block;
-		padding: 2px;
+		margin: 2px;
+		height: 200px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&.s1{
+			height: 200px;
+		}
+		&.s2{
+			height: 250px;
+		}
+		&.s3{
+			height: 300px;
+		}
 	}
 }
