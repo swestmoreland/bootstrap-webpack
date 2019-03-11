@@ -3,6 +3,7 @@
 // require bootstrap
 // require swiper
 
+var photo_arr = [];
 
 //Contact open & close
 function sleep(ms) {
@@ -77,25 +78,39 @@ var galleryTop = new Swiper('#solutions .gallery-top', {
   },
 });
 
-
-
-/*
-$(window).scroll(function(){
-    if ($(window).scrollTop() >= 1) {
-        $('header').addClass('fixed-header');
-        $('.header-fill').addClass('fixed-header');
-        $('header div').addClass('visible-title');
+if(photo_arr.length >0 ){
+  var chunk = Math.floor( photo_arr.length / 4 );
+  let bundles = chunkArray(photo_arr,chunk);
+  for (var i = bundles.length - 1; i >= 0; i--) {
+    for (var j = bundles[i].length - 1; j >= 0; j--) {
+      $("#collage-gallery #gallery-col-"+(i+1)).append(
+        "<a class=\"gallery-grid-img\" target=\"_blank\"  href=\"" +bundles[i][j]+ "\"> <img class=\"img-fluid\" src=\"" + bundles[i][j] + "\"> </a>"
+        );
     }
-    else {
-        $('header').removeClass('fixed-header');
-        $('.header-fill').removeClass('fixed-header');
-        $('header div').removeClass('visible-title');
-    }
-});
-*/
-
+  }
+}
 
 //DOC READY
 show_popup();
 });
 
+/**
+ * Returns an array with arrays of the given size.
+ *
+ * @param myArray {Array} Array to split
+ * @param chunkSize {Integer} Size of every group
+ */
+function chunkArray(myArray, chunk_size){
+    var results = [];
+    
+    while (myArray.length) {
+        results.push(myArray.splice(0, chunk_size));
+    }
+    
+    return results;
+}
+
+// Split in group of 3 items
+var result = chunkArray([1,2,3,4,5,6,7,8], 3);
+// Outputs : [ [1,2,3] , [4,5,6] ,[7,8] ]
+console.log(result);
