@@ -30,13 +30,16 @@ defined( 'ABSPATH' ) || exit;
 	<h1>
 		<?php the_title(); ?>
 	</h1>
-	
-	<?php $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+	<div class="d-none">
+	<?php
+
+		$feat_image = wp_get_attachment_image_src( get_post_thumbnail_id( the_ID() ), '	full' );
 	?>
+	</div>
 	<?php
 	    global $product;
 
-	    $attachment_ids = $product->get_gallery_attachment_ids();
+	    $attachment_ids = $product->get_gallery_image_ids();
 	    if ($feat_image && $attachment_ids) {
 
 	?>
