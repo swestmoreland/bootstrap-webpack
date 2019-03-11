@@ -92,7 +92,10 @@ header{
 	        // Smaller than md: 768px
 	        @include make-col(12);
 	        padding-top: 20px;
-	        min-width: 100px;	
+	        min-width: 100px;
+	        max-width: 50%;
+        	margin-left: auto;
+        	margin-right: auto;	
 	        .logo{
 	        	width: 25%;
 	        	min-width: 115px;	
