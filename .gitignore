@@ -29,3 +29,8 @@ themes/vincent/js/*
 !themes/vincentcustom/css/.gitkeep
 !themes/vincent/css/.gitkeep
 !themes/vincent/js/.gitkeep
+
+!public_html/.gitkeep
+public_html/*
+!mysql-data/.gitkeep
+mysql-data/*
