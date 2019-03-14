@@ -658,22 +658,14 @@ article{
 			margin-right: 20px;
 			margin-left: auto;
 			max-width: 280px;
-			&.sm{
-				display: none;
-				visibility: hidden;
-			}			
 	    }	
 		@include media-breakpoint-down(sm) {
-			font-size: $font-size-base*1.6;
-			border-radius: 6px 0px 0 6px;
-			margin-right: 0;
+			font-size: $font-size-base*3;
+			border-radius: 6px 6px 6px 6px;
+			margin-right: auto;
 			margin-left: auto;
-			width: 50%;
-			min-width: 125px;
-			&.lg{
-				display: none;
-				visibility: hidden;
-			}
+			width: 85%;
+			min-width: 200px;
 	        
 	    }
 		a{
