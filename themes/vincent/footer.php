@@ -62,7 +62,7 @@
 		</div>
 </footer>
 <div class="bottom-dock">
-	<div class="dock-button">
+	<div class="dock-button d-block d-md-none">
 		<div id="collapseContacto" class="collapse">
 			<a href="tel:+322948569">
 				<i class="fas fa-phone"></i>
@@ -78,6 +78,42 @@
 			Contactenos
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
+	</div>
+	<div class="dock-button d-none d-xs-none d-sm-none d-md-block">
+		<a data-toggle="collapse" href="#collapsePanel" role="button" aria-expanded="false" aria-controls="collapsePanel">
+			¿Interesado en Ahorrar&nbsp;<i class="fas fa-dollar-sign"></i>?
+		</a>
+		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
+	</div>
+	<div id="collapsePanel" class="collapse">
+		<div class="dock-panel">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 offset-lg-2 col-lg-8">
+						<div class="row">
+							<div class="col-sm-2">
+								<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/water-logo-sm.png">
+							</div>
+							<div class="col-sm-6">
+								<p><strong>Conozca sobre todas nuestras soluciones solares.</strong></p>								
+								<p>Revisa todas nuestras ofertas, o <strong>agenda una visita técnica gratis </strong> con nosotros.</p>
+							</div>
+							<div class="col-sm-4 col-md-4 offset-lg-1 col-lg-3">
+								<a href="/ofertas" class="btn panel-btn" role="button" aria-pressed="false">	
+									<i class="fas fa-dollar-sign"></i>
+									Ir a Ofertas
+								</a>
+								<a href="mailto:info@vincentsolar.com" class="btn panel-btn" role="button" aria-pressed="false">	
+									<i class="fas fa-envelope"></i>
+									Contactar
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </div>
   </body>
