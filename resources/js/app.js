@@ -92,7 +92,17 @@ if(photo_arr.length >0 ){
 }
 
 //DOC READY
-show_popup();
+//show_popup();
+
+$("#contactoExpander").click(function () {
+  if($(this).attr("aria-expanded") =="true"){
+    $(this).html('<i class="fas fa-hand-pointer"></i>&nbsp; Contactenos')
+  }
+  else{
+    $(this).html('<i class="fas  fa-window-close"></i>&nbsp; Cerrar')
+  }
+});
+
 });
 
 /**
