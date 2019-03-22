@@ -650,9 +650,9 @@ article{
 		background-color: $vincent-blue;
 		text-align: center;
 		padding: 4px;
+		font-weight: bold;
 		@include media-breakpoint-up(sm) {
 			font-size: $font-size-base*1.4;
-			font-weight: bold;
 			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
