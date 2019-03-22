@@ -99,7 +99,7 @@ header{
 	        .logo{
 	        	width: 25%;
 	        	min-width: 115px;	
-	        	margin-left: auto;
+	        	margin-left: 0;
 	        	margin-right: auto;
 	        }
 		}
@@ -660,12 +660,13 @@ article{
 			max-width: 280px;
 	    }	
 		@include media-breakpoint-down(sm) {
-			font-size: $font-size-base*3;
-			border-radius: 6px 6px 6px 6px;
-			margin-right: auto;
+			font-size: $font-size-base*1.6;
+			border-radius: 6px 0px 0 6px;
+			margin-right: 0;
 			margin-left: auto;
-			width: 85%;
+			width: 45%;
 			min-width: 200px;
+			max-width: 250px;
 	        
 	    }
 		a{
