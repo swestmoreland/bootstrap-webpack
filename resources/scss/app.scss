@@ -72,8 +72,8 @@ header{
 	.menu-button{
 		z-index: $zindex-fixed + 1;
 		position: absolute;
-		margin-top: 32px;
-		margin-left: 20px;	
+		top: 32px;
+		right: 32px;	
 
 		color: $vincent-orange;
 		background-color: $body-bg;
@@ -90,11 +90,10 @@ header{
 	    }
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
-	        @include make-col(12);
-	        padding-top: 20px;
+	        padding-top: 28px;
 	        min-width: 100px;
 	        max-width: 50%;
-        	margin-left: auto;
+        	margin-left: 20px;
         	margin-right: auto;	
 	        .logo{
 	        	width: 25%;
