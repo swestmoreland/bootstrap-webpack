@@ -19,7 +19,8 @@
 			  <?php
 	          $custom_logo_id = get_theme_mod( 'custom_logo' );
 	          $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-	          echo '<img class="img-fluid footer-logo" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
+	          $imghtml=  '<img class="img-fluid footer-logo" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
+	          //echo imghtm
 	          ?>
 			</div>
 			<div class="col-md-4 footer-center">
