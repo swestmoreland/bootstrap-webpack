@@ -21,8 +21,8 @@
 			// End of the loop.
 		endwhile;
 		?>
-		<div class="w-100 text-uppercase">
-			<a href="/ofertas" class="d-block mx-auto btn btn-danger">Ver Todas las Ofertas</a>
+		<div class="w-100">
+			<a id="" href="/ofertas" class="see-all-offers-btn">Ver Todas las Ofertas <i class="fas fa-dollar-sign"></i></a>
 		</div>
 	</section> <!-- ofertas -->
 </div>

@@ -632,6 +632,16 @@ article{
 		}
 	}
 }
+.see-all-offers-btn{
+	@extend .d-block;
+	@extend .mx-auto ;
+	@extend .btn ;
+	@extend .btn-danger;
+	@extend .text-uppercase;
+	max-width: 400px;
+	font-weight: bold;
+	
+}
 
 .bottom-dock{
 	position: fixed;
