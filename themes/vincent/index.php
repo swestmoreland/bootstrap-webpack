@@ -40,7 +40,12 @@ get_header();
 		<?php
 		wp_reset_postdata();
         wp_reset_query();
-		$args['category_name'] = 'cover-movil';
+        $args= array(
+		'post_type' => array('oferta'),
+		'post_status' => 'publish',
+		'post_mime_type' => null,
+		'posts_per_page' => '3000',
+		);
 
 		$loop = new WP_Query( $args );
 		?>	
@@ -48,11 +53,11 @@ get_header();
 		    <div class="swiper-wrapper">
 			    <?php
 					while ( $loop->have_posts() ) : $loop->the_post();
-						$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+						$image = null;
 							?>
 					      <div class="swiper-slide">
-					      	<a href="<?php echo wp_get_attachment_caption(get_the_ID()); ?>">
-					      		<img class="img-fluid" src="<?php echo $image[0]; ?>">
+					      	<a href="<?php echo get_post_permalink(); ?>">
+					      		<img class="img-fluid" src="<?php echo the_post_thumbnail_url(); ?>">
 					      	</a>
 					      </div>
 							<?php
