@@ -34,6 +34,10 @@ var mySwiper = new Swiper ('.cover-swiper .swiper-container.movil-swiper', {
   autoplay: {
     delay: 10000,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   loop: true
 });
 

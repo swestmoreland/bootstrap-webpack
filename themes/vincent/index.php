@@ -34,6 +34,7 @@ get_header();
 					endwhile;				    
 				?>		      
 		    </div>
+
 		</div>
 
 		<?php
@@ -61,6 +62,9 @@ get_header();
 			        wp_reset_query();
 				?>
 		    </div>
+		    <!-- If we need navigation buttons -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>		    
 		</div>
 
 
