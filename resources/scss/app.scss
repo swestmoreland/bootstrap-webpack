@@ -205,6 +205,7 @@ footer{
 		@extend .p-4;
 		@extend .d-block;
 		@extend .mx-auto;
+		max-width: 200px;
 	}
 	.bottom-text{
 		color: $gray-500;

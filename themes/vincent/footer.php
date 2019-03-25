@@ -15,12 +15,11 @@
 			</div>
 		</section><!-- flags -->
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 d-none d-xs-none d-sm-none d-md-block">
 			  <?php
 	          $custom_logo_id = get_theme_mod( 'custom_logo' );
 	          $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-	          $imghtml=  '<img class="img-fluid footer-logo" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
-	          //echo imghtm
+	          echo '<img class="img-fluid footer-logo" src="' . esc_url( $custom_logo_url ) . '" alt="" href="/">';
 	          ?>
 			</div>
 			<div class="col-md-4 footer-center">
