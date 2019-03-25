@@ -19,11 +19,20 @@ async function show_popup() {
 
 $(document).ready(function () {
 //initialize swiper when document ready
-var mySwiper = new Swiper ('.cover-swiper .swiper-container', {
+var mySwiper = new Swiper ('.cover-swiper .swiper-container.desk-swiper', {
   // Optional parameters
   direction: 'horizontal',
   autoplay: {
     delay: 4000,
+  },
+  loop: true
+});
+
+var mySwiper = new Swiper ('.cover-swiper .swiper-container.movil-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  autoplay: {
+    delay: 10000,
   },
   loop: true
 });

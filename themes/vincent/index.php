@@ -16,7 +16,7 @@ get_header();
 
 		$loop = new WP_Query( $args );
 		?>		
-		<div class="swiper-container d-none d-xs-none d-sm-none d-md-block">
+		<div class="swiper-container desk-swiper d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
 
 			    <?php
@@ -43,7 +43,7 @@ get_header();
 
 		$loop = new WP_Query( $args );
 		?>	
-		<div class="swiper-container d-block d-md-none">
+		<div class="swiper-container movil-swiper d-block d-md-none">
 		    <div class="swiper-wrapper">
 			    <?php
 					while ( $loop->have_posts() ) : $loop->the_post();
