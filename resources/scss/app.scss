@@ -676,6 +676,7 @@ article{
 			outline: none;
 		}
 		#collapseContacto{
+			z-index: $zindex-fixed+1;
 			border-radius: 6px 6px 6px 6px;
 			background-color: $body-bg;
 			a{
