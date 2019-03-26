@@ -171,7 +171,7 @@ get_header();
 <div class="container-fluid">
 	<section class="cover-swiper"><!-- ofertas -->
 		
-		<div class="swiper-container d-none d-xs-none d-sm-none d-md-block">
+		<div class="swiper-container oferta-swiper d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
 		      	<a href="/ofertas">

@@ -40,6 +40,18 @@ var mySwiper = new Swiper ('.cover-swiper .swiper-container.movil-swiper', {
   },
   loop: true
 });
+var mySwiper = new Swiper ('.cover-swiper .swiper-container.oferta-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  autoplay: {
+    delay: 8000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true
+});
 
 var galleryThumbs = new Swiper('#woocommerce .gallery-thumbs', {
   spaceBetween: 10,
