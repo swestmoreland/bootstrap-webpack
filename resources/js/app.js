@@ -5,17 +5,6 @@
 
 var photo_arr = [];
 
-//Contact open & close
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function show_popup() {
-	await sleep(5000);
-	$("#collapseContacto").collapse('show');
-	await sleep(3000);
-	$("#collapseContacto").collapse('hide');
-}
 
 $(document).ready(function () {
 //initialize swiper when document ready
@@ -105,7 +94,7 @@ var galleryTop = new Swiper('#solutions .gallery-top', {
 
 if(photo_arr.length >0 ){
   var chunk = Math.floor( photo_arr.length / 4 );
-  let bundles = chunkArray(photo_arr,chunk);
+  var bundles = chunkArray(photo_arr,chunk);
   for (var i = bundles.length - 1; i >= 0; i--) {
     for (var j = bundles[i].length - 1; j >= 0; j--) {
       var size=Math.floor(Math.random() * 3) + 1;  
