@@ -14,10 +14,35 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 function additional_custom_styles() {
 
     /*Enqueue The Styles*/
-    wp_enqueue_style( 'vincentstylesheetid', get_template_directory_uri() . '/css/app.css' ); 
-    wp_enqueue_script( 'vincentjs', get_template_directory_uri() . '/js/app.js' ); 
+    wp_enqueue_style( 'vincentstylesheetid', get_template_directory_uri() . '/css/app.css' ,array(), $ver=null); 
+
+    if ( !is_admin() ) {
+      wp_dequeue_style( 'wpsl-styles' );
+
+      wp_deregister_script('jquery');
+      wp_register_script( 'jquery', get_template_directory_uri() . '/js/app.js',array(),$ver=null );
+      wp_enqueue_script('jquery');
+      wp_deregister_script('wp-block-library');
+      remove_action('wp_head', 'print_emoji_detection_script', 7);
+      remove_action('wp_print_styles', 'print_emoji_styles');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
+
+// Remove WP Version From Styles  
+add_filter( 'style_loader_src', 'sdt_remove_ver_css_js', 9999 );
+// Remove WP Version From Scripts
+add_filter( 'script_loader_src', 'sdt_remove_ver_css_js', 9999 );
+
+// Function to remove version numbers
+function sdt_remove_ver_css_js( $src ) {
+  if ( strpos( $src, 'ver=' ) )
+    $src = remove_query_arg( 'ver', $src );
+  return $src;
+}
+
+
+
 
 function register_my_menus() {
   register_nav_menus(
