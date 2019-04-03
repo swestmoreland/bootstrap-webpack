@@ -631,6 +631,11 @@ article{
 			color: $gray-500;
 		}
 	}
+	.oferta-body{
+		p,ul{
+			font-size: $font-size-base*1.2;
+		}
+	}
 }
 .see-all-offers-btn{
 	@extend .d-block;
