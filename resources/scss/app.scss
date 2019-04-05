@@ -196,6 +196,12 @@ header{
 	  -ms-flex-align: center;
 	  -webkit-align-items: center;
 	  align-items: center;
+	  a{
+	  	width: 100%;
+	  	img{
+	  		width: 100%;
+	  	}
+	  }
 	}
 	
 }
