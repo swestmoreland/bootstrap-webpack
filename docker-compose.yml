@@ -14,12 +14,10 @@ services:
       WORDPRESS_DB_PASSWORD: dbpass
       WORDPRESS_DB_NAME: vincent_db
     volumes:
-      - ./public_html/wp-content:/var/www/html/wp-content
+      - ./public_html/:/var/www/html/
 
   mysql:
     image: mysql:5.7
-    ports:
-      - 3307:3306
     networks:
       - backend
     volumes:
