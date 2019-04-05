@@ -18,62 +18,28 @@
 		</div> 
 
 
-		<div id="galeria" class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria" >
-			<h2>
-				Galería soluciones fotovoltaicas
-			</h2>
-			<?php
-			$args = array(
-			        'post_type' => 'attachment',
-			        'post_mime_type' => 'image',
-			        'orderby' => 'post_date',
-			        'order' => 'desc',
-			        'posts_per_page' => '3000',
-			        'post_status'    => 'inherit',
-			        'category_name'=>'hogar',
-			         );
+		<?php
+		$args = array(
+		        'post_type' => 'attachment',
+		        'post_mime_type' => 'image',
+		        'orderby' => 'post_date',
+		        'order' => 'desc',
+		        'posts_per_page' => '3000',
+		        'post_status'    => 'inherit',
+		        'category_name'=>'hogar',
+		         );
 
-			$loop = new WP_Query( $args );
-			?>				
-			<div class="row sol-gallery">
-				<div class="swiper-container gallery-top">
-				<div class="swiper-wrapper">
-				    <?php
-						while ( $loop->have_posts() ) : $loop->the_post();
-							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-								?>
-								<div class="swiper-slide" style="background-image:url(<?php echo $image[0]; ?>)">
-								</div>
-								<script type="text/javascript">
-									photo_arr.push( "<?php echo $image[0]; ?>");
-								</script>								
-								<?php
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post();
+			$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+				?>
+				<script type="text/javascript">
+					photo_arr.push( "<?php echo $image[0]; ?>");
+				</script>								
+				<?php
 
-						endwhile;				    
-					?>
-				</div>
-				<!-- Add Arrows -->
-				<div class="swiper-button-next swiper-button-white"></div>
-				<div class="swiper-button-prev swiper-button-white"></div>
-				</div>
-				<div class="swiper-container gallery-thumbs">
-					<div class="swiper-wrapper">
-					<?php
-						rewind_posts();
-						while ( $loop->have_posts() ) : $loop->the_post();
-							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-								?>
-								<div class="swiper-slide" style="background-image:url(<?php echo $image[0]; ?>)">
-									
-								</div>
-								<?php
-
-						endwhile;	
-					?>
-					</div>
-				</div>
-			</div>
-		</div>
+		endwhile;				    
+		?>				
 	</section>
 	<section>
 		<h1>Soluciones Térmicas</h1>
@@ -95,7 +61,7 @@
 		<? wp_reset_query(); ?>
 		<div class="col-xs-12 col-sm-12 col-md-12 shortcut-galeria">
 			<h2>
-				Galería soluciones residenciales
+				Galería Soluciones Residenciales
 			</h2>
 			<a href="#gallery">
 				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner-hogar.jpg">

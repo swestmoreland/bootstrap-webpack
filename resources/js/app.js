@@ -67,30 +67,7 @@ var galleryTop = new Swiper('#woocommerce .gallery-top', {
   },
 });
 
-var galleryThumbs = new Swiper('#solutions .gallery-thumbs', {
-  spaceBetween: 10,
-  slidesPerView: 6,
-  loop: true,
-  freeMode: true,
-  loopedSlides: 5, //looped slides should be the same
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-});
-var galleryTop = new Swiper('#solutions .gallery-top', {
-  spaceBetween: 10,
-  autoplay: {
-    delay: 2500,
-  },
-  loop:true,
-  loopedSlides: 5, //looped slides should be the same
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  thumbs: {
-    swiper: galleryThumbs,
-  },
-});
+
 
 if(photo_arr.length >0 ){
   var chunk = Math.floor( photo_arr.length / 4 );
