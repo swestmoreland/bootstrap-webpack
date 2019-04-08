@@ -149,33 +149,38 @@ get_header();
 			<div class="row">
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
-					<div class="swiper-wrapper">				
-				<?php
-				$args = array(
-				        'post_type' => 'attachment',
-				        'post_mime_type' => 'image',
-				        'orderby' => 'post_date',
-				        'order' => 'desc',
-				        'posts_per_page' => '3000',
-				        'post_status'    => 'inherit',
-				        'category_name'=>'close-partners',
-				         );
-
-				$loop = new WP_Query( $args );
-
-				while ( $loop->have_posts() ) : $loop->the_post();
-					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-						?>
-						<div class="swiper-slide">
-							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
-							</div>						
-						</div>					
+					<div class="swiper-wrapper">	
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
+						</div>								
 						<?php
+						$args = array(
+						        'post_type' => 'attachment',
+						        'post_mime_type' => 'image',
+						        'orderby' => 'post_date',
+						        'order' => 'desc',
+						        'posts_per_page' => '3000',
+						        'post_status'    => 'inherit',
+						        'category_name'=>'close-partners',
+						         );
 
-				endwhile;
-				?>
-				<?php wp_reset_query(); ?>
-				
+						$loop = new WP_Query( $args );
+
+						while ( $loop->have_posts() ) : $loop->the_post();
+							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+								?>
+								<div class="swiper-slide">
+									<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+									</div>						
+								</div>					
+								<?php
+
+						endwhile;
+						?>
+						<?php wp_reset_query(); ?>
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
+						</div>				
 					</div>
 				</div>
 			</div>
@@ -185,33 +190,38 @@ get_header();
 			<div class="row">
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
-					<div class="swiper-wrapper">				
-				<?php
-				$args = array(
-				        'post_type' => 'attachment',
-				        'post_mime_type' => 'image',
-				        'orderby' => 'post_date',
-				        'order' => 'desc',
-				        'posts_per_page' => '3000',
-				        'post_status'    => 'inherit',
-				        'category_name'=>'clientes',
-				         );
-
-				$loop = new WP_Query( $args );
-
-				while ( $loop->have_posts() ) : $loop->the_post();
-					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-						?>
-						<div class="swiper-slide">
-							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
-							</div>						
-						</div>						
+					<div class="swiper-wrapper">	
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
+						</div>									
 						<?php
+						$args = array(
+						        'post_type' => 'attachment',
+						        'post_mime_type' => 'image',
+						        'orderby' => 'post_date',
+						        'order' => 'desc',
+						        'posts_per_page' => '3000',
+						        'post_status'    => 'inherit',
+						        'category_name'=>'clientes',
+						         );
 
-				endwhile;
-				?>
-				<?php wp_reset_query(); ?>
-				
+						$loop = new WP_Query( $args );
+
+						while ( $loop->have_posts() ) : $loop->the_post();
+							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+								?>
+								<div class="swiper-slide">
+									<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+									</div>						
+								</div>						
+								<?php
+
+						endwhile;
+						?>
+						<?php wp_reset_query(); ?>
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
+						</div>				
 					</div>			
 				</div>	
 			</div>			
@@ -222,31 +232,36 @@ get_header();
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
 					<div class="swiper-wrapper">
-				<?php
-				$args = array(
-				        'post_type' => 'attachment',
-				        'post_mime_type' => 'image',
-				        'orderby' => 'post_date',
-				        'order' => 'desc',
-				        'posts_per_page' => '3000',
-				        'post_status'    => 'inherit',
-				        'category_name'=>'partners',
-				         );
-
-				$loop = new WP_Query( $args );
-
-				while ( $loop->have_posts() ) : $loop->the_post();
-					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-						?>
-						<div class="swiper-slide">
-							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
-							</div>						
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
 						</div>
 						<?php
+						$args = array(
+						        'post_type' => 'attachment',
+						        'post_mime_type' => 'image',
+						        'orderby' => 'post_date',
+						        'order' => 'desc',
+						        'posts_per_page' => '3000',
+						        'post_status'    => 'inherit',
+						        'category_name'=>'partners',
+						         );
 
-				endwhile;
-				?>
-				
+						$loop = new WP_Query( $args );
+
+						while ( $loop->have_posts() ) : $loop->the_post();
+							$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+								?>
+								<div class="swiper-slide">
+									<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+									</div>						
+								</div>
+								<?php
+
+						endwhile;
+						?>
+						<div class="swiper-slide d-block d-md-none">
+							<div class="icon"></div>
+						</div>				
 					</div>
 				</div>				
 			</div>
