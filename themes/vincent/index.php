@@ -147,6 +147,9 @@ get_header();
 		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
 			<div class="row">
+				  <!-- Swiper -->
+				<div class="swiper-container icon-container">
+					<div class="swiper-wrapper">				
 				<?php
 				$args = array(
 				        'post_type' => 'attachment',
@@ -163,19 +166,26 @@ get_header();
 				while ( $loop->have_posts() ) : $loop->the_post();
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 						?>
-						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
-						</div>						
+						<div class="swiper-slide">
+							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+							</div>						
+						</div>					
 						<?php
 
 				endwhile;
 				?>
 				<?php wp_reset_query(); ?>
 				
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="brands">
 			<h1>Han confiado en nosotros</h1>
 			<div class="row">
+				  <!-- Swiper -->
+				<div class="swiper-container icon-container">
+					<div class="swiper-wrapper">				
 				<?php
 				$args = array(
 				        'post_type' => 'attachment',
@@ -192,7 +202,9 @@ get_header();
 				while ( $loop->have_posts() ) : $loop->the_post();
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 						?>
-						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+						<div class="swiper-slide">
+							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+							</div>						
 						</div>						
 						<?php
 
@@ -200,11 +212,16 @@ get_header();
 				?>
 				<?php wp_reset_query(); ?>
 				
+					</div>			
+				</div>	
 			</div>			
 		</div>
 		<div class="brands">
 			<h1>Partners</h1>
 			<div class="row">
+				  <!-- Swiper -->
+				<div class="swiper-container icon-container">
+					<div class="swiper-wrapper">
 				<?php
 				$args = array(
 				        'post_type' => 'attachment',
@@ -221,13 +238,17 @@ get_header();
 				while ( $loop->have_posts() ) : $loop->the_post();
 					$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
 						?>
-						<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
-						</div>						
+						<div class="swiper-slide">
+							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+							</div>						
+						</div>
 						<?php
 
 				endwhile;
 				?>
 				
+					</div>
+				</div>				
 			</div>
 		</div>
 	</section> <!-- parterns -->

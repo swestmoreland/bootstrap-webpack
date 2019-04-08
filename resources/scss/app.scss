@@ -275,33 +275,24 @@ footer{
 }
 .brands{
 	@extend .py-4;
-	@include make-col(12);
+	@extend .mx-auto;
 	@include media-breakpoint-up(sm) {
-		padding-left: 18%;
-		padding-right: 18%;
+		width: 60%;
     }
     @include media-breakpoint-down(sm) {
         // Smaller than md: 768px
-        padding-left: 10%;
-		padding-right: 10%;
-    }	
+		width: 100%;
+    }
 	.row{
 
 	}
 	.icon{
-		@extend .p-2;
-		@extend .px-3;
 		height: 80px;
+		width: 80px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
-		@include media-breakpoint-up(sm) {
-	        @include make-col(2);
-	    }
-	    @include media-breakpoint-down(sm) {
-	        // Smaller than md: 768px
-	        @include make-col(4);
-	    }		
+		
 	}
 	h1{
     	font-size: 1.5rem;

@@ -67,6 +67,15 @@ var galleryTop = new Swiper('#woocommerce .gallery-top', {
   },
 });
 
+//icon containers logos etc
+var swiper = new Swiper('.swiper-container.icon-container', {
+  slidesPerView: 5,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 1000,
+  },
+});
+
 
 
 if(photo_arr.length >0 ){
