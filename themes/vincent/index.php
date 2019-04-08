@@ -138,7 +138,7 @@ get_header();
 </div>
 <div class="container-fluid">
 	<section><!-- productos con sello -->
-		<h1>Productos Con Sello</h1>			
+		<h1>Soluciones Con Sello</h1>			
 		<div class="col">
 		        <img class="d-block img-fluid mx-auto" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">    
 		</div>
