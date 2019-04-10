@@ -261,6 +261,14 @@ footer{
 			}
 		}
 	}
+	.cert-img{
+		@extend .d-block, .img-fluid, .mx-auto;
+		max-width: 500px;
+		@include media-breakpoint-down(sm) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
 }
 .flags{
 	@extend .mx-auto;

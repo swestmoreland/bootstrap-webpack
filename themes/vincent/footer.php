@@ -1,10 +1,5 @@
 
 <footer class="container-fluid">
-		<section>
-			<div class="col-sm-12 col-md-8 offset-md-2">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/cert.png">
-			</div>
-		</section>
 		<div class="row">
 			<p class="d-block fancy-font text-center px-3"> Confianza y calidad europea a su alcance </p>
 		</div>
@@ -57,8 +52,13 @@
 
 			</div>
 		</div>
+		<section>
+			<div class="w-100">
+				<img class="cert-img" src="<?php echo get_template_directory_uri() ?>/image/snippets/cert.png">
+			</div>
+		</section>
 		<div class="row">
-			<p class="d-block bottom-text text-center"> 2018 © Vincent Solar, Renewable Energy | Todos los derechos	</p>	
+			<p class="d-block bottom-text text-center"> 2018 © Vincent Solar | Todos los derechos reserva	</p>	
 		</div>
 </footer>
 <div class="bottom-dock">
@@ -80,8 +80,8 @@
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none d-xs-none d-sm-none d-md-block">
-		<a data-toggle="collapse" href="#collapsePanel" role="button" aria-expanded="false" aria-controls="collapsePanel">
-			¿Interesado en Ahorrar&nbsp;<i class="fas fa-dollar-sign"></i>?
+		<a data-toggle="collapse" href="mailto:info@vincentsolar.com" role="button" aria-expanded="false" aria-controls="collapsePanel">
+			Contactenos&nbsp;<i class="fas fa-envelope"></i>?
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
