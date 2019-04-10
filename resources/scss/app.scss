@@ -122,6 +122,9 @@ header{
 		li{
 			@extend .p-0;
 			list-style-type: none;
+			@include media-breakpoint-up(md) {
+				margin-right:15px !important; 
+		    }			
 			@include media-breakpoint-up(sm) {
 				display: inline;
 				float:right;
@@ -295,8 +298,18 @@ footer{
 
 	}
 	.icon{
-		height: 80px;
-		width: 80px;
+		@include media-breakpoint-up(md) {
+			height: 120px;
+			width: 120px;
+	    }
+		@include media-breakpoint-up(sm) {
+			height: 100px;
+			width: 100px;
+	    }
+	    @include media-breakpoint-down(sm) {
+			height: 80px;
+			width: 80px;
+	    }		
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
