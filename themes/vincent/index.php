@@ -45,6 +45,7 @@ get_header();
 		'post_status' => 'publish',
 		'post_mime_type' => null,
 		'posts_per_page' => '3000',
+		'orderby'        => array( 'menu_order' => 'ASC' )
 		);
 
 		$loop = new WP_Query( $args );
@@ -121,10 +122,10 @@ get_header();
 		</div>
 	</section>
 </div>
-<div class="container">
+<div class="container-fluid">
 	<section> <!-- noticias -->
-		<h1>Noticias</h1>
-		<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+		<h1><a href="/noticias"> Noticias </a></h1>
+		<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
 		 
 		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); 
 		 

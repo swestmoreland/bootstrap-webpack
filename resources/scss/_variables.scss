@@ -2,6 +2,15 @@ $fa-font-path: "../fonts";
 
 $header-height : 100px ;
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 1000px,
+  lg: 1400px,
+  xl: 1900px
+) ;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
