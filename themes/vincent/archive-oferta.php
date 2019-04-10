@@ -2,7 +2,7 @@
 
 <div class="container">
 	<section>
-		<h1>Ofertas y Especiales</h1>
+		<h1>Ofertas</h1>
 	</section>
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<section class="oferta">
