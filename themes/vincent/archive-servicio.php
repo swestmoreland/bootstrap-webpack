@@ -2,7 +2,7 @@
 <div class="container-fluid">
 	<section>
 		<h1>Instalaciones y Mantenciones</h1>
-		<div class="col">
+		<div class="w-100">
 		    <img class="d-block mx-auto img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banners/banner_mantenciones_lg.png">    
 		</div>
 		

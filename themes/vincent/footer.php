@@ -52,11 +52,40 @@
 
 			</div>
 		</div>
-		<section>
+		<div class="brands">
+			<h2>Nuestros clientes y partners</h2>
+			  <!-- Swiper -->
+					<?php
+					wp_reset_query();
+					$args = array(
+					        'post_type' => 'attachment',
+					        'post_mime_type' => 'image',
+					        'orderby' => 'post_date',
+					        'order' => 'desc',
+					        'posts_per_page' => '3000',
+					        'post_status'    => 'inherit',
+					        'category_name'=>'partners,clientes',
+					         );
+
+					$loop = new WP_Query( $args );
+
+					while ( $loop->have_posts() ) : $loop->the_post();
+						$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+							?>
+							<div class="icon" style="background-image:url(<?php echo $image[0]; ?>)">
+							</div>						
+							<?php
+
+					endwhile;
+					?>
+					
+		</div>
+
+		<div class="row">
 			<div class="w-100">
 				<img class="cert-img" src="<?php echo get_template_directory_uri() ?>/image/snippets/cert.png">
 			</div>
-		</section>
+		</div>
 		<div class="row">
 			<p class="d-block bottom-text text-center"> 2018 © Vincent Solar | Todos los derechos reservados	</p>	
 		</div>
