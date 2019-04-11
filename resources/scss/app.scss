@@ -278,12 +278,18 @@ footer{
 	}
 	.cert-img{
 		@extend .d-block, .img-fluid, .mx-auto;
-		max-width: 500px;
-		@include media-breakpoint-down(sm) {
+		//max-width: 500px;
+		@include media-breakpoint-between(xs,sm) {
 			max-width: 100%;
 			padding-left: 10px;
 			padding-right: 10px;
-		}
+	    }		
+		@include media-breakpoint-between(sm,lg) {
+			max-width: 500px;
+	    }
+		@include media-breakpoint-between(lg,xl) {
+			max-width: 600px;
+	    }
 	}
 }
 .flags{
@@ -316,11 +322,11 @@ footer{
 			width: 80px;
 	    }		
 		@include media-breakpoint-between(sm,lg) {
-			height: 100px;
+			height: 90px;
 			width: 100px;
 	    }
 		@include media-breakpoint-between(lg,xl) {
-			height: 120px;
+			height: 90px;
 			width: 140px;
 	    }
 		background-position: center;
@@ -384,7 +390,7 @@ footer{
 		text-decoration: none;
 	}
 	@include media-breakpoint-up(sm) {
-        @include make-col(3);
+        @include make-col(4);
     }
     @include media-breakpoint-down(sm) {
         // Smaller than md: 768px

@@ -112,7 +112,7 @@ get_header();
 
 	</section> <!-- ofertas -->
 </div>
-<div class="container-fluid">
+<div class="container">
 	<section id="soluciones">
 		<div class="col-sm-12 col-md-6" style="cursor: pointer;" onclick="window.location='/soluciones-hogar';">
 			<img class="img-fluid py-1 mx-auto" style="width: 100%" src="<?php echo get_template_directory_uri() ?>/image/snippets/hogar.png">
@@ -122,10 +122,10 @@ get_header();
 		</div>
 	</section>
 </div>
-<div class="container-fluid">
+<div class="container">
 	<section> <!-- noticias -->
 		<h1><a href="/noticias"> Noticias </a></h1>
-		<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
+		<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
 		 
 		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); 
 		 
@@ -144,10 +144,13 @@ get_header();
 		        <img class="d-block img-fluid w-100" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">    
 		</div>
 	</section><!-- productos con sello -->
+</div>
+
+<div class="container">
 	<section><!-- parterns -->
 		<div class="brands">
 			<h1>Distribuimos y trabajamos junto con</h1>
-			<div class="row">
+			<div class="w-100">
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
 					<div class="swiper-wrapper">	
@@ -188,7 +191,7 @@ get_header();
 		</div>
 		<div class="brands">
 			<h1>Han confiado en nosotros</h1>
-			<div class="row">
+			<div class="w-100">
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
 					<div class="swiper-wrapper">	
@@ -229,7 +232,7 @@ get_header();
 		</div>
 		<div class="brands">
 			<h1>Partners</h1>
-			<div class="row">
+			<div class="w-100">
 				  <!-- Swiper -->
 				<div class="swiper-container icon-container">
 					<div class="swiper-wrapper">
