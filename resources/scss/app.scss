@@ -93,7 +93,7 @@ header{
 		@include media-breakpoint-up(sm) {
 	        @include make-col(3);
 	        padding: 0px;
-	        margin-left: 16px;
+	        margin-left: 23px;
 	        margin-top: 16px;
 
 	        max-width: 210px;	
@@ -339,15 +339,15 @@ footer{
 		@include make-col-ready();
 	    @include media-breakpoint-between(xs,sm) {
 	    	@include make-col(4);
-	    	height: 60px;
+	    	height: 50px;
 	    }		
 		@include media-breakpoint-between(sm,lg) {
 			@include make-col(1);
-			height: 60px;
+			height: 40px;
 	    }
 		@include media-breakpoint-between(lg,xl) {
 			@include make-col(1);
-			height: 60px;
+			height: 40px;
 	    }
 		background-position: center;
 		background-repeat: no-repeat;
@@ -601,9 +601,15 @@ article{
 			@include make-col-ready();
 			@include media-breakpoint-up(sm) {
 		        @include make-col(7);
+		        p{
+		        	font-size: $font-size-base * 1.4;
+		        }
 		    }
 			@include media-breakpoint-down(sm) {
 		        @include make-col(12);
+		        p{
+		        	font-size: $font-size-base * 1.2;
+		        }		        
 		    }
 		    ul{
 		    	@extend .pl-4;
@@ -703,8 +709,15 @@ article{
 		}
 	}
 	.oferta-body{
-		p,ul{
-			font-size: $font-size-base*1.2;
+		@include media-breakpoint-up(sm) {
+			p,ul{
+				font-size: $font-size-base*1.4;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			p,ul{
+				font-size: $font-size-base*1.2;
+			}
 		}
 	}
 }
