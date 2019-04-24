@@ -308,7 +308,13 @@ transition: all .2s ease-in-out;
 }
  
 .grow:hover { 
-transform: scale(1.06); 
+	@include media-breakpoint-up(sm) {
+		transform: scale(1.06); 
+	}
+	@include media-breakpoint-down(sm) {
+		transform: scale(1.02); 
+	}
+
 }
  
 
@@ -320,15 +326,27 @@ transform: scale(1.06);
 	@include media-breakpoint-down(sm) {}
 	.columna{
 		display: block;
-		padding-left: 10px !important;
-		padding-right: 10px !important;
+		@include media-breakpoint-up(sm) {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+		}
+		@include media-breakpoint-down(sm) {
+			padding-left: 5% !important;
+			padding-right: 5% !important;
+		}
 		.card{
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 15px;
+			}
 			display: block;
 			text-decoration: none;
 			border-style: solid;
 			border-width: 1px;
 			border-color: $gray-300;
 			border-radius: 0px;
+			img{
+				width: 100%;
+			}
 			h2{
 				@extend .text-center;
 				@extend .py-3;
@@ -338,9 +356,16 @@ transform: scale(1.06);
 			}
 			p{
 				@extend .text-center;
-				@extend .p-2;
+				@extend .px-2;
 				@extend .m-0;
-
+				@include media-breakpoint-up(sm) {
+					padding-top: 11px;
+					padding-bottom: 11px;					
+				}
+				@include media-breakpoint-down(sm) {
+					padding-top: 7px;
+					padding-bottom: 7px;
+				}
 				color: $gray-600;
 			}
 		}
