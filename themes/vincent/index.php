@@ -82,6 +82,49 @@ get_header();
 		</div>
 	</section><!-- flags -->
 </div>
+<div class="container">
+	<section class="main-buttons-group">
+		<div class="col-sm-12 col-md-4 columna ">
+			<a class="card grow" href="/soluciones-hogar">
+				<h2>Solar para su hogar</h2>
+				<div class="">
+					<div class="w-100">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonhogar.jpg">
+					</div>
+				</div>
+				<div class="">
+					<p> Solución todo en uno para su sistema solar de hogar. </p>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-12 col-md-4 columna ">
+			<a class="card grow" href="/soluciones-empresa">
+				<h2>Solar para su empresa</h2>
+				<div class="">
+					<div class="w-100">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonempresa.jpg">
+					</div>
+				</div>
+				<div class="">
+					<p> Solución de alta potencia para grandes consumidores. </p>
+				</div>			
+			</a>
+		</div>
+		<div class="col-sm-12 col-md-4 columna ">
+			<a class="card grow" href="/servicios">
+				<h2>Manutención</h2>
+				<div class="">
+					<div class="w-100">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonmanutencion.jpg">
+					</div>
+				</div>
+				<div class="">
+					<p> Manutención de paneles solares, inversores, termopaneles, calderas. </p>
+				</div>				
+			</a>
+		</div>
+	</section>
+</div>
 <div class="container-fluid">
 	<section class="cover-swiper"><!-- ofertas -->
 		
@@ -112,16 +155,7 @@ get_header();
 
 	</section> <!-- ofertas -->
 </div>
-<div class="container">
-	<section id="soluciones">
-		<div class="col-sm-12 col-md-6" style="cursor: pointer;" onclick="window.location='/soluciones-hogar';">
-			<img class="img-fluid py-1 mx-auto" style="width: 100%" src="<?php echo get_template_directory_uri() ?>/image/snippets/hogar.png">
-		</div>
-		<div class="col-sm-12 col-md-6" style="cursor: pointer;" onclick="window.location='/soluciones-empresa';">
-			<img class="img-fluid py-1 mx-auto" style="width: 100%" src="<?php echo get_template_directory_uri() ?>/image/snippets/empresas.png">
-		</div>
-	</section>
-</div>
+
 <div class="container">
 	<section> <!-- noticias -->
 		<h1><a href="/noticias"> Noticias </a></h1>

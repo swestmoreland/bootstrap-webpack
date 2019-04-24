@@ -302,6 +302,51 @@ footer{
 	    }
 	}
 }
+
+.grow { 
+transition: all .2s ease-in-out; 
+}
+ 
+.grow:hover { 
+transform: scale(1.06); 
+}
+ 
+
+.main-buttons-group{
+	@include media-breakpoint-up(sm) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	@include media-breakpoint-down(sm) {}
+	.columna{
+		display: block;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+		.card{
+			display: block;
+			text-decoration: none;
+			border-style: solid;
+			border-width: 1px;
+			border-color: $gray-300;
+			border-radius: 0px;
+			h2{
+				@extend .text-center;
+				@extend .py-3;
+				@extend .mb-0;
+				font-size: $font-size-base * 1.4;
+				color: $vincent-blue;
+			}
+			p{
+				@extend .text-center;
+				@extend .p-2;
+				@extend .m-0;
+
+				color: $gray-600;
+			}
+		}
+	}
+}
+
 .flags{
 	@extend .mx-auto;
 	width: auto;
