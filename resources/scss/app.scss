@@ -194,6 +194,15 @@ header{
 		}
 	}
 }
+.video-container{
+	height: 31.77vw;
+	video{
+		height: auto;
+		width: 100%;
+	    min-width: 100%;
+	    z-index: -100;		
+	}
+}
 .cover-swiper{
 	.swiper-container {
 	  width: 100%;

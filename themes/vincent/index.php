@@ -1,54 +1,15 @@
 <?php 
 get_header(); 
 ?>
-<!--
-<div class="w-100" style="height: 28.125vw">
-	<div style="position: absolute; color:white">
-		<h1 style="width:100%;margin-top: 30%;margin-left: 5%">Where the sun is ... Vincent Solar</h1>
-	</div>
-	<div style="position: absolute; z-index: -99; width: 100%; height: 28.125vw;">
-	  <iframe frameborder="0" height="100%" width="100%" 
-	    src="https://www.youtube.com/embed/90ZVG0xMlVI?&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&controls=0&color=white&iv_load_policy=3&modestbranding=0&disablekb=1&fs=0&playlist=90ZVG0xMlVI">
-	  </iframe>
-	</div>
+
+<div class="w-100 video-container">
+	<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+		<source src="/videocover.mp4" type="video/mp4">
+
+	</video>	
 </div>
--->
 <div class="container-fluid">
 	<div class="row cover-swiper"><!-- cover -->
-		<?php
-		$args = array(
-		        'post_type' => 'attachment',
-		        'post_mime_type' => 'image',
-		        'orderby' => 'post_date',
-		        'order' => 'asc',
-		        'posts_per_page' => '3000',
-		        'post_status'    => 'inherit',
-		        'category_name'=>'cover-grande',
-		         );
-
-		$loop = new WP_Query( $args );
-		?>		
-		<div class="swiper-container desk-swiper d-none d-xs-none d-sm-none d-md-block">
-		    <div class="swiper-wrapper">
-
-			    <?php
-					while ( $loop->have_posts() ) : $loop->the_post();
-						$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
-							?>
-
-					      <div class="swiper-slide">
-					      	<a href="<?php echo wp_get_attachment_caption(get_the_ID()); ?>">
-					      		<img class="img-fluid" src="<?php echo $image[0]; ?>">
-					      	</a>
-					      </div>
-							<?php
-
-					endwhile;				    
-				?>		      
-		    </div>
-
-		</div>
-
 		<?php
 		wp_reset_postdata();
         wp_reset_query();
