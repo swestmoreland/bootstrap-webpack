@@ -54,7 +54,7 @@ section {
 .header-fill{
 	//width: 100%;
 	//height: 0px;
-	padding-bottom: $header-height;
+	padding-bottom: $header-height - 3px;
 
 }
 header{
@@ -356,11 +356,11 @@ transition: all .2s ease-in-out;
 }
 
 .fade-in {
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-  -moz-animation: fadeIn ease 5s;
-  -o-animation: fadeIn ease 5s;
-  -ms-animation: fadeIn ease 5s;
+  animation: fadeIn ease 6s;
+  -webkit-animation: fadeIn ease 6s;
+  -moz-animation: fadeIn ease 6s;
+  -o-animation: fadeIn ease 6s;
+  -ms-animation: fadeIn ease 6s;
 }
 
 
