@@ -460,7 +460,6 @@ transition: all .2s ease-in-out;
 			p{
 				@extend .text-center;
 				@extend .m-0;
-				max-height: 150px;	
 				@include media-breakpoint-between(xs,sm) {
 					padding-top: 7px;
 					padding-bottom: 7px;
@@ -474,6 +473,7 @@ transition: all .2s ease-in-out;
 					padding-left: $spacer * 1;
 					padding-right: $spacer * 1;
 					font-size: $font-size-base * 1;
+					max-height: 7vw;	
 			    }
 				@include media-breakpoint-between(lg,xl) {
 					padding-top: 13%;
@@ -481,6 +481,7 @@ transition: all .2s ease-in-out;
 					padding-left: $spacer * 1.8;
 					padding-right: $spacer * 1.8;
 					font-size: $font-size-base * 1.4;
+					max-height: 7vw;	
 			    }
 				color: $gray-600;
 			}
