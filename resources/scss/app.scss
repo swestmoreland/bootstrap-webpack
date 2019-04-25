@@ -60,7 +60,7 @@ section {
 header{
 	@extend .container-fluid;
 	@include media-breakpoint-up(sm) {
-		height: 100px;
+		height: $header-height;
 	}
 	@include media-breakpoint-down(sm) {
 		height: 100px;
@@ -76,7 +76,14 @@ header{
     &.one-edge-shadow {
 	  box-shadow: 0 2px 10px -7px black;
 	}
-
+	.corner-flag{
+		position: absolute;
+		right: 0;
+		top: $header-top-margin;
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}	
+	}
 	.menu-button{
 		z-index: $zindex-fixed + 1;
 		position: absolute;
@@ -89,12 +96,11 @@ header{
 	}
 	.site-logo{
 		@extend .d-block;
-		@include make-col-ready();
 		@include media-breakpoint-up(sm) {
-	        @include make-col(3);
+	        width: 15vw;
 	        padding: 0px;
 	        margin-left: 23px;
-	        margin-top: 16px;
+	        margin-top: $header-top-margin;
 
 	        max-width: 210px;	
 	        
@@ -116,18 +122,17 @@ header{
 	}
 
 	.menu {
-		@extend .pl-4;
-		@include make-col-ready();
+		@extend .p-4;
 		background-color: $body-bg;
 		margin-right:0px;
+		margin-bottom: 0px;
 		margin-left: auto;
+		width: 100%;
 
 		@include media-breakpoint-up(sm) {
-			@include make-col(9);
 			padding-top: 2.4rem;
 		}
 		@include media-breakpoint-down(sm) {
-			@include make-col(12);
 			padding-top: 1rem;
 			padding-bottom: 1rem;
 		}
@@ -135,18 +140,18 @@ header{
 		li{
 			@extend .p-0;
 			list-style-type: none;
-			@include media-breakpoint-up(md) {
-				margin-right:15px !important; 
-		    }			
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-between(md,xl) {
+				margin-right:25px !important; 
 				display: inline;
-				float:right;
 				margin-right:6px; 
-				text-align: right;
+				text-align: center;
 				a{
 					padding-bottom: 10px;
 				}
 			}
+			@include media-breakpoint-between(md,xl) {
+			}
+
 			@include media-breakpoint-down(sm) {
 				padding: 0;
 				margin:0;
