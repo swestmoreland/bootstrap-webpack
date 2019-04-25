@@ -3,8 +3,8 @@ get_header();
 ?>
 
 <div class="w-100 video-container">
-	<div class="video-overlay">
-		<h1>Where the sun is ... Vincent Solar&reg;</h1>
+	<div class="video-overlay fade-in">
+		<h1>Where the sun is ... <br>Vincent Solar&reg;</h1>
 	</div>
 	<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
 		<source src="/videocover.mp4" type="video/mp4">
