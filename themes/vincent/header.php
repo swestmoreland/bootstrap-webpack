@@ -16,12 +16,16 @@
         <a class="btn  d-block d-md-none menu-button" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
           <i class="fas fa-bars"></i>
         </a>
-        <div class="corner-flag">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 3 2">
-            <rect width="3" height="2" fill="#009246"/>
-            <rect width="2" height="2" x="1" fill="#fff"/>
-            <rect width="1" height="2" x="2" fill="#ce2b37"/>
-          </svg>
+        <div class="d-none d-xs-none d-sm-none d-md-block top-badge ">
+          <span>Proud to be</span>
+          <div class="corner-flag">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 3 2">
+              <rect width="3" height="2" fill="#009246"/>
+              <rect width="2" height="2" x="1" fill="#fff"/>
+              <rect width="1" height="2" x="2" fill="#ce2b37"/>
+            </svg>
+          </div>
+          
         </div>
         <a href="/" class="site-logo">
             <div class="logo">
