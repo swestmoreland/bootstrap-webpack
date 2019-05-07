@@ -1,7 +1,7 @@
 <?php 
 get_header(); 
 ?>
-
+<!--
 <div class="w-100 video-container">
 	<div class="video-overlay fade-in">
 		<h1>Where the sun is ... <br>Vincent Solar&reg;</h1>
@@ -11,7 +11,43 @@ get_header();
 
 	</video>	
 </div>
+-->
 <div class="container-fluid">
+    <div class="row cover-swiper"><!-- cover -->
+               <?php
+               $args = array(
+                       'post_type' => 'attachment',
+                       'post_mime_type' => 'image',
+                       'orderby' => 'post_date',
+                       'order' => 'asc',
+                       'posts_per_page' => '3000',
+                       'post_status'    => 'inherit',
+                       'category_name'=>'cover-grande',
+                        );
+
+               $loop = new WP_Query( $args );
+               ?>              
+               <div class="swiper-container desk-swiper d-none d-xs-none d-sm-none d-md-block">
+                   <div class="swiper-wrapper">
+
+                           <?php
+                                       while ( $loop->have_posts() ) : $loop->the_post();
+                                               $image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+                                                       ?>
+
+                                             <div class="swiper-slide">
+                                               <a href="<?php echo wp_get_attachment_caption(get_the_ID()); ?>">
+                                                       <img class="img-fluid" src="<?php echo $image[0]; ?>">
+                                               </a>
+                                             </div>
+                                                       <?php
+
+                                       endwhile;                                   
+                               ?>                    
+                   </div>
+
+               </div>
+    </div>
 	<div class="row cover-swiper"><!-- cover -->
 		<?php
 		wp_reset_postdata();
@@ -87,15 +123,15 @@ get_header();
 			</a>
 		</div>
 		<div class="col-sm-12 col-md-4 columna ">
-			<a class="card grow" href="/servicios">
-				<h2>Manutención</h2>
+			<a class="card grow" href="/ofertas">
+				<h2>Ofertas</h2>
 				<div class="">
 					<div class="w-100">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonmanutencion.jpg">
 					</div>
 				</div>
 				<div class="">
-					<p> Manutención de paneles solares, inversores, termopaneles, calderas. </p>
+					<p> Vea nuestras ofertas, proyectos llave en mano sin cobros extra. </p>
 				</div>				
 			</a>
 		</div>

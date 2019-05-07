@@ -95,7 +95,7 @@ header{
 		border-color: $vincent-orange;
 	}
 	.site-logo{
-		@extend .d-block;
+		@extend .d-inline;
 		@include media-breakpoint-up(sm) {
 	        width: 15vw;
 	        padding: 0px;
@@ -107,6 +107,7 @@ header{
 	    }
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
+	        display: block;
 	        padding-top: 28px;
 	        min-width: 100px;
 	        max-width: 50%;
@@ -124,10 +125,11 @@ header{
 	.menu {
 		@extend .p-4;
 		background-color: $body-bg;
-		margin-right:0px;
+		margin-right:auto;
+		margin-top: auto;
 		margin-bottom: 0px;
-		margin-left: auto;
-		width: 100%;
+		margin-left: 20px;
+		width: auto;
 
 		@include media-breakpoint-up(sm) {
 			padding-top: 2.4rem;
