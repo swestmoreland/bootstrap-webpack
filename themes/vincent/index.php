@@ -187,7 +187,7 @@ get_header();
 	<section><!-- productos con sello -->
 		<h1>Soluciones Con Sello</h1>			
 		<div class="w-100">
-		        <img class="d-block img-fluid w-100" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.png">    
+		        <img class="d-block img-fluid w-100" src="<?php echo get_template_directory_uri() ?>/image/banners/consello.jpg">    
 		</div>
 	</section><!-- productos con sello -->
 </div>
