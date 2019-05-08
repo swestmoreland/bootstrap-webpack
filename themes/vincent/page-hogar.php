@@ -31,10 +31,11 @@
 
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-			$image = wp_get_attachment_image_src( get_the_ID(), $size="full" ); 
+			$image = wp_get_attachment_image_src( get_the_ID(), $size="large" ); 
+			$image_thumb = wp_get_attachment_image_src( get_the_ID(), $size="medium" ); 
 				?>
 				<script type="text/javascript">
-					photo_arr.push( "<?php echo $image[0]; ?>");
+					photo_arr.push( { "full":"<?php echo $image[0]; ?>", "thumb" :"<?php echo $image_thumb[0]; ?>" });
 				</script>								
 				<?php
 
@@ -70,10 +71,10 @@
 	</section>
 	<div id="gallery"></div>
 	<section id="collage-gallery" class="no-gutters">
-		<div id="gallery-col-1" class="col-sm-12 col-md-6 col-lg-3"></div>
-		<div id="gallery-col-2" class="col-sm-12 col-md-6 col-lg-3"></div>
-		<div id="gallery-col-3" class="col-sm-12 col-md-6 col-lg-3"></div>
-		<div id="gallery-col-4" class="col-sm-12 col-md-6 col-lg-3"></div>
+		<div id="gallery-col-1" class="col-sm-6 col-md-3 col-lg-3"></div>
+		<div id="gallery-col-2" class="col-sm-6 col-md-3 col-lg-3"></div>
+		<div id="gallery-col-3" class="col-sm-6 col-md-3 col-lg-3"></div>
+		<div id="gallery-col-4" class="col-sm-6 col-md-3 col-lg-3"></div>
 	</section>
 
 </div>
