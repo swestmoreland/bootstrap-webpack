@@ -27,6 +27,10 @@ var mySwiper = new Swiper ('.cover-swiper .swiper-container.movil-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true,
   loop: true
 });
 var mySwiper = new Swiper ('.cover-swiper .swiper-container.oferta-swiper', {

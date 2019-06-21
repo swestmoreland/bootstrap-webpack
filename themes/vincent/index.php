@@ -70,7 +70,7 @@ get_header();
 							?>
 					      <div class="swiper-slide">
 					      	<a href="<?php echo get_post_permalink(); ?>">
-					      		<img class="img-fluid" src="<?php echo the_post_thumbnail_url(); ?>">
+					      		<img class="img-fluid swiper-lazy" src="<?php echo the_post_thumbnail_url(); ?>">
 					      	</a>
 					      </div>
 							<?php
