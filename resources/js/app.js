@@ -12,8 +12,13 @@ var mySwiper = new Swiper ('.cover-swiper .swiper-container.desk-swiper', {
   // Optional parameters
   direction: 'horizontal',
   autoplay: {
-    delay: 4000,
+    delay: 5000,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  lazy: true,
   loop: true
 });
 
