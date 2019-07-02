@@ -56,9 +56,10 @@ get_header();
         $args= array(
 		'post_type' => array('oferta'),
 		'post_status' => 'publish',
-		'post_mime_type' => null,
-		'posts_per_page' => '3000',
-		'orderby'        => array( 'menu_order' => 'ASC' )
+		'posts_per_page' => -1,
+		'meta_key'		=> 'featured',
+		'orderby'		=> 'meta_value',
+		'order'			=> 'DESC'
 		);
 
 		$loop = new WP_Query( $args );
