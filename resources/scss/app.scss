@@ -1086,3 +1086,32 @@ article{
 		}
 	}
 }
+
+#questions-content{
+	p{
+		width:100%;
+		color: #333;
+		@include media-breakpoint-between(lg,xl) {
+			font-size: $font-size-base*1.6;
+	    }
+	    @include media-breakpoint-between(md,lg) {
+			font-size: $font-size-base*1.4;
+	    }
+		@include media-breakpoint-down(sm) {
+			font-size: $font-size-base*1.5;	        
+	    }
+		&.has-medium-font-size{
+			font-weight: bold;
+			color: #444;
+			@include media-breakpoint-between(lg,xl) {
+				font-size: $font-size-base*1.7;
+		    }
+		    @include media-breakpoint-between(md,lg) {
+				font-size: $font-size-base*1.5;
+		    }
+			@include media-breakpoint-down(sm) {
+				font-size: $font-size-base*1.6;	        
+		    }			
+		}
+	}
+}
