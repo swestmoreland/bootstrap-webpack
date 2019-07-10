@@ -47,7 +47,10 @@
 			<div class="col-md-4">
 
 	            <p class="footer-company-about">
+	            	<?php echo get_bloginfo( 'description' ); ?>
+	            	<!--
 	                En Vincent Solar nos especializamos en el diseño e implementación de soluciones solares integrales para nuestros clientes. Nuestros kits solares incluyen productos como paneles solares, inversores, colectores solares, tanto como la instalación de estos. Al producir su propia electricidad solar no solo podra ahorrar en su cuenta de energía sino que también será parte de la revolución ecológica de energía sustentables en el país y el mundo.
+	            	-->
 	            </p>
 
 			</div>
