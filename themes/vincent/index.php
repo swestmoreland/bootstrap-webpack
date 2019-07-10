@@ -154,6 +154,7 @@ get_header();
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-2.jpg">
 		      	</a>
 		      </div>
+		      <!--
 		      <div class="swiper-slide">
 		      	<a href="/ofertas">
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-3.jpg">
@@ -164,6 +165,7 @@ get_header();
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-4.jpg">
 		      	</a>
 		      </div>
+		  		-->
 		    </div>
 		</div>
 
