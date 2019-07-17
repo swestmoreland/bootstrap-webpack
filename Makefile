@@ -10,4 +10,5 @@ sass:
 	make copy
 js:
 	npm run bundle-js
+	npm run minify
 	make copy

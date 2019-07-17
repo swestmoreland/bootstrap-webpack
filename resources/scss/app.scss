@@ -321,7 +321,7 @@ footer{
 	}
 	.footer-company-about{
 		@extend .p-2;
-		@extend .text-justify;
+		@extend .text-center;
 		max-width: 400px;
 		color: $gray-600;
 	}
