@@ -92,6 +92,16 @@ defined( 'ABSPATH' ) || exit;
 	<div class="product-description">
 		<h2>Descripción</h2>
 		<?php the_content();?>
+
+		<?php 
+		$abv = $product->get_attribute("url_ficha");
+		if (!empty($abv)){
+			echo "<a class=\"ficha-tecnica\" href=\"";
+			echo __($abv, "woocommerce");
+			echo "\">Ver ficha técnica</a>";
+		}
+		?>
+		
 	</div>
 </section>
 <section>
