@@ -171,7 +171,45 @@ get_header();
 
 	</section> <!-- ofertas -->
 </div>
+<div class="container-fluid">
+	<section>
+		<h1><a href="/productos"> Productos </a></h1>
+		<?php
+		$params = array('posts_per_page' => 15, 'post_type' => 'product');
+		$wc_query = new WP_Query($params);
+		?>
+		<?php if ($wc_query->have_posts()) : ?>
+		<div class="swiper-container products-swiper">
+			<div class="swiper-wrapper">
+			<?php while ($wc_query->have_posts()) :
+		                $wc_query->the_post(); ?>
+				<div class="swiper-slide">
+		        	<a class="product-slide" href="<?php the_permalink(); ?>">
+			        	<?php the_post_thumbnail(); ?>
+			            <h4>
+			               <?php the_title(); ?>
+			               
+			           </h4>
+		           </a>
 
+				</div>
+		    <?php endwhile; ?>
+
+			</div>
+		<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+		<?php wp_reset_postdata(); ?>
+		<?php else:  ?>
+		<div>
+			<?php _e( 'Sin Productos' ); ?>
+		</div>
+		<?php endif; ?>
+
+		<ul>
+		</ul>		
+	</section>
+</div>
 <div class="container">
 	<section> <!-- noticias -->
 		<h1><a href="/noticias"> Noticias </a></h1>
