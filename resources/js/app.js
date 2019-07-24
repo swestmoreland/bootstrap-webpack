@@ -88,6 +88,10 @@ var swiper = new Swiper('.swiper-container.icon-container', {
 var swiper = new Swiper('.swiper-container.products-swiper', {
   slidesPerView: 5,
   spaceBetween: 50,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
   // init: false,
   pagination: {
     el: '.swiper-pagination',

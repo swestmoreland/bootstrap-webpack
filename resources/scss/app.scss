@@ -1115,13 +1115,18 @@ article{
 		}
 	}
 }
-.product-slide{
+a.product-slide{
 	height: 270px;
 	display: block;
 	margin-bottom: 60px;
+	text-decoration: none;
 	h4{
 		text-align: center;
 		text-decoration: none;
 		color: $gray-800;
 	}
+}
+
+.swiper-pagination-bullet-active{
+	background: $vincent-blue;
 }
