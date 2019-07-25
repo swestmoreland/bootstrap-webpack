@@ -1130,3 +1130,52 @@ a.product-slide{
 .swiper-pagination-bullet-active{
 	background: $vincent-blue;
 }
+
+#dimScreen
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+    z-index: $zindex-modal;
+    top:0;
+    left:0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.82);
+    .menu-button{
+	    z-index: $zindex-modal + 1;
+	    position: absolute;
+	    top: 32px;
+	    right: 32px;
+	    color: #fff;
+	    border-color: #fff;
+    }
+    .container{
+    	height: 100vh;
+    	.spacer{
+			@include media-breakpoint-down(md) {
+				height:10vh;
+			}
+			@include media-breakpoint-up(md) {
+				height:21vh;
+			}
+    	}
+    	.img-body{
+    		overflow: hidden;
+			@include media-breakpoint-down(md) {
+    			max-height: 95vh;
+			}
+			@include media-breakpoint-up(md) {
+    			max-height: 70vh;
+			}    		
+    	}
+    }
+   #selectedImg{
+		display: block;
+		width: 100%;
+   }
+   #imageDescription{
+		color: white;
+   }
+}

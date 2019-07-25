@@ -124,7 +124,7 @@ if(photo_arr.length >0 ){
     for (var j = bundles[i].length - 1; j >= 0; j--) {
       var size=Math.floor(Math.random() * 3) + 1;  
       $("#collage-gallery #gallery-col-"+(i+1)).append(
-        "<a class=\"gallery-grid-img s"+size+"\" target=\"_blank\"  href=\"" +bundles[i][j]["full"]+ "\" style=\"background-image:url("+ bundles[i][j]["thumb"] +")\" > </a>"
+        "<div class=\"gallery-grid-img s"+size+"\"   data-link=\"" +bundles[i][j]["full"]+ "\" style=\"background-image:url("+ bundles[i][j]["thumb"] +")\" > </div>"
         );
     }
   }
