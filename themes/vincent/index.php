@@ -89,14 +89,16 @@ get_header();
 
 
 	</div> <!-- cover -->
-	<section><!-- flags -->
+	<section><!-- SECOND TO MAIN COVERS -->
 		<div class="flags">
 			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/flags.png">
-			
 		</div>
-	</section><!-- flags -->
+	</section><!-- SECOND TO MAIN COVERS -->
 </div>
 <div class="container">
+	<section class="main-buttons-group-mov">
+		
+	</section>
 	<section class="main-buttons-group">
 		<div class="col-sm-12 col-md-4 columna ">
 			<a class="card grow" href="/soluciones-hogar">

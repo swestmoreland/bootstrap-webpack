@@ -538,6 +538,12 @@ transition: all .2s ease-in-out;
 	@extend .mx-auto;
 	width: auto;
 	max-width: 230px;
+	@include media-breakpoint-up(sm) {
+		display: block;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
 }
 .proud-to-be{
 	@extend .d-block;
@@ -953,6 +959,7 @@ article{
 		}
 	}
 	.oferta-body{
+		@extend .px-2;
 		@include media-breakpoint-up(sm) {
 			p,ul{
 				font-size: $font-size-base*1.4;

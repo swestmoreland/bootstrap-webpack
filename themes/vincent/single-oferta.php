@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
 
-	<section> <!-- ofertas -->
 
 		<?php
 		// Start the loop.
@@ -21,9 +20,8 @@
 			// End of the loop.
 		endwhile;
 		?>
-		<div class="w-100">
+		<div class="w-100 px-2">
 			<a id="" href="/ofertas" class="see-all-offers-btn">Ver Todas las Ofertas <i class="fas fa-dollar-sign"></i></a>
 		</div>
-	</section> <!-- ofertas -->
 </div>
 <?php get_footer(); ?>
