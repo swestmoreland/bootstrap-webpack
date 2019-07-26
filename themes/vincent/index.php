@@ -68,7 +68,7 @@ get_header();
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$image = null;
 					?>
-		      		<a class=" d-block d-md-none"> href="<?php echo get_post_permalink(); ?>">
+		      		<a class=" d-block d-md-none" href="<?php echo get_post_permalink(); ?>">
 		      		<img class="img-fluid w-100" src="<?php echo the_post_thumbnail_url(); ?>">
 		      		</a>
 					<?php
