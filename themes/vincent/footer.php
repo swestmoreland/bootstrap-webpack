@@ -97,7 +97,7 @@
 			</div>
 		</div>
 		<div class="brands">
-			<h2>Nuestros clientes y partners</h2>
+			<h2>Nuestros Partners</h2>
 			  <!-- Swiper -->
 					<?php
 					wp_reset_query();
@@ -108,7 +108,7 @@
 					        'order' => 'desc',
 					        'posts_per_page' => '3000',
 					        'post_status'    => 'inherit',
-					        'category_name'=>'partners,clientes',
+					        'category_name'=>'partners',
 					         );
 
 					$loop = new WP_Query( $args );
