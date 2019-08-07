@@ -166,7 +166,7 @@ get_header();
 
 	</section> <!-- ofertas -->
 </div>
-<div class="container-fluid">
+<div class="container-fluid d-none">
 	<section>
 		<h1><a href="/productos"> Productos </a></h1>
 		<?php
