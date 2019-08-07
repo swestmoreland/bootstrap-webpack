@@ -79,11 +79,7 @@ get_header();
 		?>
 
 	</div> <!-- cover -->
-	<section><!-- SECOND TO MAIN COVERS -->
-		<div class="flags">
-			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/flags.png">
-		</div>
-	</section><!-- SECOND TO MAIN COVERS -->
+
 </div>
 <div class="container">
 	<section class="main-buttons-group-mov">
@@ -92,27 +88,27 @@ get_header();
 	<section class="main-buttons-group">
 		<div class="col-sm-12 col-md-4 columna ">
 			<a class="card grow" href="/soluciones-hogar">
-				<h2>Solar para su casa</h2>
+				<h2>Energ&iacute;a Solar Hogar</h2>
 				<div class="">
 					<div class="w-100">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonhogar.jpg">
 					</div>
 				</div>
 				<div class="">
-					<p> Solución todo en uno para su sistema solar de hogar. </p>
+					
 				</div>
 			</a>
 		</div>
 		<div class="col-sm-12 col-md-4 columna ">
 			<a class="card grow" href="/soluciones-empresa">
-				<h2>Solar para su empresa</h2>
+				<h2>Energ&iacute;a Solar Empresas</h2>
 				<div class="">
 					<div class="w-100">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonempresa.jpg">
 					</div>
 				</div>
 				<div class="">
-					<p> Solución de alta potencia para grandes consumidores. </p>
+					
 				</div>			
 			</a>
 		</div>
@@ -125,7 +121,7 @@ get_header();
 					</div>
 				</div>
 				<div class="">
-					<p> Vea nuestras ofertas, proyectos llave en mano sin cobros extra. </p>
+					
 				</div>				
 			</a>
 		</div>
