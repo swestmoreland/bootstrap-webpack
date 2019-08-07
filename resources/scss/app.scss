@@ -998,23 +998,26 @@ article{
 	}
 
 	.dock-button{
+		cursor: pointer;
 		background-color: $vincent-blue;
 		text-align: center;
 		padding: 4px;
 		font-weight: bold;
 		@include media-breakpoint-between(lg,xl) {
-			font-size: $font-size-base*1.9;
+			font-size: 2rem;
 			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
-			max-width: 350px;
+			padding-bottom: 5px;
+			max-width: 23%;
 	    }
 	    @include media-breakpoint-between(md,lg) {
-			font-size: $font-size-base*1.4;
+			font-size: $font-size-base*1.8;
 			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
-			max-width: 280px;
+			padding-bottom: 5px;
+			max-width: 23%;
 	    }
 		@include media-breakpoint-down(sm) {
 			font-size: $font-size-base*1.6;
@@ -1201,7 +1204,7 @@ a.product-slide{
 				max-width: 29%;
 			}
 			p{
-			    padding-top: 12%;
+			    padding-top: 14%;
 			    padding-bottom: 0;
 			    margin-bottom: 0;
 			    color: white;
@@ -1217,8 +1220,14 @@ a.product-slide{
 				@include make-row();
 				margin-left: 0;
 				margin-right: 0;
-				margin-top: -70px;
-				margin-bottom: 10px;
+				@include media-breakpoint-between(lg,xl) {
+					margin-top: -105px;
+					margin-bottom: 25px;
+			    }
+	    		@include media-breakpoint-between(md,lg) {
+					margin-top: -70px;
+					margin-bottom: 10px;
+	    		}
 				width: 100%;
 				a{
 					@include make-col-ready();
