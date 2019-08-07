@@ -57,15 +57,18 @@
 			</div>
 			<div class="col-md-4 footer-center">
 
+                <div class="footer-contact-pill">
+                    <i class="fas fa-map-marker"></i>
+                    <p>Oficina Legal:<span>Los conquistadores 1925 </span> Santiago, Chile</p>                   
+                </div>
 	            <div class="footer-contact-pill">
 	                <i class="fas fa-map-marker"></i>
-	                <p><span>Los conquistadores 1925 </span> Santiago, Chile</p>
+	                <p>Oficina Operativa y Distribucí&oacute;n:<span>Av. Industrial 1198 </span> El Belloto, Chile</p>
 	            </div>
 	            <div class="footer-contact-pill">
 	                <i class="fas fa-map-marker"></i>
-	                <p><span>Av. Industrial 1198 </span> Quilpué, Chile</p>
+	                <p>Proximamente:<span>Florianopolis </span> Brasil</p>
 	            </div>
-
 
 	            <div class="footer-contact-pill">
 	                <a href="tel:+322948569" rel="nofollow"> 					
