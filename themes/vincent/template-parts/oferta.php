@@ -10,7 +10,7 @@
 						</div>
 					<?php endif; ?>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-7">
+				<div class="col-sm-12 col-md-6 col-lg-7 oferta-body">
 					<?php the_content() ;?>
 				</div>
 					
