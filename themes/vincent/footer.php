@@ -1,3 +1,41 @@
+<!-- Modal contacto -->
+<div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="modalContactoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    	<div class="modal-header">
+              <?php
+              $custom_logo_id = get_theme_mod( 'custom_logo' );
+              $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+              echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="Vincent Solar">';
+              ?>    		
+    		<p>Asesorate con nosotros</p>
+	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<span aria-hidden="true">&times;</span>
+	        </button>
+    	</div>
+		<div class="modal-contacto-body">
+			<img class="d-block img-fluid w-100"
+				 src="<?php echo get_template_directory_uri() ?>/image/snippets/solar-pact.jpg"
+				 alt="Venta de paneles solares kit placas solares kit"
+        	>
+        	<div class="button-container">
+				<a href="tel:+322948569">
+					<h4>Llamar</h4>
+					
+					<i class="fas fa-phone"></i>
+					+(56) 32 2948569
+				</a>
+				<a href="mailto:info@vincentsolar.com">
+					<h4>Escribanos</h4>
+					
+					<i class="fas fa-envelope"></i>
+					info@vincentsolar.com
+				</a>
+        	</div>
+		</div>
+    </div>
+  </div>
+</div><!-- Modal contacto -->
 
 <footer class="container-fluid">
 		<div class="row">
@@ -112,41 +150,12 @@
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none d-xs-none d-sm-none d-md-block">
-		<a href="mailto:info@vincentsolar.com">
+		<a data-toggle="modal" data-target="#modalContacto">
 			Contactenos&nbsp;<i class="fas fa-envelope"></i>
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
-	<div id="collapsePanel" class="collapse">
-		<div class="dock-panel">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12 offset-lg-2 col-lg-8">
-						<div class="row">
-							<div class="col-sm-2">
-								<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/water-logo-sm.png">
-							</div>
-							<div class="col-sm-6">
-								<p><strong>Conozca sobre todas nuestras soluciones solares.</strong></p>								
-								<p>Revisa todas nuestras ofertas, o <strong>agenda una visita técnica gratis </strong> con nosotros.</p>
-							</div>
-							<div class="col-sm-4 col-md-4 offset-lg-1 col-lg-3">
-								<a href="/ofertas" class="btn panel-btn" role="button" aria-pressed="false">	
-									<i class="fas fa-dollar-sign"></i>
-									Ir a Ofertas
-								</a>
-								<a href="mailto:info@vincentsolar.com" class="btn panel-btn" role="button" aria-pressed="false">	
-									<i class="fas fa-envelope"></i>
-									Contactar
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
+	
 </div>
   </body>
 </html>

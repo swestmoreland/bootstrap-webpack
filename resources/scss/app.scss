@@ -1186,3 +1186,63 @@ a.product-slide{
 		color: white;
    }
 }
+
+#oferta-modal-dialog{
+	width: 65vw;
+	max-width: none;
+}
+.modal-dialog{
+	margin-top: 20vh;
+	.modal-content{
+		overflow: hidden;
+		.modal-header{
+			font-size: 1vw;
+			img{
+				max-width: 29%;
+			}
+			p{
+			    padding-top: 12%;
+			    padding-bottom: 0;
+			    margin-bottom: 0;
+			    color: white;
+			    position: absolute;
+			    font-weight: bold;
+			    font-size: 1.8vw;
+			    text-shadow: 1px 1px 4px #000000;
+			}
+		}
+		.modal-contacto-body{
+			width: 100%;
+			.button-container{
+				@include make-row();
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: -70px;
+				margin-bottom: 10px;
+				width: 100%;
+				a{
+					@include make-col-ready();
+					@include make-col(5);	
+					@extend .d-block;
+					@extend .btn;
+					@extend .mx-auto;
+					font-size: 1vw;
+					background-color: white;
+					width: 40%;
+					h4{
+						margin:0;
+						padding: 0;
+					}
+				}
+			}
+		}
+		.modal-oferta-body{
+			button{
+				position: absolute;
+				height:0;
+				right: 4px;
+				top: 4px;
+			}
+		}
+	}
+}
