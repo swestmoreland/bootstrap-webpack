@@ -157,16 +157,14 @@ header{
 	}
 
 	.menu {
-		@extend .p-4;
 		background-color: $body-bg;
 		margin-right:auto;
 		margin-top: auto;
 
 		@include media-breakpoint-up(sm) {
 			margin-left: 20px;
-			width: auto;
-			margin-bottom: -6px;
-			padding-top: 2.4rem;
+			width: 74vw;
+			margin-bottom: 2%;
 		}
 		@include media-breakpoint-down(sm) {
 			margin-left: 0px;

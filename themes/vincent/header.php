@@ -12,7 +12,7 @@
       
     </div>
     <header class="one-edge-shadow">
-      <div class="row" style="overflow: hidden">
+      <div class="row">
         <a class="btn  d-block d-md-none menu-button" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
           <i class="fas fa-bars"></i>
         </a>
