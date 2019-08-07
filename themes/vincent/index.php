@@ -101,7 +101,7 @@ get_header();
 		</div>
 		<div class="col-sm-12 col-md-4 columna ">
 			<a class="card grow" href="/soluciones-empresa">
-				<h2>Energ&iacute;a Solar Empresas</h2>
+				<h2>Energ&iacute;a Solar Empresa</h2>
 				<div class="">
 					<div class="w-100">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/snippets/botonempresa.jpg">
