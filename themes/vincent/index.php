@@ -137,27 +137,30 @@ get_header();
 		<div class="swiper-container oferta-swiper d-none d-xs-none d-sm-none d-md-block">
 		    <div class="swiper-wrapper">
 		      <div class="swiper-slide">
-		      	<a href="/ofertas">
+		      	<a href="/ofertas#15kw">
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-1.jpg">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide">
-		      	<a href="/ofertas">
+		      	<a href="/ofertas#2kw160l">
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-2.jpg">
 		      	</a>
 		      </div>
-		      <!--
 		      <div class="swiper-slide">
-		      	<a href="/ofertas">
+		      	<a href="/ofertas#3kw">
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-3.jpg">
 		      	</a>
 		      </div>
 		      <div class="swiper-slide" id="soluciones">
-		      	<a href="/ofertas">
+		      	<a href="/ofertas#3kw160l">
 		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-4.jpg">
 		      	</a>
 		      </div>
-		  		-->
+		      <div class="swiper-slide" id="soluciones">
+		      	<a href="/ofertas#3kwoff">
+		      		<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/banner_ofertas/oferta-5.jpg">
+		      	</a>
+		      </div>
 		    </div>
 		</div>
 
