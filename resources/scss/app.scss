@@ -142,13 +142,14 @@ header{
 	    @include media-breakpoint-down(sm) {
 	        // Smaller than md: 768px
 	        display: block;
-	        padding-top: 28px;
-	        min-width: 100px;
-	        max-width: 50%;
+	        height: $header-height;
+	        margin-top: $header-height *0.14;
+	        width: 50%;
         	margin-left: 20px;
         	margin-right: auto;	
 	        .logo{
-	        	width: 25%;
+	        	width: auto;
+	        	height: 100%;
 	        	min-width: 115px;	
 	        	margin-left: 0;
 	        	margin-right: auto;
