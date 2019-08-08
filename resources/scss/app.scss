@@ -143,8 +143,8 @@ header{
 	        // Smaller than md: 768px
 	        display: block;
 	        height: $header-height;
-	        margin-top: $header-height *0.14;
-	        width: 50%;
+	        padding-top: $header-height *0.14;
+	        width: 43%;
         	margin-left: 20px;
         	margin-right: auto;	
 	        .logo{
@@ -164,7 +164,7 @@ header{
 
 		@include media-breakpoint-up(sm) {
 			margin-left: 20px;
-			width: 74vw;
+			width: 80vw;
 			margin-bottom: 2%;
 		}
 		@include media-breakpoint-down(sm) {
