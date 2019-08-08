@@ -161,7 +161,9 @@ header{
 		background-color: $body-bg;
 		margin-right:auto;
 		margin-top: auto;
-
+		@include media-breakpoint-between(lg,xl) {
+			padding-top: 40px;
+		}	
 		@include media-breakpoint-up(sm) {
 			margin-left: 20px;
 			width: 80vw;
@@ -177,7 +179,18 @@ header{
 
 		li{
 			list-style-type: none;
-			@include media-breakpoint-between(md,xl) {
+			
+			@include media-breakpoint-between(lg,xl) {
+				margin-right:40px !important; 
+				display: inline;
+				margin-right:6px; 
+				text-align: center;
+				padding: 0;
+				a{
+					padding-bottom: 10px;
+				}				
+			}	
+			@include media-breakpoint-between(md,lg) {
 				margin-right:25px !important; 
 				display: inline;
 				margin-right:6px; 
@@ -204,7 +217,10 @@ header{
 			a{
 				text-decoration: none;
 				text-transform: uppercase;
-				@include media-breakpoint-between(md,xl) {
+				@include media-breakpoint-between(lg,xl) {
+					font-size: $font-size-base*1.5;
+				}
+				@include media-breakpoint-between(md,lg) {
 					font-size: $font-size-base*1.2;
 				}
 				@include media-breakpoint-between(xs,md) {
