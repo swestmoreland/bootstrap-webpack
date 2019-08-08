@@ -977,12 +977,39 @@ article{
 	}
 	.oferta-body{
 		@extend .px-3;
-		@include media-breakpoint-up(sm) {
+		ul{
+			li{
+				margin-left:17px;
+			}
+		}
+		@include media-breakpoint-between(lg,xl) {
+			h2{
+				font-size: $font-size-base*2.6;
+
+			}
+			h3{
+				font-size: $font-size-base*2.3;
+			}
+			p,ul{
+				font-size: $font-size-base*1.7;
+			}
+		}
+		@include media-breakpoint-between(md,lg) {
+			h2{
+				font-size: $font-size-base*2.3;
+
+			}
+			h3{
+				font-size: $font-size-base*2;
+			}
 			p,ul{
 				font-size: $font-size-base*1.4;
 			}
 		}
 		@include media-breakpoint-down(sm) {
+			h3{
+				
+			}
 			p,ul{
 				font-size: $font-size-base*1.2;
 			}
