@@ -148,13 +148,13 @@
 		</div>
 		<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
 			<i class="fas fa-hand-pointer"></i>
-			Contactenos
+			Cont&aacute;ctenos
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none d-xs-none d-sm-none d-md-block">
 		<a data-toggle="modal" data-target="#modalContacto">
-			Contactenos&nbsp;<i class="fas fa-envelope"></i>
+			Cont&aacute;ctenos&nbsp;<i class="fas fa-envelope"></i>
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>

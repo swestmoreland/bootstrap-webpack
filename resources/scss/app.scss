@@ -1239,6 +1239,14 @@ a.product-slide{
 			    font-size: 1.8vw;
 			    text-shadow: 1px 1px 4px #000000;
 			}
+			.close{
+				@include media-breakpoint-between(lg,xl) {
+					font-size: $font-size-base * 3.2;
+			    }
+	    		@include media-breakpoint-between(md,lg) {
+					font-size: $font-size-base * 2;
+	    		}
+			}
 		}
 		.modal-contacto-body{
 			width: 100%;
