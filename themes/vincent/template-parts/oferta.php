@@ -15,6 +15,13 @@
 			<div class="col-sm-12 col-md-6 col-lg-7 oferta-body">
 				<h2 class="px-2"><?php the_title() ;?> <small>Todo Incluido</small></h2>
 				<?php the_content() ;?>
+				<a class="boton-cotizar mov" href="mailto:info@vincentsolar.com?subject=Intersado en <?php the_title() ;?>&body=Nombre:%0D%0ACiudad:%0D%0ATelefono:%0D%0AComentario:">
+					Contáctenos <br> <i class="fas fa-hand-pointer"></i>
+				</a>
+				
+				<button type="button" class="boton-cotizar" data-toggle="modal" data-target="#modalContacto">
+					Contáctenos <br> <i class="fas fa-hand-pointer"></i>
+				</button>				
 			</div>
 					
 		</div>
