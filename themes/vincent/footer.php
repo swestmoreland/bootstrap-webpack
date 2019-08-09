@@ -8,7 +8,7 @@
               $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
               echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="Vincent Solar">';
               ?>    		
-    		<p>Asesorate con nosotros</p>
+    		
 	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	        	<span aria-hidden="true">&times;</span>
 	        </button>
@@ -19,7 +19,7 @@
 				 alt="Venta de paneles solares kit placas solares kit"
         	>
         	<div class="button-container">
-				<a href="tel:+322948569">
+				<a href="tel:322948569">
 					<h4>Llamar</h4>
 					
 					<i class="fas fa-phone"></i>
@@ -71,7 +71,7 @@
 	            </div>
 
 	            <div class="footer-contact-pill">
-	                <a href="tel:+322948569" rel="nofollow"> 					
+	                <a href="tel:322948569" rel="nofollow"> 					
 		                <i class="fas fa-phone"></i>
 		                <p>322 948569</p>
 	            	</a>
@@ -131,13 +131,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<p class="d-block bottom-text text-center"> 2018 © Vincent Solar | Todos los derechos reservados	</p>	
+			<p class="d-block bottom-text text-center"> 2019 © Vincent Solar | Todos los derechos reservados	</p>	
 		</div>
 </footer>
 <div class="bottom-dock">
 	<div class="dock-button d-block d-md-none">
 		<div id="collapseContacto" class="collapse">
-			<a href="tel:+322948569">
+			<a href="tel:322948569">
 				<i class="fas fa-phone"></i>
 				Llamar
 			</a>
