@@ -133,13 +133,13 @@
 <div class="bottom-dock">
 	<div class="dock-button d-block d-md-none">
 		<div id="collapseContacto" class="collapse">
+			<a href="mailto:info@vincentsolar.com">
+				<i class="fas fa-envelope"></i>
+				Contacto
+			</a>
 			<a href="tel:322948569">
 				<i class="fas fa-phone"></i>
 				Llamar
-			</a>
-			<a href="mailto:info@vincentsolar.com">
-				<i class="fas fa-envelope"></i>
-				Correo
 			</a>
 		</div>
 		<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
