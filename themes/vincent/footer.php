@@ -131,7 +131,7 @@
 		</div>
 </footer>
 <div class="bottom-dock">
-	<div class="dock-button d-block d-md-none">
+	<div class="dock-button">
 		<div id="collapseContacto" class="collapse">
 			<a href="mailto:info@vincentsolar.com">
 				<i class="fas fa-envelope"></i>
@@ -148,7 +148,7 @@
 		</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
-	<div class="dock-button d-none d-xs-none d-sm-none d-md-block">
+	<div class="dock-button d-none">
 		<a data-toggle="modal" data-target="#modalContacto">
 			Cont&aacute;ctenos&nbsp;<i class="fas fa-envelope"></i>
 		</a>
