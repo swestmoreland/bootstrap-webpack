@@ -3,11 +3,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
     	<div class="modal-header">
-              <?php
-              $custom_logo_id = get_theme_mod( 'custom_logo' );
-              $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-              echo '<img class="img-fluid" src="' . esc_url( $custom_logo_url ) . '" alt="Vincent Solar">';
-              ?>    		
+			<img class="" style="width: 10%; height:auto;" src="<?php site_icon_url(); ?>" alt="Vincent Solar">
     		
 	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	        	<span aria-hidden="true">&times;</span>
@@ -26,7 +22,7 @@
 					+(56) 32 2948569
 				</a>
 				<a href="mailto:info@vincentsolar.com">
-					<h4>Escribanos</h4>
+					<h4>Contacto</h4>
 					
 					<i class="fas fa-envelope"></i>
 					info@vincentsolar.com
