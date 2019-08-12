@@ -8,13 +8,17 @@
 			<img class="img-fluid d-none d-xs-none d-sm-none d-md-block" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-banner.png">
 			<img class="img-fluid d-block d-md-none mx-auto" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-banner-mob.png">
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-5 offset-md-1">
+		<div class="col-xs-12 col-sm-12 col-md-4">
 			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-1.png">
 			<p>Diagrama de sistema fotovoltaico en un hogar.</p>
 		</div> 
-		<div class="col-xs-12 col-sm-12 col-md-5">
+		<div class="col-xs-12 col-sm-12 col-md-4">
 			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-2.png">
-			<p>Conexión del sistema fotovoltaico 1 fase.</p>
+			<p>Conexión del sistema fotovoltaico 1 fase</p>
+		</div> 
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/image/soluciones/hogar-fv-3.png">
+			<p>Conexión del sistema fotovoltaico 3 fases</p>
 		</div> 
 
 
