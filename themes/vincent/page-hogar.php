@@ -39,7 +39,10 @@
 			$image_thumb = wp_get_attachment_image_src( get_the_ID(), $size="medium" ); 
 				?>
 				<script type="text/javascript">
-					photo_arr.push( { "full":"<?php echo $image[0]; ?>", "thumb" :"<?php echo $image_thumb[0]; ?>" });
+					photo_arr.push( { "full":"<?php echo $image[0]; ?>", 
+						"thumb" :"<?php echo $image_thumb[0]; ?>", 
+						"title" :"<?php the_title(); ?>" 
+					});
 				</script>								
 				<?php
 
@@ -74,40 +77,7 @@
 		</div>
 	</section>
 	<div id="gallery"></div>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".gallery-grid-img").click(function(){
-				$("#selectedImg").attr("src",$(this).attr("data-link"));
-				$("#dimScreen").fadeIn();
-			});
 
-			$("#dimScreen").click(function(){
-				 $("#dimScreen").fadeOut(700,function(){
-				 	$("#selectedImg").attr("src","");
-				 });
-			});
-		});
-	</script>
-	<div id="dimScreen">
-		<a class="menu-button" role="button">
-          <i class="fas fa-times"></i>
-        </a>
-		<div class="container">
-			<div class="row spacer"></div>
-			<div class="row img-body" style="">
-				<div class="col-sm-12 col-md-8" style="">
-					<img id="selectedImg" class="img-fluid" src="">
-				</div>
-				<div id="imageDescription" class="col-sm-12 col-md-4" >
-					<h2>Proyecto</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	<section id="collage-gallery" class="no-gutters">
 		<div id="gallery-col-1" class="col-sm-6 col-md-3 col-lg-3"></div>
 		<div id="gallery-col-2" class="col-sm-6 col-md-3 col-lg-3"></div>

@@ -35,8 +35,11 @@
 			$image_thumb = wp_get_attachment_image_src( get_the_ID(), $size="medium" ); 
 				?>
 				<script type="text/javascript">
-					photo_arr.push( { "full":"<?php echo $image[0]; ?>", "thumb" :"<?php echo $image_thumb[0]; ?>" });
-				</script>
+					photo_arr.push( { "full":"<?php echo $image[0]; ?>", 
+						"thumb" :"<?php echo $image_thumb[0]; ?>", 
+						"title" :"<?php the_title(); ?>" 
+					});
+				</script>	
 				<?php
 		endwhile;				    
 		?>				

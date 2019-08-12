@@ -2,6 +2,7 @@
 // require popper.js
 // require bootstrap
 // require swiper
+// require lightbox2
 
 var photo_arr = [];
 
@@ -124,11 +125,20 @@ if(photo_arr.length >0 ){
     for (var j = bundles[i].length - 1; j >= 0; j--) {
       var size=Math.floor(Math.random() * 3) + 1;  
       $("#collage-gallery #gallery-col-"+(i+1)).append(
-        "<div class=\"gallery-grid-img s"+size+"\"   data-link=\"" +bundles[i][j]["full"]+ "\" style=\"background-image:url("+ bundles[i][j]["thumb"] +")\" > </div>"
+        "<a class=\"gallery-grid-img s"+size+"\" data-lightbox=\"galeria\" data-title=\"" +bundles[i][j]["title"]+ "\"  href=\"" +bundles[i][j]["full"]+ "\" style=\"background-image:url("+ bundles[i][j]["thumb"] +")\" > </div>"
         );
     }
   }
 }
+
+
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'imageFadeDuration': 200,
+  'alwaysShowNavOnTouchDevices': true
+  })
+
 
 //DOC READY
 //show_popup();
