@@ -17,7 +17,7 @@
 				<?php the_content() ;?>
 				<div class="boton-cotizar-mov">
 					<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto"
-					data-mailto="mailto:info@vincentsolar.com?subject=Intersado en <?php the_title() ;?>&body=Nombre:%0D%0ACiudad:%0D%0ATelefono:%0D%0AComentario:"
+					data-mailto="mailto:info@vincentsolar.com?subject=Intersado en kit <?php if($hash) {echo $hash;} ?>&body=Nombre:%0D%0ACiudad:%0D%0ATelefono:%0D%0AComentario:"
 					>
 						Cont&aacute;ctenos
 						<br>
