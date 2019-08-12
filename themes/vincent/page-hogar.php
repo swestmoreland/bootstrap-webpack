@@ -84,6 +84,8 @@
 		<div id="gallery-col-3" class="col-sm-6 col-md-3 col-lg-3"></div>
 		<div id="gallery-col-4" class="col-sm-6 col-md-3 col-lg-3"></div>
 	</section>
-
+	<section>
+		<div class="fadetowhite"></div>
+	</section>
 </div>
 <?php get_footer(); ?>

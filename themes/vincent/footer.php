@@ -140,10 +140,6 @@
 				<i class="fas fa-phone"></i>
 				(32) 294 8569
 			</a>
-			<a href="#">
-				<i class="fas fa-dollar-sign"></i>
-				Recibir Ofertas
-			</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none">

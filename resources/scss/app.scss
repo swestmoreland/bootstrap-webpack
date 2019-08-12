@@ -1195,7 +1195,21 @@ article{
 
 }
 
+.fadetowhite {
+	@include make-col-ready();
+	@include make-col(12);
+	z-index: $zindex-fixed - 5;
+	pointer-events   : none;
+	background-image : linear-gradient(to bottom, 
+	                rgba(255,255,255, 0), 
+	                rgba(255,255,255, 1) 90%);
+	margin-top: -5em; 
+	height   : 5em;
+}
 #collage-gallery{
+	max-height: 400px;
+	overflow: hidden;
+
 	.gallery-grid-img{
 		display: block;
 		margin: 2px;
