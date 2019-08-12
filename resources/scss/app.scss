@@ -783,7 +783,7 @@ article{
 		}
 	}
 	a,h2{
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Encode Sans Expanded', sans-serif;
 		text-decoration: none;
 		color: $gray-800;
 		&:hover{
@@ -1153,6 +1153,13 @@ article{
 			text-decoration: none;
 			color: $vincent-blue;
 			outline: none;
+		}
+		p{
+			color: white;
+			font-size: bold;
+			font-style: italic;
+			text-align: center;
+			margin-bottom: 0;
 		}
 		#collapseContacto{
 			z-index: $zindex-fixed+1;

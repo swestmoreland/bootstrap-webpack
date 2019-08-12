@@ -140,6 +140,7 @@
 				<i class="fas fa-phone"></i>
 				(32) 294 8569
 			</a>
+			<p>Vis&iacute;ta T&eacute;cnica Gratis</p>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none">
