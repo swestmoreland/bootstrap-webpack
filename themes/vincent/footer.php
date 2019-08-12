@@ -132,20 +132,18 @@
 </footer>
 <div class="bottom-dock">
 	<div class="dock-button">
-		<div id="collapseContacto" class="collapse">
 			<a href="mailto:info@vincentsolar.com">
 				<i class="fas fa-envelope"></i>
-				Contacto
+				info@vincentsolar.com
 			</a>
 			<a href="tel:322948569">
 				<i class="fas fa-phone"></i>
-				Llamar
+				(32) 294 8569
 			</a>
-		</div>
-		<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
-			<i class="fas fa-hand-pointer"></i>
-			Cont&aacute;ctenos
-		</a>
+			<a href="#">
+				<i class="fas fa-dollar-sign"></i>
+				Recibir Ofertas
+			</a>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	<div class="dock-button d-none">

@@ -1112,9 +1112,10 @@ article{
 	.dock-button{
 		cursor: pointer;
 		background-color: $vincent-blue;
-		text-align: center;
+		text-align: left;
 		padding: 4px;
 		font-weight: bold;
+		white-space: nowrap;
 		@include media-breakpoint-between(lg,xl) {
 			font-size: 2rem;
 			border-radius: 6px 6px 0 0;
@@ -1124,7 +1125,7 @@ article{
 			max-width: 23%;
 	    }
 	    @include media-breakpoint-between(md,lg) {
-			font-size: $font-size-base*1.8;
+			font-size: $font-size-base*1.5;
 			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
@@ -1142,10 +1143,15 @@ article{
 	        
 	    }
 		a{
+			background-color: white;
+			border-radius: 6px;
+			margin-bottom: 3px;
+			margin-top: 2px;
+			padding-left: 5%;
 			display: block;
 			width: 100%;
 			text-decoration: none;
-			color: inherit;
+			color: $vincent-blue;
 			outline: none;
 		}
 		#collapseContacto{
