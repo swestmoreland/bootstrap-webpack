@@ -134,11 +134,11 @@
 	<div class="dock-button">
 			<a href="mailto:info@vincentsolar.com">
 				<i class="fas fa-envelope"></i>
-				info@vincentsolar.com
+				Contacto
 			</a>
 			<a href="tel:322948569">
 				<i class="fas fa-phone"></i>
-				(32) 294 8569
+				Llamar
 			</a>
 			<p>Vis&iacute;ta T&eacute;cnica Gratis</p>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">

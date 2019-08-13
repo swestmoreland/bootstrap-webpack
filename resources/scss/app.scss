@@ -1111,7 +1111,7 @@ article{
 
 	.dock-button{
 		cursor: pointer;
-		background-color: $vincent-blue;
+		background-color: $vincent-orange;
 		text-align: left;
 		padding: 4px;
 		font-weight: bold;
@@ -1137,13 +1137,13 @@ article{
 			border-radius: 6px 0px 0 6px;
 			margin-right: 0;
 			margin-left: auto;
-			width: 45%;
+			width: 55%;
 			min-width: 200px;
 			max-width: 250px;
 	        
 	    }
 		a{
-			background-color: white;
+			background-color: $vincent-orange;
 			border-radius: 6px;
 			margin-bottom: 3px;
 			margin-top: 2px;
@@ -1151,11 +1151,11 @@ article{
 			display: block;
 			width: 100%;
 			text-decoration: none;
-			color: $vincent-blue;
+			color: $vincent-black;
 			outline: none;
 		}
 		p{
-			color: white;
+			color: $vincent-black;
 			font-size: bold;
 			font-style: italic;
 			text-align: center;
@@ -1167,7 +1167,7 @@ article{
 			background-color: $body-bg;
 			a{
 				@extend .p-2;
-				color: $vincent-blue
+				color: $vincent-black
 			}
 		}
 		img{
@@ -1181,15 +1181,15 @@ article{
 	}
 	.dock-panel{
 		@extend .py-2;
-		background-color: $vincent-blue;
-		color: $white;
+		background-color: $vincent-orange;
+		color: $vincent-black;
 		.panel-btn{
 			@extend .mt-2;
 			font-size: $font-size-base*1.6;
 			font-weight: bold;
-			background-color: white;
+			background-color: $vincent-orange;
 			width: 100%;
-			color: $vincent-blue;
+			color: $vincent-black;
 		}
 		p{
 			font-size: $font-size-base*1.1;
