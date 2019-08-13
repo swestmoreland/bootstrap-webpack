@@ -1277,7 +1277,7 @@ article{
 #questions-content{
 	p{
 		width:100%;
-		color: #333;
+		color: $vincent-black;
 		@include media-breakpoint-between(lg,xl) {
 			font-size: $font-size-base*1.6;
 	    }
