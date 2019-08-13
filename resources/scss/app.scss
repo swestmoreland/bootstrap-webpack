@@ -1,7 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 // Variables
@@ -1114,6 +1112,9 @@ article{
 }
 
 .bottom-dock{
+	font-family: "Encode Sans Expanded";
+    font-style: normal;
+	font-weight: 900;
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
@@ -1189,6 +1190,7 @@ article{
 			text-decoration: none;
 			color: $vincent-black;
 			outline: none;
+			
 		}
 		p{
 			color: $vincent-black;
