@@ -14,14 +14,14 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 function additional_custom_styles() {
 
     /*Enqueue The Styles*/
-    wp_enqueue_style( 'vincentstylesheetid', '/css/app.css' ,array(), $ver=null); 
+    //wp_enqueue_style( 'vincentstylesheetid', '/css/app.css?ver=10' ,array(), $ver=10); 
 
     if ( !is_admin() ) {
       wp_dequeue_style( 'wpsl-styles' );
 
       wp_deregister_script('jquery');
-      wp_register_script( 'jquery', '/js/app.js',array(),$ver=null );
-      wp_enqueue_script('jquery');
+      //wp_register_script( 'jquery', '/js/app.js?ver=10',array(),$ver=10 );
+      //wp_enqueue_script('jquery');
       wp_deregister_script('wp-block-library');
       remove_action('wp_head', 'print_emoji_detection_script', 7);
       remove_action('wp_print_styles', 'print_emoji_styles');
