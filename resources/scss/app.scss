@@ -1004,7 +1004,7 @@ article{
 		}
 		h2{
 			text-transform: uppercase;
-			
+
 		}
 		h2,h3{
 			font-weight: bold;
@@ -1194,76 +1194,48 @@ article{
 
 
 	.dock-button{
-		pointer-events: all;
+		pointer-events   : all;
 		cursor: pointer;
-		background-color: $vincent-orange;
-	    -webkit-transition: background-color 300ms linear;
-	    -ms-transition: background-color 300ms linear;
-	    transition: background-color 300ms linear;				
-		text-align: left;
+		background-color: $vincent-blue;
+		text-align: center;
 		padding: 4px;
 		font-weight: bold;
-		white-space: nowrap;
-		&.bg-high{
-			background-color: $vincent-light-orange;
-		    -webkit-transition: background-color 300ms linear;
-		    -ms-transition: background-color 300ms linear;
-		    transition: background-color 300ms linear;			
-		}
 		@include media-breakpoint-between(lg,xl) {
-			font-size: $font-size-base*2.3;
-			border-radius: $site-border-radius $site-border-radius 0 0;
+			font-size: 2rem;
+			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
 			padding-bottom: 5px;
-			max-width: 23%;
-			p{
-	        	font-size: $font-size-base*2;
-	        }
+			max-width: 28%;
 	    }
 	    @include media-breakpoint-between(md,lg) {
-			font-size: $font-size-base*1.5;
-			border-radius: $site-border-radius $site-border-radius 0 0;
+			font-size: $font-size-base*1.8;
+			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
 			padding-bottom: 5px;
-			max-width: 23%;
+			max-width: 28%;
 	    }
 		@include media-breakpoint-down(sm) {
-			font-size: $font-size-base*1.6;
-			border-radius: $site-border-radius 0px 0 $site-border-radius;
+			font-size: $font-size-base*1.7;
+			border-radius: 6px 0px 0 6px;
 			margin-right: 0;
 			margin-left: auto;
-			width: 55%;
+			width: 50%;
 			min-width: 200px;
-			max-width: 300px;
-	        p{
-	        	font-size: $font-size-base*1.3;
-	        }
+			max-width: 350px;
+	        
 	    }
 		a{
-			background-color: $vincent-orange;
-			&:hover,:focus{
-				background-color: $vincent-light-orange;
-
-			}
-			border-radius: $site-border-radius;
-			margin-bottom: 3px;
-			margin-top: 2px;
-			padding-left: 5%;
 			display: block;
 			width: 100%;
 			text-decoration: none;
-			color: $vincent-black;
+			color: inherit;
 			outline: none;
-			
-		}
-		p{
-			color: $vincent-black;
-			font-weight: bold;
-			font-style: italic;
-			text-align: center;
-			margin-bottom: 0;
+			&.inside-a{
+				margin-left: 20px;
+				text-align: left;
+			}
 		}
 		#collapseContacto{
 			z-index: $zindex-fixed+1;
@@ -1271,7 +1243,7 @@ article{
 			background-color: $body-bg;
 			a{
 				@extend .p-2;
-				color: $vincent-black
+				color: $vincent-blue
 			}
 		}
 		img{
