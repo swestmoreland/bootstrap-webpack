@@ -13,20 +13,25 @@
 				<?php endif; ?>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-7 col-xl-6 oferta-body">
-				<h2 class="px-2"><?php the_title() ;?> <small>Todo Incluido</small></h2>
+				<h2 class="px-2"><span class="badge-oferta">OFERTA</span><?php the_title() ;?> </h2>
 				<?php the_content() ;?>
 				<div class="boton-cotizar-mov">
-					<a href="tel:322948569" style="border-style: solid; border-color: white; border-width:0 0 1px 0">
-						<i class="fas fa-phone"></i>
-						<br>
-						Llamar
-					</a>
-					<a href="mailto:info@vincentsolar.com">
-						<i class="fas fa-envelope"></i>
-						<br>
+					<div id="collapseContacto<?php the_ID() ?>" class="collapse">
+						<a href="tel:322948569">
+							<i class="fas fa-phone"></i>
+							Llamar
+						</a>
+						<a href="mailto:info@vincentsolar.com?subject=Intersado en <?php the_title() ;?>&body=Nombre:%0D%0ACiudad:%0D%0ATelefono:%0D%0AComentario:">
+							<i class="fas fa-envelope"></i>
+							Correo
+						</a>
+					</div>
+					<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto<?php the_ID() ?>" role="button" aria-expanded="false" aria-controls="collapseContacto<?php the_ID() ?>">
 						Contacto
+						<br>
+						<i class="fas fa-hand-pointer"></i>
 					</a>
-				</div>		
+				</div>	
 				<button type="button" class="boton-cotizar contacto-oferta">
 					Contáctenos <br> <i class="fas fa-hand-pointer"></i>
 				</button>				

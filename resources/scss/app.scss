@@ -998,7 +998,37 @@ article{
 		ul{
 			li{
 				margin-left:17px;
+				margin-bottom: 12px;
 			}
+		}
+		h2,h3{
+			font-weight: bold;
+			color: $vincent-blue;
+			@include media-breakpoint-between(xs,md) {
+				text-align: center;
+			}			
+			.badge-oferta{
+				@extend .badge;
+				@extend .badge-danger;
+				//color: $vincent-orange;
+				display: block;
+				width: 50%;
+				margin-right: auto;
+				margin-left: auto;
+				text-transform: uppercase;
+				@include media-breakpoint-between(md,xl) {
+				}
+				@include media-breakpoint-between(xs,md) {
+					text-align: center;
+				}
+			}
+		}
+		p,ul{
+			font-weight: normal;
+			color: $vincent-black;
+		}
+		a{
+			color: $vincent-blue;
 		}
 		@include media-breakpoint-between(lg,xl) {
 			h2{
@@ -1024,22 +1054,27 @@ article{
 			}
 		}
 		@include media-breakpoint-down(sm) {
+			h2{
+				font-size: $font-size-base*2.0;
+
+			}			
 			h3{
-				font-size: $font-size-base*2;
+				font-size: $font-size-base*1.7;
 			}
 			p,ul{
-				font-weight: bold;
-				font-size: $font-size-base*1.6;
+				
+				font-size: $font-size-base*1.4;
+				line-height: 1.1;
 			}
 		}
 		.boton-cotizar-mov{
 			cursor: pointer;
-			background-color: $vincent-orange;
+			background-color: $vincent-blue;
 			text-align: center;
 			padding: 8px;
 			font-weight: bold;
 			font-size: $font-size-base * 1.75;
-			border-radius: 38px;
+			border-radius: $site-border-radius;
 			@include media-breakpoint-down(md) {
 				display: block;
 				margin-right: auto;
@@ -1061,7 +1096,7 @@ article{
 			}
 			.collapse, .collapsing{
 				z-index: $zindex-fixed+1;
-				border-radius: 38px 38px 10px 10px;
+				border-radius: $site-border-radius;
 				background-color: $body-bg;
 				a{
 					@extend .p-2;
@@ -1073,8 +1108,8 @@ article{
 			@extend .mx-auto;
 			@extend .btn;
 			color: #fff;
-    		background-color: $vincent-orange;
-    		border-color: $vincent-light-orange;
+    		background-color: $vincent-blue;
+    		border-color: $vincent-blue;
 			border-radius: 38px;
 			width: 50%;
 			min-width: 160px;
@@ -1101,14 +1136,33 @@ article{
 	}
 }
 .see-all-offers-btn{
-	@extend .d-block;
-	@extend .mx-auto ;
-	@extend .btn ;
-	@extend .btn-danger;
-	@extend .text-uppercase;
-	max-width: 400px;
+	cursor: pointer;
+	background-color: $red;
+	color: white;
+	text-align: center;
+	padding: 8px;
 	font-weight: bold;
-	
+	font-size: $font-size-base * 1.75;
+	border-radius: $site-border-radius;
+	@include media-breakpoint-down(md) {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		width: 65%;
+		min-width: 200px;
+		max-width: 250px;
+        
+    }
+    @include media-breakpoint-up(md) {
+    	display: none;
+    }
+	a{
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		color: white;
+		outline: none;
+	}
 }
 
 .bottom-dock{

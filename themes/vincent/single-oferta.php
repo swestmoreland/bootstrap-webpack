@@ -21,7 +21,7 @@
 		endwhile;
 		?>
 		<div class="w-100 px-2">
-			<a id="" href="/ofertas" class="see-all-offers-btn">Ver Todas las Ofertas <i class="fas fa-dollar-sign"></i></a>
+			<a id="" href="/ofertas" class="see-all-offers-btn">Ver Todas las Ofertas</a>
 		</div>
 </div>
 <?php get_footer(); ?>
