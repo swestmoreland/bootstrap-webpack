@@ -1,4 +1,5 @@
 // require ../../node_modules/jquery/dist/jquery.min.js
+// require ../../node_modules/jquery-ui-dist/jquery-ui.min.js
 // require popper.js
 // require bootstrap
 // require swiper
@@ -141,6 +142,8 @@ lightbox.option({
 
 $('.contacto-oferta').click(function(){
   $( ".dock-button" ).toggleClass("bg-high");
+  $( ".bottom-dock" ).effect( "shake", {direction:"up",times:4, distance:10}, 1000 );
+
 });
 
 //DOC READY
