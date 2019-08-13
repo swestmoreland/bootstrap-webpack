@@ -1130,10 +1130,19 @@ article{
 	.dock-button{
 		cursor: pointer;
 		background-color: $vincent-orange;
+	    -webkit-transition: background-color 300ms linear;
+	    -ms-transition: background-color 300ms linear;
+	    transition: background-color 300ms linear;				
 		text-align: left;
 		padding: 4px;
 		font-weight: bold;
 		white-space: nowrap;
+		&.bg-high{
+			background-color: $vincent-light-orange;
+		    -webkit-transition: background-color 300ms linear;
+		    -ms-transition: background-color 300ms linear;
+		    transition: background-color 300ms linear;			
+		}
 		@include media-breakpoint-between(lg,xl) {
 			font-size: $font-size-base*2.3;
 			border-radius: 6px 6px 0 0;

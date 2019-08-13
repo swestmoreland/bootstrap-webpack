@@ -139,6 +139,9 @@ lightbox.option({
   'alwaysShowNavOnTouchDevices': true
   })
 
+$('.contacto-oferta').click(function(){
+  $( ".dock-button" ).toggleClass("bg-high");
+});
 
 //DOC READY
 //show_popup();

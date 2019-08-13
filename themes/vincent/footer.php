@@ -143,13 +143,7 @@
 				<span class="mov-only">Llamar</span>
 				<span class="desk-only">(32) 294 8569</span>
 			</a>
-			<p>Vis&iacute;ta T&eacute;cnica Gratis</p>
-		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
-	</div>
-	<div class="dock-button d-none">
-		<a data-toggle="modal" data-target="#modalContacto">
-			Cont&aacute;ctenos&nbsp;<i class="fas fa-envelope"></i>
-		</a>
+			<p>Visita T&eacute;cnica Gratis</p>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">
 	</div>
 	

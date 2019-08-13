@@ -16,15 +16,14 @@
 				<h2 class="px-2"><?php the_title() ;?> <small>Todo Incluido</small></h2>
 				<?php the_content() ;?>
 				<div class="boton-cotizar-mov">
-					<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto"
-					data-mailto="mailto:info@vincentsolar.com?subject=Intersado en kit <?php if($hash) {echo $hash;} ?>&body=Nombre:%0D%0ACiudad:%0D%0ATelefono:%0D%0AComentario:"
+					<a id="contactoExpander" class="contacto-oferta" href="#collapseContacto"
 					>
-						Cont&aacute;ctenos
+						Contacto
 						<br>
 						<i class="fas fa-hand-pointer"></i>
 					</a>
 				</div>		
-				<button type="button" class="boton-cotizar" data-toggle="modal" data-target="#modalContacto">
+				<button type="button" class="boton-cotizar contacto-oferta">
 					Contáctenos <br> <i class="fas fa-hand-pointer"></i>
 				</button>				
 			</div>
