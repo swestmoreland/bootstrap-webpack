@@ -16,7 +16,7 @@
 				<h2 class="px-2"><span class="badge-oferta">OFERTA</span><?php the_title() ;?> </h2>
 				<?php the_content() ;?>
 				<div class="boton-cotizar-mov">
-					<div id="collapseContacto<?php the_ID() ?>" class="collapse">
+					<div id="collapseContacto<?php the_ID() ?>" class="collapse show">
 						<a href="tel:322948569">
 							<i class="fas fa-phone"></i>
 							Llamar
@@ -27,9 +27,8 @@
 						</a>
 					</div>
 					<a id="contactoExpander" data-toggle="collapse" href="#collapseContacto<?php the_ID() ?>" role="button" aria-expanded="false" aria-controls="collapseContacto<?php the_ID() ?>">
-						Contacto
+						Visita T&eacute;cnica Gratis
 						<br>
-						<i class="fas fa-hand-pointer"></i>
 					</a>
 				</div>	
 				<button type="button" class="boton-cotizar" data-toggle="modal" data-target="#modalContacto">
