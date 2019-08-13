@@ -134,11 +134,14 @@
 	<div class="dock-button">
 			<a href="mailto:info@vincentsolar.com">
 				<i class="fas fa-envelope"></i>
-				Contacto
+				
+				<span class="mov-only">Contacto</span>
+				<span class="desk-only">info@vincentsolar</span>
 			</a>
 			<a href="tel:322948569">
 				<i class="fas fa-phone"></i>
-				Llamar
+				<span class="mov-only">Llamar</span>
+				<span class="desk-only">(32) 294 8569</span>
 			</a>
 			<p>Vis&iacute;ta T&eacute;cnica Gratis</p>
 		<img src="<?php echo get_template_directory_uri() ?>/image/snippets/it_line.png">

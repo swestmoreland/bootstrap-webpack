@@ -21,6 +21,24 @@
 //lightbox
 @import "../../node_modules/lightbox2/dist/css/lightbox"; 
 
+
+.mov-only{
+	@include media-breakpoint-up(sm) {
+		display: none;
+	}
+	@include media-breakpoint-down(sm) {
+		display: inline;
+	}
+}
+.desk-only{
+	@include media-breakpoint-up(sm) {
+		display: inline;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
 body{
 	font-family: 'Encode Sans Expanded', sans-serif;
 }
@@ -1117,12 +1135,15 @@ article{
 		font-weight: bold;
 		white-space: nowrap;
 		@include media-breakpoint-between(lg,xl) {
-			font-size: 2rem;
+			font-size: $font-size-base*2.3;
 			border-radius: 6px 6px 0 0;
 			margin-right: 20px;
 			margin-left: auto;
 			padding-bottom: 5px;
 			max-width: 23%;
+			p{
+	        	font-size: $font-size-base*2;
+	        }
 	    }
 	    @include media-breakpoint-between(md,lg) {
 			font-size: $font-size-base*1.5;
@@ -1139,11 +1160,17 @@ article{
 			margin-left: auto;
 			width: 55%;
 			min-width: 200px;
-			max-width: 250px;
-	        
+			max-width: 300px;
+	        p{
+	        	font-size: $font-size-base*1.4;
+	        }
 	    }
 		a{
 			background-color: $vincent-orange;
+			&:hover,:focus{
+				background-color: $vincent-light-orange;
+
+			}
 			border-radius: 6px;
 			margin-bottom: 3px;
 			margin-top: 2px;
@@ -1156,7 +1183,7 @@ article{
 		}
 		p{
 			color: $vincent-black;
-			font-size: bold;
+			font-weight: bold;
 			font-style: italic;
 			text-align: center;
 			margin-bottom: 0;
