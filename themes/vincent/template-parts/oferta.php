@@ -16,11 +16,15 @@
 				<h2 class="px-2"><?php the_title() ;?> <small>Todo Incluido</small></h2>
 				<?php the_content() ;?>
 				<div class="boton-cotizar-mov">
-					<a id="contactoExpander" class="contacto-oferta" href="#collapseContacto"
-					>
-						Contacto
+					<a href="tel:322948569" style="border-style: solid; border-color: white; border-width:0 0 1px 0">
+						<i class="fas fa-phone"></i>
 						<br>
-						<i class="fas fa-hand-pointer"></i>
+						Llamar
+					</a>
+					<a href="mailto:info@vincentsolar.com">
+						<i class="fas fa-envelope"></i>
+						<br>
+						Contacto
 					</a>
 				</div>		
 				<button type="button" class="boton-cotizar contacto-oferta">

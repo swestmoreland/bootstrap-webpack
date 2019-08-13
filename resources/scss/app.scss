@@ -1003,7 +1003,6 @@ article{
 		@include media-breakpoint-between(lg,xl) {
 			h2{
 				font-size: $font-size-base*2.6;
-
 			}
 			h3{
 				font-size: $font-size-base*2.3;
@@ -1026,10 +1025,11 @@ article{
 		}
 		@include media-breakpoint-down(sm) {
 			h3{
-				
+				font-size: $font-size-base*2;
 			}
 			p,ul{
-				font-size: $font-size-base*1.2;
+				font-weight: bold;
+				font-size: $font-size-base*1.6;
 			}
 		}
 		.boton-cotizar-mov{
@@ -1131,7 +1131,7 @@ article{
 
 
 	.dock-button{
-		pointer-events   : all;
+		pointer-events: all;
 		cursor: pointer;
 		background-color: $vincent-orange;
 	    -webkit-transition: background-color 300ms linear;
