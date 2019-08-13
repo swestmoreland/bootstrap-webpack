@@ -63,6 +63,7 @@ section {
     	}
     }
 }
+
 :target {
   display: block;
   position: relative;
@@ -1001,6 +1002,10 @@ article{
 				margin-bottom: 12px;
 			}
 		}
+		h2{
+			text-transform: uppercase;
+			
+		}
 		h2,h3{
 			font-weight: bold;
 			color: $vincent-blue;
@@ -1015,6 +1020,7 @@ article{
 				width: 50%;
 				margin-right: auto;
 				margin-left: auto;
+				margin-bottom: 5px;
 				text-transform: uppercase;
 				@include media-breakpoint-between(md,xl) {
 				}
@@ -1075,6 +1081,9 @@ article{
 			font-weight: bold;
 			font-size: $font-size-base * 1.75;
 			border-radius: $site-border-radius;
+			&:hover{
+				color: white;
+			}
 			@include media-breakpoint-down(md) {
 				display: block;
 				margin-right: auto;

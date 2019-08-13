@@ -32,8 +32,8 @@
 						<i class="fas fa-hand-pointer"></i>
 					</a>
 				</div>	
-				<button type="button" class="boton-cotizar contacto-oferta">
-					Contáctenos <br> <i class="fas fa-hand-pointer"></i>
+				<button type="button" class="boton-cotizar" data-toggle="modal" data-target="#modalContacto">
+					Contacto <br> <i class="fas fa-hand-pointer"></i>
 				</button>				
 			</div>
 					
