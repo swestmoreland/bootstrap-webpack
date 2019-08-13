@@ -1203,7 +1203,7 @@ article{
 		}
 		@include media-breakpoint-between(lg,xl) {
 			font-size: $font-size-base*2.3;
-			border-radius: 6px 6px 0 0;
+			border-radius: $site-border-radius $site-border-radius 0 0;
 			margin-right: 20px;
 			margin-left: auto;
 			padding-bottom: 5px;
@@ -1214,7 +1214,7 @@ article{
 	    }
 	    @include media-breakpoint-between(md,lg) {
 			font-size: $font-size-base*1.5;
-			border-radius: 6px 6px 0 0;
+			border-radius: $site-border-radius $site-border-radius 0 0;
 			margin-right: 20px;
 			margin-left: auto;
 			padding-bottom: 5px;
@@ -1222,7 +1222,7 @@ article{
 	    }
 		@include media-breakpoint-down(sm) {
 			font-size: $font-size-base*1.6;
-			border-radius: 6px 0px 0 6px;
+			border-radius: $site-border-radius 0px 0 $site-border-radius;
 			margin-right: 0;
 			margin-left: auto;
 			width: 55%;
@@ -1238,7 +1238,7 @@ article{
 				background-color: $vincent-light-orange;
 
 			}
-			border-radius: 6px;
+			border-radius: $site-border-radius;
 			margin-bottom: 3px;
 			margin-top: 2px;
 			padding-left: 5%;
