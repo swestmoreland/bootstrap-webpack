@@ -1351,7 +1351,22 @@ a.product-slide{
 		color: $gray-800;
 	}
 }
+#product-slider{
+	@include media-breakpoint-between(lg,xl) {
+		margin-top:40px;
+		height: 750px;
+		.products-swiper{
+			height: 440px;
+		}
+	}
+	@include media-breakpoint-between(md,lg) {
+		margin-top:20px;
+		margin-bottom:20px;
+		.products-swiper{
+		}
+	}
 
+}
 .swiper-pagination-bullet-active{
 	background: $vincent-blue;
 }
